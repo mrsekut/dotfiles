@@ -1,0 +1,6 @@
+[color]
+	ui = true
+[alias]
+  graph = log --graph --date-order --pretty=format:\"%C(magenta)<%h> %C(yellow)%ad %C(green)(%cr) %C(cyan)[%an] %C(white)%d%C(reset) %s\" --all --date=short
+  ssb = status --short --branch
+  aa = add --all
