@@ -1,0 +1,29 @@
+
+
+
+# ==== Format ====
+# :emoji: Subject
+
+# Commit body...
+
+# ==== Emojis ====
+# ✨ :sparkles:         新規機能追加 
+# 📝 :memo:             ドキュメント編集
+# 🔉 :sound:            ログ追加 
+# 🚧 :construction:     WIP
+# ✅ :white_check_mark: テストの追加 
+# 👍 :+1:               機能修正 
+# 🚀 :rocket:           パフォーマンス改善 
+# 👮 :cop:              セキュリティ関連の改善 
+# 🎨 :art:              リファクタリング 
+# 🔥 :fire:             ファイル削除 
+# 🐛 :bug:              バグ修正 
+# 🔖 :bookmark:         バージョンアップ 
+
+# ==== Messages ====
+# [Add]     新規(ファイル)機能追加
+# [Update]  機能修正、既存機能追加（バグではない)
+# [Clean]   リファクタリング
+# [Remove]  削除など
+# [Fix]     バグ修正
+# [Update]  バージョンアップ
