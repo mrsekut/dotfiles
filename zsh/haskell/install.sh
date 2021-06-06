@@ -1,0 +1,2 @@
+# linter
+brew install hlint
