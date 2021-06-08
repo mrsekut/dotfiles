@@ -1,0 +1,159 @@
+// 既定の設定を上書きするには、このファイル内に設定を挿入します
+{
+	"atomKeymap.promptV3Features": true,
+	"breadcrumbs.enabled": false,
+	"codic.ACCESS_TOKEN": "ZxhujAJzjIfj0B09ZA2JC9eQniMsknAhgW",
+	"debug.console.fontSize": 16,
+	"editor.codeActionsOnSave": [
+		"source.fixAll.eslint"
+	],
+	"editor.cursorBlinking": "smooth",
+	"editor.fontFamily": "\"Fira Code\", Menlo, Monaco, ‘Courier New’, monospace",
+	"editor.fontLigatures": true,
+	"editor.fontSize": 16,
+	"editor.formatOnPaste": false,
+	"editor.formatOnSave": false,
+	"editor.formatOnType": false,
+	"editor.gotoLocation.multiple": "goto",
+	"editor.insertSpaces": false,
+	"editor.lineNumbers": "relative",
+	"editor.minimap.enabled": false,
+	"editor.multiCursorModifier": "ctrlCmd",
+	"editor.showFoldingControls": "always",
+	"editor.suggest.snippetsPreventQuickSuggestions": false,
+	"editor.suggestFontSize": 16,
+	"editor.suggestSelection": "first",
+	"editor.tabSize": 2,
+	"eslint.autoFixOnSave": true,
+	"git.autofetch": true,
+	"gitlens.currentLine.scrollable": false,
+	"guides.enabled": false,
+	"haskell.formattingProvider": "stylish-haskell",
+	"javascript.updateImportsOnFileMove.enabled": "always",
+	"julia.enableTelemetry": true,
+	"nim.logNimsuggest": true,
+	"prettier.useTabs": true,
+	"python.languageServer": "Microsoft",
+	"rest-client.fontSize": 0,
+	"rust.checkOnSave": true,
+	"rust.formatOnSave": true,
+	"scm.alwaysShowRepositories": true,
+	"sync.autoDownload": true,
+	"sync.autoUpload": true,
+	"sync.gist": "",
+	"sync.quietSync": true,
+	"tabnine.experimentalAutoImports": true,
+	"terminal.integrated.commandsToSkipShell": [
+		"language-julia.interrupt"
+	],
+	"terminal.integrated.fontSize": 16,
+	"typescript.tsdk": "/usr/local/lib/node_modules/typescript/lib",
+	"typescript.updateImportsOnFileMove.enabled": "always",
+	"vim.easymotion": true,
+	"vim.foldfix": true,
+	"vim.hlsearch": true,
+	"vim.leader": "space",
+	"vim.replaceWithRegister": true,
+	"vim.sneak": true,
+	"vim.useSystemClipboard": true,
+	"vim.visualstar": true,
+	"vim.insertModeKeyBindings": [
+		{
+			"before": [
+				"j",
+				"j"
+			],
+			"after": [
+				"<Esc>"
+			]
+		}
+	],
+	"vscodeGoogleTranslate.preferredLanguage": "ja",
+	"window.title": "${dirty}${activeEditorMedium}${separator}${rootName}",
+	"workbench.colorTheme": "One Dark Pro",
+	"workbench.editor.enablePreviewFromQuickOpen": false,
+	"workbench.editor.tabSizing": "shrink",
+	"workbench.editor.wrapTabs": true,
+	"workbench.iconTheme": "material-icon-theme",
+	"workbench.sideBar.location": "left",
+	"workbench.startupEditor": "welcomePage",
+	"todohighlight.keywords": [
+		{
+			"text": "ASK:",
+			"color": "#3ADF00",
+			"border": "1px solid #3ADF00",
+			"borderRadius": "2px",
+			"backgroundColor": "#E0F8E0"
+		},
+		{
+			"text": "NOTE:",
+			"color": "#FF8000",
+			"border": "1px solid #FF8000",
+			"borderRadius": "2px",
+			"backgroundColor": "#F5D0A9"
+		},
+		{
+			"text": "TODO:",
+			"color": "red",
+			"border": "1px solid red",
+			"borderRadius": "2px",
+			"backgroundColor": "rgba(0,0,0,.2)"
+		},
+		{
+			"text": "PENDING:",
+			"color": "#00FFFF",
+			"border": "1px solid #00FFFF",
+			"borderRadius": "2px",
+			"backgroundColor": "rgba(0,0,0,.2)"
+		},
+		{
+			"text": "DEPRECATED:",
+			"color": "#D358F7",
+			"border": "1px solid #D358F7",
+			"borderRadius": "2px",
+			"backgroundColor": "rgba(0,0,0,.2)"
+		}
+	],
+	"files.trimTrailingWhitespace": true,
+	"files.associations": {
+		"*.jsx": "typescriptreact"
+	},
+	"workbench.colorCustomizations": {
+		"statusBar.background": "#005f5f",
+		"statusBar.noFolderBackground": "#005f5f",
+		"statusBar.debuggingBackground": "#005f5f"
+	},
+	"files.watcherExclude": {
+		"**/.git/objects/**": true,
+		"**/.git/subtree-cache/**": true,
+		"**/node_modules/**": true
+	},
+	"emmet.syntaxProfiles": {
+		"javascript": "jsx",
+		"typescript": "tsx"
+	},
+	"emmet.includeLanguages": {
+		"twig": "html"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features"
+	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[php]": {
+		"editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
+	},
+	"vim.smartRelativeLine": true,
+	"intelephense.format.braces": "k&r",
+	"twig-language-2.formatting": false,
+	"[haskell]": {
+		"editor.defaultFormatter": "haskell.haskell"
+	},
+	"[purescript]": {
+		"editor.defaultFormatter": "mvakula.vscode-purty"
+	},
+	"diffEditor.ignoreTrimWhitespace": false,
+	"window.openFoldersInNewWindow": "on",
+	"window.zoomLevel": -2,
+}

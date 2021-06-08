@@ -1,0 +1,77 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+	{
+		"key": "cmd+n",
+		"command": "extension.advancedNewFile"
+	},
+	{
+		"key": "alt+cmd+[",
+		"command": "editor.fold",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "alt+cmd+[",
+		"command": "-editor.fold",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "alt+cmd+]",
+		"command": "editor.unfold",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "alt+cmd+]",
+		"command": "-editor.unfold",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "ctrl+p",
+		"command": "editor.action.rename",
+		"when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "f2",
+		"command": "-editor.action.rename",
+		"when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "ctrl+y",
+		"command": "editor.action.referenceSearch.trigger",
+		"when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+	},
+	{
+		"key": "shift+f12",
+		"command": "-editor.action.referenceSearch.trigger",
+		"when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+	},
+	{
+		"key": "cmd+p",
+		"command": "workbench.action.keepEditor"
+	},
+	{
+		"key": "cmd+k enter",
+		"command": "-workbench.action.keepEditor"
+	},
+	{
+		"key": "right ctrl+cmd",
+		"command": "workbench.action.terminal.resizePaneRight",
+		"when": "terminalFocus && terminalProcessSupported"
+	},
+	{
+		"key": "ctrl+cmd+right",
+		"command": "-workbench.action.terminal.resizePaneRight",
+		"when": "terminalFocus && terminalProcessSupported"
+	},
+	{
+		"key": "shift+cmd+p",
+		"command": "workbench.action.showCommands"
+	},
+	{
+		"key": "shift+cmd+p",
+		"command": "-workbench.action.showCommands"
+	},
+	{
+		"key": "right ctrl+cmd",
+		"command": "workbench.action.terminal.resizePaneRight"
+	}
+]
