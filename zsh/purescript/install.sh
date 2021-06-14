@@ -1,2 +1,1 @@
-brew install purescript
-npm install -g spago
+npm install -g spago purescript
