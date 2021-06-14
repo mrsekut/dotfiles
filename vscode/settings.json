@@ -15,7 +15,6 @@
 	"editor.formatOnSave": false,
 	"editor.formatOnType": false,
 	"editor.gotoLocation.multiple": "goto",
-	"editor.insertSpaces": false,
 	"editor.lineNumbers": "relative",
 	"editor.minimap.enabled": false,
 	"editor.multiCursorModifier": "ctrlCmd",
