@@ -3,8 +3,8 @@
 # ctrl-iで選択し、`ctrl-d`で削除を実行
 git-remove-branch() {
   local k results
-  while out=$(git branch --merged |
-              sed -e '/^\*/d'     |
+  while out=$(git branch      |
+              sed -e '/^\*/d' |
               fzf --multi --reverse --print-query --expect=ctrl-d); do
     k=$(head -2 <<< "$out" | tail -1)
 
