@@ -9,6 +9,8 @@
 
   home.packages = with pkgs; [
     bat
+    exa
+
     # jq
     # ghq
     # httpie
@@ -51,6 +53,7 @@
       cdg = "cd $(ghq list --full-path | fzf)";
       codeg = "ghq list --full-path | fzf | xargs code";
 
+      ls = "exa";
       cat = "bat";
       sed = "gsed";
     };
