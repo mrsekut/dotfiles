@@ -1,5 +1,6 @@
 [character]
 success_symbol = "λ"
+error_symbol = "λ"
 
 [aws]
 disabled = true
