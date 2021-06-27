@@ -6,7 +6,6 @@
     jq
     ghq
     httpie
-    fzf
     # gnu-sed
 
     # font-fira-code
