@@ -1,13 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  programs.starship = {
-    enable = true;
-    enableZshIntegration = true;
-    settings = {
-      character = {
-        success_symbol = "λ";
-      };
-    };
-  };
+  programs.starship.enable = true;
+
+  xdg.configFile."starship.toml".source = ./starship.toml;
 }

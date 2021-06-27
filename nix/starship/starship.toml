@@ -1,0 +1,8 @@
+[character]
+success_symbol = "λ"
+
+[aws]
+disabled = true
+
+[nix_shell]
+symbol = "nix-shell "
