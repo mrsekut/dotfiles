@@ -1,5 +1,9 @@
 { config, pkgs, ... }:
 
+let
+  allDirs = path: map (d: ./. + "/${d}") (builtins.attrNames (builtins.readDir path));
+
+in
 {
   programs.home-manager.enable = true;
 
@@ -7,13 +11,7 @@
   home.homeDirectory = "/Users/mrsekut";
   home.stateVersion = "21.11";
 
-  # FIXME: ここにいちいち追記するのめんどい
-  imports = [
-    ./bat
-    ./exa
-    ./starship
-    ./zsh
-  ];
+  imports = builtins.filter (p: p != ./. + "/home.nix") (allDirs ./.);
 
   # home.packages = with pkgs; [
   #   cloc
