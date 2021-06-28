@@ -1,9 +1,5 @@
 { config, pkgs, ... }:
 
-let
-  allDirs = path: map (d: ./. + "/${d}") (builtins.attrNames (builtins.readDir path));
-
-in
 {
   programs.home-manager.enable = true;
 
@@ -11,5 +7,14 @@ in
   home.homeDirectory = "/Users/mrsekut";
   home.stateVersion = "21.11";
 
-  imports = builtins.filter (p: p != ./. + "/home.nix") (allDirs ./.);
+  imports = [
+    ./bat
+    ./exa
+    ./fzf
+
+    ./starship
+    ./zsh
+
+    ./utils
+  ];
 }
