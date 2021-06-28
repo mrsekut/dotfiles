@@ -7,3 +7,6 @@ disabled = true
 
 [nix_shell]
 symbol = "nix-shell "
+
+[cmd_duration]
+disabled = true
