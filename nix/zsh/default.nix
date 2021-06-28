@@ -12,11 +12,17 @@
     enable = true;
     enableAutosuggestions = true;
 
+
     initExtra = ''
       source ${pkgs.zsh-syntax-highlighting}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+      # zsh-history-substring-search
       source ${pkgs.zsh-history-substring-search}/share/zsh-history-substring-search/zsh-history-substring-search.zsh
       bindkey '^[[A' history-substring-search-up
       bindkey '^[[B' history-substring-search-down
+
+      # vim for zsh
+      bindkey -v
     '';
   };
 }
