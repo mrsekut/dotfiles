@@ -15,6 +15,8 @@
     ./starship
     ./zsh
 
+    ./purescript
+
     ./utils
   ];
 }

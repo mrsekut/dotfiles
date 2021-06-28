@@ -27,8 +27,6 @@
     # node
     # yarn
 
-    # julia
-
     # idris
     # idris2
 
