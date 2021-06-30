@@ -19,6 +19,7 @@
 
     # languages
     ./purescript
+    ./idris
 
     # others
     ./git
