@@ -11,7 +11,6 @@
     # font-fira-code
 
     # git
-    # gh
     # hub
 
     # julia
