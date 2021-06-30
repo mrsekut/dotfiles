@@ -1,4 +1,3 @@
-
 # fzfを使って`git branch -d`を実行
 # ctrl-iで選択し、`ctrl-d`で削除を実行
 git-remove-branch() {
@@ -23,4 +22,3 @@ git-remove-branch() {
     fi
   done
 }
-

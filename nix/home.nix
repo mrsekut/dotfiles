@@ -8,15 +8,20 @@
   home.stateVersion = "21.11";
 
   imports = [
+    # commands
     ./bat
     ./exa
     ./fzf
 
+    # shell
     ./starship
     ./zsh
 
+    # languages
     ./purescript
 
+    # others
+    ./git
     ./utils
   ];
 }
