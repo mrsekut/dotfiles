@@ -6,7 +6,7 @@
     jq
     ghq
     httpie
-    # gnu-sed
+    gnused
 
     # font-fira-code
 
