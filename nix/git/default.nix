@@ -1,7 +1,10 @@
 { pkgs, ... }:
 
 {
-  home.packages = with pkgs; [ git ];
+  home.packages = with pkgs; [
+    git
+    hub
+  ];
 
   programs.git = {
     enable = true;

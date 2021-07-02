@@ -10,15 +10,7 @@
 
     # font-fira-code
 
-    # git
-    # hub
-
     # julia
-
-    # hlint
-    # ghc
-    # haskell-stack
-    # cabal-install
 
     clojure
     # gauche
