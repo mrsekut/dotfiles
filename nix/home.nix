@@ -20,6 +20,7 @@
     # languages
     ./purescript
     ./idris
+    # ./haskell
 
     # others
     ./git

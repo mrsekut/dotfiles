@@ -138,7 +138,6 @@
     # rtmpdump
     # six
     # tcl-tk
-    # thefuck
     # tidy-html5
     # translate-shell
     # unbound
