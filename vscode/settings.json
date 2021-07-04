@@ -115,7 +115,8 @@
 	],
 	"files.trimTrailingWhitespace": true,
 	"files.associations": {
-		"*.jsx": "typescriptreact"
+		"*.jsx": "typescriptreact",
+		"*.purs": "purescript"
 	},
 	"workbench.colorCustomizations": {
 		"statusBar.background": "#005f5f",
@@ -148,9 +149,6 @@
 	"twig-language-2.formatting": false,
 	"[haskell]": {
 		"editor.defaultFormatter": "haskell.haskell"
-	},
-	"[purescript]": {
-		"editor.defaultFormatter": "mvakula.vscode-purty"
 	},
 	"diffEditor.ignoreTrimWhitespace": false,
 	"window.openFoldersInNewWindow": "on",
