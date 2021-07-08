@@ -42,8 +42,6 @@ let g:user_emmet_leader_key='<Tab>'
 """""""""""""""""""""""""""""""
 "" Unit.vimの設定
 """""""""""""""""""""""""""""""
-"" 入力モードで開始する
-"let g:unite_enable_start_insert=1
 "" バッファ一覧
 "noremap <C-P> :Unite buffer<CR>
 "" ファイル一覧
@@ -112,24 +110,11 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
 syntax on
 colorscheme monokai
-"highlight Normal ctermbg=black ctermfg=grey
-"highlight StatusLine term=none cterm=none ctermfg=black ctermbg=grey
-"highlight CursorLine term=none cterm=none ctermfg=none ctermbg=darkgray
-"highlight Normal ctermbg=grey ctermfg=black
-"highlight StatusLine term=none cterm=none ctermfg=grey ctermbg=black
-"highlight CursorLine term=none cterm=none ctermfg=darkgray ctermbg=none
-
-
-
-
-
-
-
 
 "" ステータスラインを表示
-"set laststatus=2 " ステータスラインを常に表示
-"set statusline=%F%r%h%= " ステータスラインの内容
-"
+set laststatus=2 " ステータスラインを常に表示
+set statusline=%F%r%h%= " ステータスラインの内容
+
 "" 起動時にruntimepathにNeoBundleのパスを追加する
 "if has('vim_starting')
 "  if &compatible
