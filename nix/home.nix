@@ -19,6 +19,7 @@
 
     # editor
     ./vim
+    ./emacs
 
     # languages
     ./purescript

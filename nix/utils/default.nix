@@ -41,8 +41,6 @@
     # docker
     # unison
 
-    # emacs
-
     # docker
     docker-sync
     docker-compose
