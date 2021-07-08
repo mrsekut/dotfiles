@@ -17,6 +17,9 @@
     ./starship
     ./zsh
 
+    # editor
+    ./vim
+
     # languages
     ./purescript
     ./idris
