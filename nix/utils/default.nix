@@ -8,6 +8,8 @@
     httpie
     gnused
 
+    just
+
     # font-fira-code
 
     # julia
@@ -45,7 +47,6 @@
     docker-sync
     docker-compose
 
-    # curl
     # gawk
     # jpeg
     # node
