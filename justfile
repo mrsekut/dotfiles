@@ -5,10 +5,11 @@ default:
 
 
 # nix-env install
+# ref https://nixos.org/manual/nix/stable/#sect-macos-installation
 nix-install:
 	#!/usr/bin/env bash
 	mkdir -p ~/.config
-	ln -sf ~/dotfiles/nix-home ~/.config/nixpkgs
+	ln -sf {{dotfilesPath}}/nix ~/.config/nixpkgs
 
 	if [[ $(uname -s) == "Darwin" ]]; then
 		sh <(curl -L https://nixos.org/nix/install) --darwin-use-unencrypted-nix-store-volume --no-daemon
