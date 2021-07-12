@@ -1,22 +1,34 @@
+## Installation
 
-## install
-
+Manually create a directory that matches the root of ghq
 ```bash
-# ghqのrootと合わせるために手動でdirectoryを作る
 $ mkdir -p ~/Desktop/dev/github.com/mrsekut
 $ cd ~/Desktop/dev/github.com/mrsekut
 $ git clone https://github.com/mrsekut/dotfiles.git
-
-# install just
-$ bash ./just-install.sh
-
-# install nix
-$ just nix-install
-
-# install home-manager
-$ just home-manager-install
-
+$ cd dotfiles
 ```
+
+install [just](https://github.com/casey/just)
+```bash
+$ bash ./just-install.sh
+```
+
+install [nix](https://github.com/NixOS/nix)
+```bash
+$ just nix-install
+```
+
+install [home-manager](https://github.com/nix-community/home-manager)
+```bash
+$ just home-manager-install
+```
+
+## Application
+home-manager
+```bash
+$ home-manager switch
+```
+
 
 ## Reference
 
