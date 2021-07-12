@@ -3,8 +3,8 @@
 {
   programs.home-manager.enable = true;
 
-  home.username = "mrsekut";
-  home.homeDirectory = "/Users/mrsekut";
+  home.username = "$USER";
+  home.homeDirectory = "/Users/$USER";
   home.stateVersion = "21.11";
 
   imports = [
@@ -17,7 +17,7 @@
     ./starship
     ./zsh
 
-    # editor
+    # editors
     ./vim
     ./emacs
 

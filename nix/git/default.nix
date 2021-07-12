@@ -14,7 +14,7 @@
     extraConfig = {
       color.ui = true;
       help.autocorrect = 1;
-      ghq.root = "/Users/mrsekut/Desktop/dev";
+      ghq.root = "~/Desktop/dev";
     };
 
     delta.enable = true;
