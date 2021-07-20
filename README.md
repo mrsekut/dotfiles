@@ -19,6 +19,8 @@ $ just nix-install
 ```
 
 install [home-manager](https://github.com/nix-community/home-manager)
+
+After moving the `.zshrc` to another location, run the following command.
 ```bash
 $ just home-manager-install
 ```
