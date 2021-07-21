@@ -17,7 +17,7 @@
     clojure
     # gauche
 
-    # node
+    nodejs
     # yarn
 
     # idris
