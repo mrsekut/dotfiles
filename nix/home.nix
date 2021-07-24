@@ -8,6 +8,9 @@
   home.stateVersion = "21.11";
 
   imports = [
+    # nix
+    ./nix
+
     # commands
     ./bat
     ./exa
