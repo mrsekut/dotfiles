@@ -13,6 +13,7 @@
       cdd = "cd $(ghq list --full-path | fzf) && code .";
       cdg = "cd $(ghq list --full-path | fzf)";
       codeg = "ghq list --full-path | fzf | xargs code";
+      cdm = "cd $(ghq root)/github.com/mrsekut";
     };
   };
 }
