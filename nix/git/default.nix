@@ -12,6 +12,7 @@
     userEmail = "k.cloudspider@gmail.com";
 
     extraConfig = {
+      rebase.autosquash = true;
       color.ui = true;
       help.autocorrect = 1;
       ghq.root = "~/Desktop/dev";
@@ -30,7 +31,7 @@
       pro = "!git push -u origin $(git symbolic-ref --short HEAD) && git see";
       md = "merge develop";
       fp = "fetch -p";
-      bd = "!zsh -c 'source ${builtins.toString ./.}/git-remove-branch.zsh && git-remove-branch'";
+      fixup = "!zsh -c 'source ${builtins.toString ./.}/git-fixup.zsh'";
     };
   };
 }
