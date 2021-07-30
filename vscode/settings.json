@@ -155,9 +155,6 @@
 	"editor.inlineSuggest.enabled": true,
 	"window.zoomLevel": -2,
 	"github.copilot.enable": {
-		"*": false,
-		"yaml": false,
-		"plaintext": false,
-		"markdown": false
+		"*": true
 	},
 }
