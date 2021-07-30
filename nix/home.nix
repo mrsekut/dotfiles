@@ -3,9 +3,11 @@
 {
   programs.home-manager.enable = true;
 
-  home.username = "$USER";
-  home.homeDirectory = "/Users/$USER";
-  home.stateVersion = "21.11";
+  home = {
+    username = "$USER";
+    homeDirectory = "/Users/$USER";
+    stateVersion = "21.11";
+  };
 
   imports = [
     # nix
