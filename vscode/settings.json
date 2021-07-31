@@ -11,9 +11,9 @@
 	"editor.fontFamily": "\"Fira Code\", Menlo, Monaco, ‘Courier New’, monospace",
 	"editor.fontLigatures": true,
 	"editor.fontSize": 16,
-	"editor.formatOnPaste": false,
-	"editor.formatOnSave": false,
-	"editor.formatOnType": false,
+	"editor.formatOnPaste": true,
+	"editor.formatOnSave": true,
+	"editor.formatOnType": true,
 	"editor.gotoLocation.multiple": "goto",
 	"editor.lineNumbers": "relative",
 	"editor.minimap.enabled": false,
@@ -153,8 +153,8 @@
 	"diffEditor.ignoreTrimWhitespace": false,
 	"window.openFoldersInNewWindow": "on",
 	"editor.inlineSuggest.enabled": true,
-	"window.zoomLevel": -2,
 	"github.copilot.enable": {
 		"*": true
 	},
+	"window.zoomLevel": -2,
 }
