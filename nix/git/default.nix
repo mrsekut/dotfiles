@@ -27,6 +27,7 @@
       ssb = "status --short --branch";
       aa = "add --all";
       ac = "!git add --all && git commit";
+      ca = "commit --amend";
       co = "checkout";
       see = "!hub browse -- pull/$(git symbolic-ref --short HEAD)";
       po = "push origin head";
