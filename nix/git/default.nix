@@ -14,7 +14,12 @@
     userEmail = "k.cloudspider@gmail.com";
 
     extraConfig = {
-      rebase.autosquash = true;
+      rebase = {
+        autosquash = true;
+        autostash = true;
+      };
+      # pull.rebase = true;
+      fetch.prune = true;
       color.ui = true;
       help.autocorrect = 1;
       ghq.root = "~/Desktop/dev";
@@ -33,7 +38,7 @@
       po = "push origin head";
       pro = "!git push -u origin $(git symbolic-ref --short HEAD) && git see";
       md = "merge develop";
-      fp = "fetch -p";
+      # fp = "fetch -p"; DEPRECATED:
       bd = "!zsh -c 'source ${builtins.toString ./.}/git-remove-branch.zsh'";
       fixup = "!zsh -c 'source ${builtins.toString ./.}/git-fixup.zsh'";
     };
