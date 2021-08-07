@@ -27,5 +27,9 @@
     initExtra = ''
       eval "$(direnv hook zsh)"
     '';
+
+    shellAliases = {
+      nix-direnv = "echo 'use nix' >> .envrc && direnv allow";
+    };
   };
 }
