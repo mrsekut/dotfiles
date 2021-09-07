@@ -14,6 +14,9 @@
     userEmail = "k.cloudspider@gmail.com";
 
     extraConfig = {
+      core = {
+        ignorecase = false;
+      };
       rebase = {
         autosquash = true;
         autostash = true;
