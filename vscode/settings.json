@@ -136,7 +136,7 @@
 		"twig": "html"
 	},
 	"[typescript]": {
-		"editor.defaultFormatter": "vscode.typescript-language-features"
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 	"[typescriptreact]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -154,7 +154,18 @@
 	"window.openFoldersInNewWindow": "on",
 	"editor.inlineSuggest.enabled": true,
 	"github.copilot.enable": {
-		"*": true
+		"*": true,
+		"yaml": false,
+		"plaintext": false,
+		"markdown": false
 	},
+	"remoteHub.search.download.enabled": true,
+	"[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[purescript]": {
+		"editor.defaultFormatter": "nwolverson.ide-purescript"
+	},
+	"purescript.formatter": "purs-tidy",
 	"window.zoomLevel": -2,
 }
