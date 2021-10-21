@@ -155,9 +155,11 @@
 	"editor.inlineSuggest.enabled": true,
 	"github.copilot.enable": {
 		"*": true,
-		"yaml": false,
+		"yaml": true,
 		"plaintext": false,
-		"markdown": false
+		"markdown": false,
+		"haskell": true,
+		"typescript": false
 	},
 	"remoteHub.search.download.enabled": true,
 	"[json]": {
@@ -167,5 +169,12 @@
 		"editor.defaultFormatter": "nwolverson.ide-purescript"
 	},
 	"purescript.formatter": "purs-tidy",
+	"[html]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"gutterpreview.imagePreviewMaxHeight": 500,
 	"window.zoomLevel": -2,
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
 }

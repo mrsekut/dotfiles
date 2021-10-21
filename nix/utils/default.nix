@@ -10,6 +10,8 @@
 
     just
 
+    sqlfluff
+
     # font-fira-code
 
     ### languages ###

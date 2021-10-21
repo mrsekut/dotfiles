@@ -3,6 +3,7 @@
 {
   home.packages = with pkgs; [
     nix-prefetch-git
+    cachix
     direnv
   ];
 
