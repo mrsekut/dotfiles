@@ -12,6 +12,8 @@
 
     # font-fira-code
 
+    ### languages ###
+    opam
     # julia
 
     clojure
@@ -43,7 +45,7 @@
     # docker
     # unison
 
-    # docker
+    ### docker ###
     docker-sync
     docker-compose
 
