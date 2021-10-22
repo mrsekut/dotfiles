@@ -15,7 +15,6 @@
     # font-fira-code
 
     ### languages ###
-    opam
     # julia
 
     clojure
@@ -51,6 +50,7 @@
     docker-sync
     docker-compose
 
+    zlib
     # gawk
     # jpeg
     # node

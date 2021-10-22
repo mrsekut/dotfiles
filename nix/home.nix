@@ -29,6 +29,7 @@
     # languages
     ./purescript
     ./idris
+    ./ocaml
     # ./haskell
 
     # others
