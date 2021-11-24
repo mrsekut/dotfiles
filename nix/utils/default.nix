@@ -15,20 +15,11 @@
     # font-fira-code
 
     ### languages ###
-    # julia
-
     clojure
     # gauche
 
     nodejs
     # yarn
-
-    # idris
-    # idris2
-
-    # llvm
-
-    # go
 
     # rbenv
     # ruby-build
