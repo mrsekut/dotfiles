@@ -31,7 +31,7 @@
     ./purescript
     ./idris
     ./ocaml
-    ./node
+    ./javascript
     # ./haskell
 
     # others
