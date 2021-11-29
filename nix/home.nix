@@ -16,6 +16,7 @@
     # commands
     ./bat
     ./exa
+    ./ripgrep
     ./fzf
 
     # shell
