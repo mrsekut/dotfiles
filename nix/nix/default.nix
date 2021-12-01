@@ -3,12 +3,7 @@
 {
   home.packages = with pkgs; [
     nix-prefetch-git
-    direnv
   ];
-
-  programs.direnv.enable = true;
-  programs.direnv.nix-direnv.enable = true;
-  programs.direnv.nix-direnv.enableFlakes = true;
 
   programs.zsh = {
     plugins = [
@@ -23,13 +18,5 @@
         };
       }
     ];
-
-    initExtra = ''
-      eval "$(direnv hook zsh)"
-    '';
-
-    shellAliases = {
-      nix-direnv = "echo 'use nix' >> .envrc && direnv allow";
-    };
   };
 }

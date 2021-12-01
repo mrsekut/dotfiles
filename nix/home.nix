@@ -12,6 +12,7 @@
   imports = [
     # nix
     ./nix
+    ./direnv
 
     # commands
     ./bat
@@ -32,7 +33,6 @@
     ./idris
     ./ocaml
     ./javascript
-    # ./haskell
 
     # others
     ./git
