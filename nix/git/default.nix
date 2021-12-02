@@ -4,6 +4,7 @@
   home.packages = with pkgs; [
     git
     hub
+    commitizen
 
     git-absorb
   ];
@@ -41,7 +42,6 @@
       po = "push origin head";
       pro = "!git push -u origin $(git symbolic-ref --short HEAD) && git see";
       md = "merge develop";
-      # fp = "fetch -p"; DEPRECATED:
       pull-f = "!git fetch && git reset --hard origin";
       bd = "!zsh -c 'source ${builtins.toString ./.}/git-remove-branch.zsh'";
       fixup = "!zsh -c 'source ${builtins.toString ./.}/git-fixup.zsh'";
