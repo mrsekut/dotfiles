@@ -1,6 +1,7 @@
 ## Installation
 
 Manually create a directory that matches the root of ghq
+
 ```bash
 $ mkdir -p ~/Desktop/dev/github.com/mrsekut
 $ cd ~/Desktop/dev/github.com/mrsekut
@@ -9,11 +10,13 @@ $ cd dotfiles
 ```
 
 install [just](https://github.com/casey/just)
+
 ```bash
 $ bash ./just-install.sh
 ```
 
 install [nix](https://github.com/NixOS/nix)
+
 ```bash
 $ just nix-install
 ```
@@ -21,16 +24,24 @@ $ just nix-install
 install [home-manager](https://github.com/nix-community/home-manager)
 
 After moving the `.zshrc` to another location, run the following command.
+
 ```bash
 $ just home-manager-install
 ```
 
+install [nix-darwin](https://github.com/LnL7/nix-darwin)
+
+```bash
+$ just nix-darwin-install
+```
+
 ## Application
+
 home-manager
+
 ```bash
 $ home-manager switch
 ```
-
 
 ## Reference
 
