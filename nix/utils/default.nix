@@ -24,15 +24,14 @@
     # php@7.4
     # composer
 
-    # awscli
-    # docker
-    # unison
-
     ### docker ###
+    # docker
     docker-sync
     docker-compose
+    # unison
 
     zlib
+    # awscli
     # gawk
     # jpeg
     # node
