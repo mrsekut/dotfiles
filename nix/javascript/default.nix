@@ -5,6 +5,5 @@
     nodePackages.typescript
     nodejs
     # yarn
-    deno
   ];
 }
