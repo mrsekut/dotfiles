@@ -24,20 +24,12 @@
     # php@7.4
     # composer
 
-    ### docker ###
-    # docker
-    docker-sync
-    docker-compose
-    # unison
-
     zlib
     # awscli
     # gawk
     # jpeg
     # node
     # oniguruma
-    # php@7.4
-    # rbenv
     # six
     # unbound
     # unixodbc

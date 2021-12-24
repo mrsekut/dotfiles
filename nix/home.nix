@@ -36,6 +36,7 @@
 
     # others
     ./git
+    ./docker
     ./utils
   ];
 }
