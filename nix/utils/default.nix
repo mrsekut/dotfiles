@@ -24,6 +24,7 @@
     # php@7.4
     # composer
 
+    bash
     zlib
     # awscli
     # gawk
