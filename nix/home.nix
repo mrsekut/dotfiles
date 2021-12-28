@@ -30,8 +30,8 @@
 
     # languages
     ./purescript
-    ./idris
-    ./ocaml
+    # ./idris
+    # ./ocaml
     ./javascript
 
     # others
