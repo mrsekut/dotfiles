@@ -5,6 +5,6 @@
     nodePackages.typescript
     nodePackages.npm-check-updates
     nodejs
-    # yarn
+    yarn
   ];
 }
