@@ -10,7 +10,6 @@
 	"editor.cursorBlinking": "smooth",
 	"editor.fontFamily": "\"Fira Code\", Menlo, Monaco, ‘Courier New’, monospace",
 	"editor.fontLigatures": true,
-	"editor.fontSize": 16,
 	"editor.formatOnPaste": true,
 	"editor.formatOnSave": true,
 	"editor.formatOnType": true,
@@ -23,7 +22,6 @@
 	"editor.suggestFontSize": 16,
 	"editor.suggestSelection": "first",
 	"editor.tabSize": 2,
-	"eslint.autoFixOnSave": true,
 	"git.autofetch": true,
 	"gitlens.currentLine.scrollable": false,
 	"guides.enabled": false,
@@ -46,7 +44,7 @@
 		"language-julia.interrupt"
 	],
 	"terminal.integrated.fontSize": 16,
-	"typescript.tsdk": "/usr/local/lib/node_modules/typescript/lib",
+  "typescript.tsdk": "./node_modules/typescript/lib",
 	"typescript.updateImportsOnFileMove.enabled": "always",
 	"vim.easymotion": true,
 	"vim.foldfix": true,
@@ -133,7 +131,8 @@
 		"typescript": "tsx"
 	},
 	"emmet.includeLanguages": {
-		"twig": "html"
+		"twig": "html",
+		"haskell": "html"
 	},
 	"[typescript]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -156,10 +155,10 @@
 	"github.copilot.enable": {
 		"*": true,
 		"yaml": true,
-		"plaintext": false,
+		"plaintext": true,
 		"markdown": false,
 		"haskell": true,
-		"typescript": false
+		"typescript": true
 	},
 	"remoteHub.search.download.enabled": true,
 	"[json]": {
@@ -173,8 +172,17 @@
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 	"gutterpreview.imagePreviewMaxHeight": 500,
-	"window.zoomLevel": -2,
 	"[javascript]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"editor.bracketPairColorization.enabled": true,
+	"julia.symbolCacheDownload": true,
+	"editor.fontSize": 16,
+	"window.zoomLevel": -2,
+	"[jsonc]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"terminal.integrated.env.osx": {
+		"FIG_NEW_SESSION": "1"
 	},
 }
