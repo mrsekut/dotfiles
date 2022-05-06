@@ -73,5 +73,9 @@
 	{
 		"key": "right ctrl+cmd",
 		"command": "workbench.action.terminal.resizePaneRight"
+	},
+	{
+		"key": "cmd+k cmd+0",
+		"command": "workbench.files.action.collapseExplorerFolders"
 	}
 ]
