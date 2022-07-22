@@ -38,6 +38,7 @@
       ac = "!git add --all && git commit";
       ca = "commit --amend";
       co = "checkout";
+      sw = "switch";
       see = "!hub browse -- pull/$(git symbolic-ref --short HEAD)";
       po = "push origin head";
       pro = "!git push -u origin $(git symbolic-ref --short HEAD) && git see";
