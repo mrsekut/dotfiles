@@ -11,11 +11,8 @@ nix-install:
   mkdir -p ~/.config
   ln -sf {{dotfilesPath}}/nix ~/.config/nixpkgs
 
-  if [[ $(uname -s) == "Darwin" ]]; then
-    sh <(curl -L https://nixos.org/nix/install) --darwin-use-unencrypted-nix-store-volume --no-daemon
-  else
-    sh <(curl -L https://nixos.org/nix/install) --no-daemon
-  fi
+  # mac
+  sh <(curl -L https://nixos.org/nix/install)
 
   source ~/.nix-profile/etc/profile.d/nix.sh
 
