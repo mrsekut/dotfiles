@@ -14,13 +14,13 @@ nix-install:
   # mac
   sh <(curl -L https://nixos.org/nix/install)
 
-  source ~/.nix-profile/etc/profile.d/nix.sh
+  source /nix/var/nix/profiles/default/etc/profile.d/nix.sh
 
 
 nix-uninstall:
   @echo ref https://github.com/NixOS/nix/issues/1402#issuecomment-312496360
-  # rm -rf $HOME/{.nix-channels,.nix-defexpr,.nix-profile,.config/nixpkgs}
-  # sudo rm -rf /nix
+  rm -rf $HOME/{.nix-channels,.nix-defexpr,.nix-profile,.config/nixpkgs}
+  sudo rm -rf /nix
 
 
 
@@ -28,7 +28,7 @@ home-manager-install:
   #!/usr/bin/env bash
   nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
   nix-channel --update
-  export NIX_PATH=$HOME/.nix-defexpr/channels${NIX_PATH:+:}$NIX_PATH
+  export NIX_PATH=$HOME/.nix-defexpr/channels:/nix/var/nix/profiles/per-user/root/channels${NIX_PATH:+:$NIX_PATH}
   nix-shell '<home-manager>' -A install
 
 
