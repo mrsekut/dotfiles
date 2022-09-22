@@ -38,5 +38,6 @@
     ./git
     ./docker
     ./utils
+    ./gyazo
   ];
 }

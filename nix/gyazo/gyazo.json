@@ -1,0 +1,21 @@
+{
+	"title": "FnでGyazo起動",
+	"rules": [
+		{
+			"description": "FnでGyazo起動",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "fn"
+					},
+					"to_if_alone": [
+						{
+							"shell_command": "open -a 'Gyazo.app'"
+						}
+					]
+				}
+			]
+		}
+	]
+}
