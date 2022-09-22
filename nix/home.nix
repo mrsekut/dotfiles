@@ -39,5 +39,6 @@
     ./docker
     ./utils
     ./gyazo
+    ./karabiner
   ];
 }
