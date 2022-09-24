@@ -1,12 +1,8 @@
-// 既定の設定を上書きするには、このファイル内に設定を挿入します
 {
 	"atomKeymap.promptV3Features": true,
 	"breadcrumbs.enabled": false,
-	"codic.ACCESS_TOKEN": "ZxhujAJzjIfj0B09ZA2JC9eQniMsknAhgW",
 	"debug.console.fontSize": 16,
-	"editor.codeActionsOnSave": [
-		"source.fixAll.eslint"
-	],
+	"editor.codeActionsOnSave": ["source.fixAll.eslint"],
 	"editor.cursorBlinking": "smooth",
 	"editor.fontFamily": "\"Fira Code\", Menlo, Monaco, ‘Courier New’, monospace",
 	"editor.fontLigatures": true,
@@ -28,10 +24,7 @@
 	"haskell.formattingProvider": "stylish-haskell",
 	"javascript.updateImportsOnFileMove.enabled": "always",
 	"julia.enableTelemetry": true,
-	"nim.logNimsuggest": true,
 	"prettier.useTabs": true,
-	"python.languageServer": "Microsoft",
-	"rest-client.fontSize": 0,
 	"rust.checkOnSave": true,
 	"rust.formatOnSave": true,
 	"scm.alwaysShowRepositories": true,
@@ -40,11 +33,9 @@
 	"sync.gist": "",
 	"sync.quietSync": true,
 	"tabnine.experimentalAutoImports": true,
-	"terminal.integrated.commandsToSkipShell": [
-		"language-julia.interrupt"
-	],
+	"terminal.integrated.commandsToSkipShell": ["language-julia.interrupt"],
 	"terminal.integrated.fontSize": 16,
-  "typescript.tsdk": "./node_modules/typescript/lib",
+	"typescript.tsdk": "./node_modules/typescript/lib",
 	"typescript.updateImportsOnFileMove.enabled": "always",
 	"vim.easymotion": true,
 	"vim.foldfix": true,
@@ -56,16 +47,10 @@
 	"vim.visualstar": true,
 	"vim.insertModeKeyBindings": [
 		{
-			"before": [
-				"j",
-				"j"
-			],
-			"after": [
-				"<Esc>"
-			]
+			"before": ["j", "j"],
+			"after": ["<Esc>"]
 		}
 	],
-	"vscodeGoogleTranslate.preferredLanguage": "ja",
 	"window.title": "${dirty}${activeEditorMedium}${separator}${rootName}",
 	"workbench.colorTheme": "One Dark Pro",
 	"workbench.editor.enablePreviewFromQuickOpen": false,
@@ -76,7 +61,7 @@
 	"workbench.startupEditor": "welcomePage",
 	"todohighlight.keywords": [
 		{
-			"text": "ASK:",
+			"text": "QUESTION:",
 			"color": "#3ADF00",
 			"border": "1px solid #3ADF00",
 			"borderRadius": "2px",
@@ -141,7 +126,7 @@
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 	"[php]": {
-		"editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
+		"editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
 	},
 	"vim.smartRelativeLine": true,
 	"intelephense.format.braces": "k&r",
@@ -149,14 +134,13 @@
 	"[haskell]": {
 		"editor.defaultFormatter": "haskell.haskell"
 	},
-	"diffEditor.ignoreTrimWhitespace": false,
 	"window.openFoldersInNewWindow": "on",
 	"editor.inlineSuggest.enabled": true,
 	"github.copilot.enable": {
 		"*": true,
 		"yaml": true,
 		"plaintext": true,
-		"markdown": false,
+		"markdown": true,
 		"haskell": true,
 		"typescript": true
 	},
@@ -178,11 +162,27 @@
 	"editor.bracketPairColorization.enabled": true,
 	"julia.symbolCacheDownload": true,
 	"editor.fontSize": 16,
-	"window.zoomLevel": -2,
 	"[jsonc]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 	"terminal.integrated.env.osx": {
 		"FIG_NEW_SESSION": "1"
 	},
+	"redhat.telemetry.enabled": true,
+	"diffEditor.ignoreTrimWhitespace": false,
+	"workbench.localHistory.enabled": false,
+	"json.schemas": [],
+	"git.experimental.mergeEditor": true,
+	"githubPullRequests.pullBranch": "never",
+	"typescript.referencesCodeLens.enabled": true,
+	"workbench.editorAssociations": {
+		"*.txt": "default"
+	},
+	"editor.unicodeHighlight.invisibleCharacters": false,
+	"deno.path": "/nix/store/6xvnjz2grdah9kawh9qcf2d6gh0pda23-deno-1.16.2/bin/deno",
+	"window.zoomLevel": -2,
+	"hexeditor.columnWidth": 5,
+	"hexeditor.showDecodedText": true,
+	"hexeditor.defaultEndianness": "little",
+	"hexeditor.inspectorType": "aside"
 }
