@@ -22,9 +22,9 @@ $ just nix-install
 ```
 
 note: If you already have `bash` or `zsh`, you may get an error.
+
 1. In that case, back up `/etc/zshrc` etc. according to the error message
 2. After running `$ just nix-uninstall`, run `$ just nix-install` again
-
 
 ### install [home-manager](https://github.com/nix-community/home-manager)
 
@@ -32,6 +32,7 @@ After moving the `.zshrc` to another location, run the following command.
 
 ```bash
 $ just home-manager-install
+$ just home-manager-apply
 ```
 
 ### install [nix-darwin](https://github.com/LnL7/nix-darwin)

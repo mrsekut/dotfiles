@@ -15,6 +15,7 @@ nix-install:
   sh <(curl -L https://nixos.org/nix/install)
 
   source /nix/var/nix/profiles/default/etc/profile.d/nix.sh
+  nix-channel --add https://nixos.org/channels/nixpkgs-unstable
 
 
 nix-uninstall:
