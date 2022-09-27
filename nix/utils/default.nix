@@ -6,7 +6,7 @@
     jq
     ghq
     httpie
-    gnused
+    # gnused
 
     just
 
@@ -15,7 +15,7 @@
     # font-fira-code
 
     ### languages ###
-    clojure
+    # clojure
     # gauche
 
     # rbenv
