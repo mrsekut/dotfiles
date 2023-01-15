@@ -4,7 +4,6 @@
   home.packages = with pkgs; [
     git
     hub
-    commitizen
 
     git-absorb
   ];
