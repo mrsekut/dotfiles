@@ -4,7 +4,7 @@
   home.packages = with pkgs; [
     nodePackages.typescript
     nodePackages.npm-check-updates
-    nodejs-16_x
+    nodejs-18_x
     yarn
   ];
 }
