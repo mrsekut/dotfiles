@@ -1,10 +1,3 @@
-{ pkgs, ... }:
-
-{
-  programs.zsh.sessionVariables.EDITOR = "vim";
-
-  programs.vim = {
-    enable = true;
-    extraConfig = builtins.readFile ./dot.vimrc;
-  };
+{ config, pkgs, lib, ... }: {
+  imports = [ ./neovim.nix ./vim.nix ];
 }
