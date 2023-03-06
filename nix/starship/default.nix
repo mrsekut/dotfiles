@@ -1,7 +1,22 @@
 { pkgs, ... }:
 
 {
-  programs.starship.enable = true;
+  programs.starship = {
+    enable = true;
 
-  xdg.configFile."starship.toml".source = ./starship.toml;
+    settings = {
+      character = {
+        success_symbol = "λ";
+        error_symbol = "λ";
+      };
+
+      nix_shell = {
+        symbol = "nix-shell ";
+      };
+
+      cmd_duration = {
+        disabled = true;
+      };
+    };
+  };
 }
