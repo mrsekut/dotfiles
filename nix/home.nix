@@ -9,6 +9,13 @@
     stateVersion = "22.11";
   };
 
+  nix = {
+    package = pkgs.nixFlakes;
+    settings = {
+      experimental-features = "nix-command flakes";
+    };
+  };
+
   imports = [
     # nix
     ./nix
