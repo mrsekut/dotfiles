@@ -5,6 +5,8 @@
     enable = true;
 
     settings = {
+      aws.disabled = true;
+
       character = {
         success_symbol = "λ";
         error_symbol = "λ";
