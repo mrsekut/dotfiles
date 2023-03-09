@@ -21,6 +21,7 @@
         autosquash = true;
         autostash = true;
       };
+      merge.conflictstyle = "diff3";
       # pull.rebase = true;
       fetch.prune = true;
       color.ui = true;
