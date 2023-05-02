@@ -1,0 +1,25 @@
+{
+	"title": "Toggle Warp with alt-space",
+	"rules": [
+		{
+			"description": "Show Warp with alt-space",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "spacebar",
+						"modifiers": {
+							"mandatory": ["left_alt"],
+							"optional": ["any"]
+						}
+					},
+					"to": [
+						{
+							"shell_command": "open -a Warp"
+						}
+					]
+				}
+			]
+		}
+	]
+}
