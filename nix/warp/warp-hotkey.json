@@ -2,7 +2,7 @@
 	"title": "Toggle Warp with alt-space",
 	"rules": [
 		{
-			"description": "Show Warp with alt-space",
+			"description": "Toggle Warp with alt-space",
 			"manipulators": [
 				{
 					"type": "basic",
@@ -15,7 +15,7 @@
 					},
 					"to": [
 						{
-							"shell_command": "open -a Warp"
+							"shell_command": "osascript -e 'tell application \"System Events\"' -e 'if visible of process \"Warp\" is true then' -e 'set visible of process \"Warp\" to false' -e 'else' -e 'tell application \"Warp\" to activate' -e 'end if' -e 'end tell'"
 						}
 					]
 				}
