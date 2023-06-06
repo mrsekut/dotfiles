@@ -1,13 +1,13 @@
 {
-	"title": "Shift-FnでGyazo GIF起動",
+	"title": "Shift-F13でGyazo GIF起動",
 	"rules": [
 		{
-			"description": "Shift-FnでGyazo GIF起動",
+			"description": "Shift-F13でGyazo GIF起動",
 			"manipulators": [
 				{
 					"type": "basic",
 					"from": {
-						"key_code": "fn",
+						"key_code": "f13",
 						"modifiers": { "mandatory": ["shift"] }
 					},
 					"to_if_alone": [

@@ -1,13 +1,13 @@
 {
-	"title": "FnでGyazo起動",
+	"title": "F13でGyazo起動",
 	"rules": [
 		{
-			"description": "FnでGyazo起動",
+			"description": "F13でGyazo起動",
 			"manipulators": [
 				{
 					"type": "basic",
 					"from": {
-						"key_code": "fn"
+						"key_code": "f13"
 					},
 					"to_if_alone": [
 						{
