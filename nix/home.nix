@@ -29,7 +29,8 @@
     ./emacs
 
     # languages
-    ./purescript
+    ./haskell
+    # ./purescript
     # ./idris
     # ./ocaml
     ./javascript
