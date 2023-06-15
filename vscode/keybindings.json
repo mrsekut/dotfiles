@@ -77,5 +77,34 @@
 	{
 		"key": "cmd+k cmd+0",
 		"command": "workbench.files.action.collapseExplorerFolders"
+	},
+	{
+		"key": "shift+alt+cmd+e",
+		"command": "-copilot-labs.use-brush-picker",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "cmd+k cmd+k",
+		"command": "vscode-chatgpt.adhoc",
+		"when": "editorHasSelection"
+	},
+	{
+		"key": "cmd+k shift+cmd+7",
+		"command": "-vscode-chatgpt.adhoc",
+		"when": "editorHasSelection"
+	},
+	{
+		"key": "cmd+k cmd+k",
+		"command": "copilot-labs.use-brush-picker"
+	},
+	{
+		"key": "ctrl+shift+e",
+		"command": "editor.action.marker.nextInFiles",
+		"when": "editorFocus"
+	},
+	{
+		"key": "f8",
+		"command": "-editor.action.marker.nextInFiles",
+		"when": "editorFocus"
 	}
 ]

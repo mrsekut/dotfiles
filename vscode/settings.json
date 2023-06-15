@@ -35,9 +35,10 @@
 	"git.experimental.mergeEditor": true,
 	"github.copilot.enable": {
 		"*": true,
-		"yaml": true,
 		"plaintext": true,
 		"markdown": true,
+		"scminput": false,
+		"yaml": true,
 		"haskell": true,
 		"typescript": true
 	},
@@ -61,7 +62,9 @@
 	"sync.quietSync": true,
 	"tabnine.experimentalAutoImports": true,
 	"terminal.integrated.commandsToSkipShell": ["language-julia.interrupt"],
-	"terminal.integrated.env.osx": { "FIG_NEW_SESSION": "1" },
+	"terminal.integrated.env.osx": {
+		"FIG_NEW_SESSION": "1"
+	},
 	"terminal.integrated.fontSize": 16,
 	"todohighlight.keywords": [
 		{
@@ -145,8 +148,20 @@
 	"rust.formatOnSave": true,
 	"twig-language-2.formatting": false,
 	"typescript.referencesCodeLens.enabled": true,
-	"typescript.tsdk": "./node_modules/typescript/lib",
+	"typescript.tsdk": "node_modules/typescript/lib",
 	"typescript.updateImportsOnFileMove.enabled": "always",
 	"totalTypeScript.hideAllTips": true,
+	"julia.symbolCacheDownload": true,
+	"audioCues.volume": 0,
+	"editor.accessibilitySupport": "off",
+	"julia.enableTelemetry": true,
+	"[python]": {
+		"editor.formatOnType": true
+	},
+	"chatgpt.gpt3.model": "text-davinci-002-render-paid",
+	"chatgpt.method": "Browser Auto-login",
+	"git.confirmSync": false,
+	"editor.linkedEditing": true,
+	"typescript.preferences.importModuleSpecifier": "relative",
 	"window.zoomLevel": -2
 }
