@@ -43,7 +43,7 @@
       po = "push origin head";
       pro = "!git push -u origin $(git symbolic-ref --short HEAD) && git see";
       md = "merge develop";
-      pull-f = "!git fetch && git reset --hard origin";
+      pull-f = "!f() { git fetch origin $(git rev-parse --abbrev-ref HEAD) && git reset --hard origin/$(git rev-parse --abbrev-ref HEAD); }; f";
       bd = "!zsh -c 'source ${builtins.toString ./.}/git-remove-branch.zsh'";
       fixup = "!zsh -c 'source ${builtins.toString ./.}/git-fixup.zsh'";
       ds = "!zsh -c 'source ${builtins.toString ./.}/git-delete-squashed.zsh' foo"; # delete squash TODO: `foo` is a hack
