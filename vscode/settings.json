@@ -1,8 +1,6 @@
 {
 	"atomKeymap.promptV3Features": true,
-	"breadcrumbs.enabled": false,
 	"debug.console.fontSize": 16,
-	"diffEditor.ignoreTrimWhitespace": false,
 	"editor.bracketPairColorization.enabled": true,
 	"editor.codeActionsOnSave": ["source.fixAll.eslint"],
 	"editor.cursorBlinking": "smooth",
@@ -40,7 +38,8 @@
 		"scminput": false,
 		"yaml": true,
 		"haskell": true,
-		"typescript": true
+		"typescript": true,
+		"ini": false
 	},
 	"githubPullRequests.pullBranch": "never",
 	"gitlens.currentLine.scrollable": false,
@@ -158,12 +157,14 @@
 	"[python]": {
 		"editor.formatOnType": true
 	},
-	"chatgpt.gpt3.model": "text-davinci-002-render-paid",
-	"chatgpt.method": "Browser Auto-login",
 	"git.confirmSync": false,
 	"editor.linkedEditing": true,
 	"typescript.preferences.importModuleSpecifier": "relative",
 	"window.zoomLevel": -2,
 	"haskell.manageHLS": "GHCup",
-	"haskell.ghcupExecutablePath": "/Users/mrsekut/.ghcup/bin/ghcup"
+	"haskell.ghcupExecutablePath": "/Users/mrsekut/.ghcup/bin/ghcup",
+	"breadcrumbs.enabled": false,
+	"diffEditor.ignoreTrimWhitespace": false,
+	"workbench.editor.splitSizing": "distribute",
+	"importCost.timeout": 700
 }
