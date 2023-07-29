@@ -158,7 +158,6 @@
 		"editor.formatOnType": true
 	},
 	"git.confirmSync": false,
-	"editor.linkedEditing": true,
 	"typescript.preferences.importModuleSpecifier": "relative",
 	"window.zoomLevel": -2,
 	"haskell.manageHLS": "GHCup",
