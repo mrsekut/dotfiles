@@ -16,6 +16,10 @@
     #   enable = true;
     # };
 
+    shellAliases = {
+      c = "clear";
+    };
+
     initExtra = ''
       source ${pkgs.zsh-syntax-highlighting}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
