@@ -32,22 +32,34 @@
     delta.enable = true;
 
     aliases = {
+      # log
       graph = "log --graph --date-order --pretty=format:\"%C(magenta)<%h> %C(yellow)%ad %C(green)(%cr) %C(cyan)[%an] %C(white)%d%C(reset) %s\" --all --date=short";
+
+      # status
       ssb = "status --short --branch";
+
+      # add, commit
       aa = "add --all";
       ac = "!git add --all && git commit";
       ca = "commit --amend";
+
+      # branch
       co = "checkout";
       sw = "switch";
-      see = "!hub browse -- pull/$(git symbolic-ref --short HEAD)";
-      po = "push origin head";
-      pro = "!git push -u origin $(git symbolic-ref --short HEAD) && git see";
       md = "merge develop";
+
+      # remote
+      po = "push origin head";
+      po-f = "push --force-with-lease";
+      pro = "!git push -u origin $(git symbolic-ref --short HEAD) && git see";
       pull-f = "!f() { git fetch origin $(git rev-parse --abbrev-ref HEAD) && git reset --hard origin/$(git rev-parse --abbrev-ref HEAD); }; f";
+
+      # その他のスクリプト操作
+      see = "!hub browse -- pull/$(git symbolic-ref --short HEAD)";
       bd = "!zsh -c 'source ${builtins.toString ./.}/git-remove-branch.zsh'";
       fixup = "!zsh -c 'source ${builtins.toString ./.}/git-fixup.zsh'";
       ds = "!zsh -c 'source ${builtins.toString ./.}/git-delete-squashed.zsh' foo"; # delete squash TODO: `foo` is a hack
-      po-f = "push --force-with-lease";
     };
+
   };
 }
