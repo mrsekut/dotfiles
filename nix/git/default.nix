@@ -47,6 +47,7 @@
       bd = "!zsh -c 'source ${builtins.toString ./.}/git-remove-branch.zsh'";
       fixup = "!zsh -c 'source ${builtins.toString ./.}/git-fixup.zsh'";
       ds = "!zsh -c 'source ${builtins.toString ./.}/git-delete-squashed.zsh' foo"; # delete squash TODO: `foo` is a hack
+      po-f = "push --force-with-lease";
     };
   };
 }
