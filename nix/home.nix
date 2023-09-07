@@ -16,7 +16,7 @@
 
     # commands
     ./bat
-    ./exa
+    ./eza
     ./ripgrep
     ./fzf
 
