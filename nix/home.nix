@@ -34,6 +34,7 @@
     # ./idris
     # ./ocaml
     ./javascript
+    ./java
 
     # others
     ./git
