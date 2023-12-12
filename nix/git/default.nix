@@ -42,22 +42,22 @@
       aa = "add --all";
       ac = "!git add --all && git commit";
       ca = "commit --amend";
+      fixup = "!zsh -c 'source ${builtins.toString ./.}/git-fixup.zsh'";
 
       # branch
       co = "checkout";
       sw = "switch";
       md = "merge develop";
+      bd = "!zsh -c 'source ${builtins.toString ./.}/git-remove-branch.zsh'";
 
       # remote
       po = "push origin head";
       po-f = "push --force-with-lease";
       pro = "!git push -u origin $(git symbolic-ref --short HEAD) && git see";
       pull-f = "!f() { git fetch origin $(git rev-parse --abbrev-ref HEAD) && git reset --hard origin/$(git rev-parse --abbrev-ref HEAD); }; f";
+      see = "!hub browse -- pull/$(git symbolic-ref --short HEAD)";
 
       # その他のスクリプト操作
-      see = "!hub browse -- pull/$(git symbolic-ref --short HEAD)";
-      bd = "!zsh -c 'source ${builtins.toString ./.}/git-remove-branch.zsh'";
-      fixup = "!zsh -c 'source ${builtins.toString ./.}/git-fixup.zsh'";
       ds = "!zsh -c 'source ${builtins.toString ./.}/git-delete-squashed.zsh' foo"; # delete squash TODO: `foo` is a hack
     };
 
