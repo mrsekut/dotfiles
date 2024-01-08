@@ -26,7 +26,7 @@
 
     # editors
     ./vim
-    ./emacs
+    # ./emacs
 
     # languages
     ./haskell
@@ -34,6 +34,7 @@
     # ./idris
     # ./ocaml
     ./javascript
+    ./java # for alloy
     ./lean
 
     # others
