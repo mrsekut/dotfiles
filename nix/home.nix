@@ -18,6 +18,7 @@
     ./bat
     ./eza
     ./ripgrep
+    ./ast-grep
     ./fzf
 
     # shell
