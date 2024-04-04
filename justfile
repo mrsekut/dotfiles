@@ -4,44 +4,19 @@ default:
   @just --choose
 
 
-# nix-env install
-# ref https://nixos.org/manual/nix/stable/#sect-macos-installation
+# install nix by Determine Nix Installer
 nix-install:
   #!/usr/bin/env bash
-  mkdir -p ~/.config
-  ln -sf {{dotfilesPath}}/nix ~/.config/nixpkgs
-
-  # mac
-  sh <(curl -L https://nixos.org/nix/install)
-
-  source /nix/var/nix/profiles/default/etc/profile.d/nix.sh
-  nix-channel --add https://nixos.org/channels/nixpkgs-unstable
+  curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
 
 
 nix-uninstall:
-  @echo ref https://github.com/NixOS/nix/issues/1402#issuecomment-312496360
-  rm -rf $HOME/{.nix-channels,.nix-defexpr,.nix-profile,.config/nixpkgs}
-  sudo rm -rf /nix
+  /nix/nix-installer uninstall
 
 
-
-home-manager-install:
-  #!/usr/bin/env bash
-  nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
-  nix-channel --update
-  export NIX_PATH=$HOME/.nix-defexpr/channels:/nix/var/nix/profiles/per-user/root/channels${NIX_PATH:+:$NIX_PATH}
-  nix-shell '<home-manager>' -A install
-
-
-home-manager-apply:
-  #!/usr/bin/env bash
-  home-manager switch -I localconfig=$HOME/dotfiles/nix-home/machine/$(hostname).nix
-
-
-home-manager-uninstall:
-  #!/usr/bin/env bash
-  home-manager uninstall
-
+nix-apply:
+  nix run . switch
+	ln -s $HOME/Desktop/dev/github.com/mrsekut/dotfiles/nix/home.nix $HOME/.config/home-manager/home.nix # できればこれなしでやりたい
 
 
 nix-darwin-install:

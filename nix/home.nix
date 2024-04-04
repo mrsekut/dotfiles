@@ -4,9 +4,9 @@
   programs.home-manager.enable = true;
 
   home = {
-    username = "$USER";
-    homeDirectory = "/Users/$USER";
-    stateVersion = "22.11";
+    username = "mrsekut";
+    homeDirectory = "/Users/mrsekut";
+    stateVersion = "23.11";
   };
 
   imports = [
