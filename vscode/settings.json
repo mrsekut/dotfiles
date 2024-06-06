@@ -6,7 +6,6 @@
 	"editor.cursorBlinking": "smooth",
 	"editor.fontFamily": "\"Fira Code\", Menlo, Monaco, ‘Courier New’, monospace",
 	"editor.fontLigatures": true,
-	"editor.fontSize": 16,
 	"editor.formatOnPaste": true,
 	"editor.formatOnSave": true,
 	"editor.formatOnType": true,
@@ -37,9 +36,9 @@
 		"markdown": true,
 		"scminput": false,
 		"yaml": true,
-		"haskell": true,
+		"haskell": false,
 		"typescript": true,
-		"ini": false
+		"ini": true
 	},
 	"githubPullRequests.pullBranch": "never",
 	"gitlens.currentLine.scrollable": false,
@@ -119,11 +118,13 @@
 		"statusBar.noFolderBackground": "#005f5f",
 		"statusBar.debuggingBackground": "#005f5f"
 	},
-	"workbench.colorTheme": "One Dark Pro",
 	"workbench.editor.enablePreviewFromQuickOpen": false,
 	"workbench.editor.tabSizing": "shrink",
 	"workbench.editor.wrapTabs": true,
-	"workbench.editorAssociations": { "*.txt": "default" },
+	"workbench.editorAssociations": {
+		"*.txt": "default",
+		"git-rebase-todo": "gitlens.rebase"
+	},
 	"workbench.iconTheme": "material-icon-theme",
 	"workbench.localHistory.enabled": false,
 	"workbench.sideBar.location": "left",
@@ -151,19 +152,26 @@
 	"typescript.updateImportsOnFileMove.enabled": "always",
 	"totalTypeScript.hideAllTips": true,
 	"julia.symbolCacheDownload": true,
-	"audioCues.volume": 0,
 	"editor.accessibilitySupport": "off",
 	"julia.enableTelemetry": true,
 	"[python]": {
 		"editor.formatOnType": true
 	},
 	"git.confirmSync": false,
-	"typescript.preferences.importModuleSpecifier": "relative",
-	"window.zoomLevel": -2,
 	"haskell.manageHLS": "GHCup",
 	"haskell.ghcupExecutablePath": "/Users/mrsekut/.ghcup/bin/ghcup",
-	"breadcrumbs.enabled": false,
 	"diffEditor.ignoreTrimWhitespace": false,
 	"workbench.editor.splitSizing": "distribute",
-	"importCost.timeout": 700
+	"importCost.timeout": 700,
+	"gitlens.views.worktrees.files.layout": "list",
+	"errorLens.delay": 1000,
+	"diffEditor.experimental.showMoves": true,
+	"security.promptForLocalFileProtocolHandling": false,
+	"typescript.preferences.importModuleSpecifier": "relative",
+	"workbench.colorTheme": "One Dark Pro",
+	"accessibility.signals.sounds.volume": 0,
+	"window.zoomLevel": -1,
+	"editor.fontSize": 13,
+	"prisma.showPrismaDataPlatformNotification": false,
+	"github.copilot.editor.enableAutoCompletions": true
 }
