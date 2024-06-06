@@ -4,7 +4,12 @@ default:
   @just --choose
 
 
+# =================
+# Nix
+# =================
+
 # install nix by Determine Nix Installer
+# https://zero-to-nix.com/concepts/nix-installer#using
 nix-install:
   #!/usr/bin/env bash
   curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
@@ -20,12 +25,21 @@ nix-apply:
 
 
 
+# =================
+# Devbox
+# - https://scrapbox.io/mrsekut-p/Devbox
+# =================
+
 # https://www.jetify.com/devbox/docs/quickstart/#install-devbox
 devbox-install:
 	#!/usr/bin/env bash
 	curl -fsSL https://get.jetify.com/devbox | bash
 
 
+
+# =================
+# Nix Darwin
+# =================
 
 nix-darwin-install:
 	#!/usr/bin/env bash
