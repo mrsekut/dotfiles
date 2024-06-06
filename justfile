@@ -19,6 +19,14 @@ nix-apply:
 	ln -s $HOME/Desktop/dev/github.com/mrsekut/dotfiles/nix/home.nix $HOME/.config/home-manager/home.nix # できればこれなしでやりたい
 
 
+
+# https://www.jetify.com/devbox/docs/quickstart/#install-devbox
+devbox-install:
+	#!/usr/bin/env bash
+	curl -fsSL https://get.jetify.com/devbox | bash
+
+
+
 nix-darwin-install:
 	#!/usr/bin/env bash
 	mkdir -p $HOME/.nixpkgs
