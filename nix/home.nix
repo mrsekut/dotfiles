@@ -40,7 +40,6 @@
 
     # others
     ./git
-    ./docker
     ./utils
     ./gyazo
     ./warp
