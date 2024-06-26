@@ -38,20 +38,6 @@ $ just nix-apply
 $ just nix-darwin-install
 ```
 
-## apply home-manager
-
-home-manager
-
-```bash
-$ home-manager switch
-```
-
-### install [Devbox](https://www.jetify.com/devbox/)
-
-```bash
-$ just devbox-install
-```
-
 ## Reference
 
 - [mrsekut-p/modular dotfiles in nix](https://scrapbox.io/mrsekut-p/modular_dotfiles_in_nix)

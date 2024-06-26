@@ -20,20 +20,8 @@ nix-uninstall:
 
 
 nix-apply:
+  ln -s $HOME/Desktop/dev/github.com/mrsekut/dotfiles/nix/home.nix $HOME/.config/home-manager/home.nix # できればこれなしでやりたい
   nix run . switch
-	ln -s $HOME/Desktop/dev/github.com/mrsekut/dotfiles/nix/home.nix $HOME/.config/home-manager/home.nix # できればこれなしでやりたい
-
-
-
-# =================
-# Devbox
-# - https://scrapbox.io/mrsekut-p/Devbox
-# =================
-
-# https://www.jetify.com/devbox/docs/quickstart/#install-devbox
-devbox-install:
-	#!/usr/bin/env bash
-	curl -fsSL https://get.jetify.com/devbox | bash
 
 
 
