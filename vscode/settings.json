@@ -186,7 +186,7 @@
 			"after": ["leader", "leader", "j"]
 		},
 		{
-			"before": ["leader", "s"],
+			"before": ["s"],
 			"after": ["leader", "leader", "s"]
 		}
 	],
