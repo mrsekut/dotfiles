@@ -49,3 +49,18 @@ nix-darwin-update:
 
 
 
+
+# =================
+# VSCode
+# =================
+
+# dotfilesの内容をlocalに適用する
+vscode-apply:
+	bash vscode/settings/index.sh
+	bash vscode/keybindings/index.sh
+	bash vscode/extensions/apply.sh
+
+
+# localの内容をdotfilesに適用する
+vscode-save:
+	bash vscode/extensions/save.sh
