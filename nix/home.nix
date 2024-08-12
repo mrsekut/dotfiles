@@ -36,7 +36,8 @@
     # ./ocaml
     ./javascript
     ./java # for alloy
-    ./lean
+    # ./lean
+    ./python
 
     # others
     ./git
