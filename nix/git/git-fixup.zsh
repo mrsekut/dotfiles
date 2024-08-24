@@ -1,28 +1,46 @@
 #!/bin/bash
 
-# `git commit --fixup`の対象をfzfで選択
-# ref: https://qiita.com/uasi/items/57da2e4268d348b371fb
+# `git commit --fixup` の対象を fzf で選択し、その後rebaseを自動実行する
 
+# 環境変数の設定 (デフォルト値を使用)
 FILTER=${FILTER:-fzf}
 MAX_LOG_COUNT=${MAX_LOG_COUNT:-30}
 
+# stageされている変更がない場合
 if git diff --cached --quiet; then
-  commits="No staged changes. Use git add -p to add them."
-  ret=1
-else
-  commits=$(git log --oneline -n "$MAX_LOG_COUNT")
-  ret=$?
+  echo "No staged changes. Use 'git add -p' to add them." >&2
+  exit 1
 fi
 
-if [[ "$ret" != 0 ]]; then
-  headline=$(head -n1 <<<"$commits")
-  if [[ "$headline" = "No staged changes. Use git add -p to add them." ]]; then
-    echo "$headline" >&2
-  fi
-  exit "$ret"
+# 最新のcommit履歴を取得
+commits=$(git log --oneline -n "$MAX_LOG_COUNT")
+if [[ $? -ne 0 ]]; then
+  echo "Failed to retrieve commit history." >&2
+  exit 1
 fi
 
-line=$("$FILTER" <<<"$commits")
-[[ "$?" = 0 && "$line" != "" ]] || exit "$?"
+# fzf でcommitを選択
+selected_line=$("$FILTER" <<<"$commits")
+if [[ $? -ne 0 || -z "$selected_line" ]]; then
+  echo "No commit selected." >&2
+  exit 1
+fi
 
-git commit --fixup "$(awk '{print $1}' <<<"$line")" "$@"
+# 選択されたcommitのhashを取得
+target_commit_hash=$(awk '{print $1}' <<<"$selected_line")
+
+# fixup commitを作成
+git commit --fixup "$target_commit_hash" "$@"
+if [[ $? -ne 0 ]]; then
+  echo "Failed to create fixup commit." >&2
+  exit 1
+fi
+
+# rebase (対象commitの1個前から)
+git rebase -i --autosquash "$target_commit_hash~1"
+if [[ $? -ne 0 ]]; then
+  echo "Rebase failed." >&2
+  exit 1
+fi
+
+echo "Fixup commit and rebase completed successfully."
