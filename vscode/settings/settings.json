@@ -169,13 +169,8 @@
 	"security.promptForLocalFileProtocolHandling": false,
 	"typescript.preferences.importModuleSpecifier": "relative",
 	"workbench.colorTheme": "One Dark Pro",
-	"window.zoomLevel": -1,
-	"editor.fontSize": 13,
 	"prisma.showPrismaDataPlatformNotification": false,
 	"github.copilot.editor.enableAutoCompletions": true,
-	"accessibility.signalOptions": {
-		"volume": 0
-	},
 	"vim.normalModeKeyBindingsNonRecursive": [
 		{
 			"before": ["leader", "k"],
@@ -200,5 +195,9 @@
 			"before": ["C-w", "s"],
 			"after": [":", "s", "p", "<Enter>"]
 		}
-	]
+	],
+	"[css]": {
+		"editor.defaultFormatter": "vscode.css-language-features"
+	},
+	"window.zoomLevel": -0.5
 }
