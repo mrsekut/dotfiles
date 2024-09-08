@@ -35,7 +35,7 @@
     # ./idris
     # ./ocaml
     ./javascript
-    ./java # for alloy
+    # ./java # for alloy
     # ./lean
     ./python
 
@@ -43,7 +43,7 @@
     ./git
     ./utils
     ./gyazo
-    ./warp
+    # ./warp
     ./karabiner
   ];
 }
