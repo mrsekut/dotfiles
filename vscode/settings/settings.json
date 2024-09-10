@@ -1,6 +1,12 @@
 {
+	// General Settings
 	"atomKeymap.promptV3Features": true,
 	"debug.console.fontSize": 16,
+	"window.zoomLevel": -0.5,
+	"window.openFoldersInNewWindow": "on",
+	"workbench.startupEditor": "welcomePage",
+
+	// Editor Settings
 	"editor.bracketPairColorization.enabled": true,
 	"editor.codeActionsOnSave": ["source.fixAll.eslint"],
 	"editor.cursorBlinking": "smooth",
@@ -19,8 +25,8 @@
 	"editor.suggestSelection": "first",
 	"editor.tabSize": 2,
 	"editor.unicodeHighlight.invisibleCharacters": false,
-	"emmet.includeLanguages": { "twig": "html", "haskell": "html" },
-	"emmet.syntaxProfiles": { "javascript": "jsx", "typescript": "tsx" },
+
+	// File Management
 	"files.associations": { "*.jsx": "typescriptreact", "*.purs": "purescript" },
 	"files.trimTrailingWhitespace": true,
 	"files.watcherExclude": {
@@ -28,8 +34,15 @@
 		"**/.git/subtree-cache/**": true,
 		"**/node_modules/**": true
 	},
+
+	// Git Settings
 	"git.autofetch": true,
 	"git.experimental.mergeEditor": true,
+	"git.confirmSync": false,
+	"gitlens.currentLine.scrollable": false,
+	"gitlens.views.worktrees.files.layout": "list",
+
+	// GitHub Copilot Settings
 	"github.copilot.enable": {
 		"*": true,
 		"plaintext": true,
@@ -41,29 +54,25 @@
 		"ini": true
 	},
 	"githubPullRequests.pullBranch": "never",
-	"gitlens.currentLine.scrollable": false,
-	"guides.enabled": false,
-	"gutterpreview.imagePreviewMaxHeight": 500,
+	"github.copilot.editor.enableAutoCompletions": true,
+
+	// Emmet Settings
+	"emmet.includeLanguages": { "twig": "html", "haskell": "html" },
+	"emmet.syntaxProfiles": { "javascript": "jsx", "typescript": "tsx" },
+
+	// Haskell Settings
 	"haskell.formattingProvider": "stylish-haskell",
-	"hexeditor.columnWidth": 5,
-	"hexeditor.defaultEndianness": "little",
-	"hexeditor.inspectorType": "aside",
-	"hexeditor.showDecodedText": true,
-	"intelephense.format.braces": "k&r",
-	"json.schemas": [],
-	"redhat.telemetry.enabled": true,
-	"remoteHub.search.download.enabled": true,
-	"scm.alwaysShowRepositories": true,
-	"sync.autoDownload": true,
-	"sync.autoUpload": true,
-	"sync.gist": "",
-	"sync.quietSync": true,
-	"tabnine.experimentalAutoImports": true,
+	"haskell.manageHLS": "GHCup",
+	"haskell.ghcupExecutablePath": "/Users/mrsekut/.ghcup/bin/ghcup",
+
+	// Terminal Settings
 	"terminal.integrated.commandsToSkipShell": ["language-julia.interrupt"],
 	"terminal.integrated.env.osx": {
 		"FIG_NEW_SESSION": "1"
 	},
 	"terminal.integrated.fontSize": 16,
+
+	// Todo Highlight Settings
 	"todohighlight.keywords": [
 		{
 			"text": "NOTE:",
@@ -101,6 +110,8 @@
 			"backgroundColor": "#E0F8E0"
 		}
 	],
+
+	// Vim Settings
 	"vim.easymotion": true,
 	"vim.foldfix": true,
 	"vim.hlsearch": true,
@@ -111,66 +122,6 @@
 	"vim.sneak": true,
 	"vim.useSystemClipboard": true,
 	"vim.visualstar": true,
-	"window.openFoldersInNewWindow": "on",
-	"window.title": "${dirty}${activeEditorMedium}${separator}${rootName}",
-	"workbench.colorCustomizations": {
-		"statusBar.background": "#005f5f",
-		"statusBar.noFolderBackground": "#005f5f",
-		"statusBar.debuggingBackground": "#005f5f"
-	},
-	"workbench.editor.enablePreviewFromQuickOpen": false,
-	"workbench.editor.tabSizing": "shrink",
-	"workbench.editor.wrapTabs": true,
-	"workbench.editorAssociations": {
-		"*.txt": "default",
-		"git-rebase-todo": "gitlens.rebase"
-	},
-	"workbench.iconTheme": "material-icon-theme",
-	"workbench.localHistory.enabled": false,
-	"workbench.sideBar.location": "left",
-	"workbench.startupEditor": "welcomePage",
-
-	// languages
-	"[haskell]": { "editor.defaultFormatter": "haskell.haskell" },
-	"[html]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-	"[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-	"[json]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-	"[jsonc]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-	"[php]": { "editor.defaultFormatter": "bmewburn.vscode-intelephense-client" },
-	"[purescript]": { "editor.defaultFormatter": "nwolverson.ide-purescript" },
-	"purescript.formatter": "purs-tidy",
-	"[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-	"[typescriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-	"deno.path": "/nix/store/6xvnjz2grdah9kawh9qcf2d6gh0pda23-deno-1.16.2/bin/deno",
-	"javascript.updateImportsOnFileMove.enabled": "always",
-	"prettier.useTabs": true,
-	"rust.checkOnSave": true,
-	"rust.formatOnSave": true,
-	"twig-language-2.formatting": false,
-	"typescript.referencesCodeLens.enabled": true,
-	"typescript.tsdk": "node_modules/typescript/lib",
-	"typescript.updateImportsOnFileMove.enabled": "always",
-	"totalTypeScript.hideAllTips": true,
-	"julia.symbolCacheDownload": true,
-	"editor.accessibilitySupport": "off",
-	"julia.enableTelemetry": true,
-	"[python]": {
-		"editor.formatOnType": true
-	},
-	"git.confirmSync": false,
-	"haskell.manageHLS": "GHCup",
-	"haskell.ghcupExecutablePath": "/Users/mrsekut/.ghcup/bin/ghcup",
-	"diffEditor.ignoreTrimWhitespace": false,
-	"workbench.editor.splitSizing": "distribute",
-	"importCost.timeout": 700,
-	"gitlens.views.worktrees.files.layout": "list",
-	"errorLens.delay": 1000,
-	"diffEditor.experimental.showMoves": true,
-	"security.promptForLocalFileProtocolHandling": false,
-	"typescript.preferences.importModuleSpecifier": "relative",
-	"workbench.colorTheme": "One Dark Pro",
-	"prisma.showPrismaDataPlatformNotification": false,
-	"github.copilot.editor.enableAutoCompletions": true,
 	"vim.normalModeKeyBindingsNonRecursive": [
 		{
 			"before": ["leader", "k"],
@@ -196,8 +147,64 @@
 			"after": [":", "s", "p", "<Enter>"]
 		}
 	],
+
+	// Workbench Settings
+	"workbench.colorCustomizations": {
+		"statusBar.background": "#005f5f",
+		"statusBar.noFolderBackground": "#005f5f",
+		"statusBar.debuggingBackground": "#005f5f"
+	},
+	"workbench.editor.enablePreviewFromQuickOpen": false,
+	"workbench.editor.tabSizing": "shrink",
+	"workbench.editor.wrapTabs": true,
+	"workbench.editor.splitSizing": "distribute",
+	"workbench.iconTheme": "material-icon-theme",
+	"workbench.localHistory.enabled": false,
+	"workbench.sideBar.location": "left",
+
+	// Language-Specific Settings
+	"[haskell]": { "editor.defaultFormatter": "haskell.haskell" },
+	"[html]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+	"[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+	"[json]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+	"[jsonc]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+	"[php]": { "editor.defaultFormatter": "bmewburn.vscode-intelephense-client" },
+	"[purescript]": { "editor.defaultFormatter": "nwolverson.ide-purescript" },
+	"purescript.formatter": "purs-tidy",
+	"[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+	"[typescriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
 	"[css]": {
 		"editor.defaultFormatter": "vscode.css-language-features"
 	},
-	"window.zoomLevel": -0.5
+
+	// Additional Language Settings
+	"deno.path": "/nix/store/6xvnjz2grdah9kawh9qcf2d6gh0pda23-deno-1.16.2/bin/deno",
+	"javascript.updateImportsOnFileMove.enabled": "always",
+	"prettier.useTabs": true,
+	"rust.checkOnSave": true,
+	"rust.formatOnSave": true,
+	"twig-language-2.formatting": false,
+	"typescript.referencesCodeLens.enabled": true,
+	"typescript.tsdk": "node_modules/typescript/lib",
+	"typescript.updateImportsOnFileMove.enabled": "always",
+	"totalTypeScript.hideAllTips": true,
+	"julia.symbolCacheDownload": true,
+	"editor.accessibilitySupport": "off",
+	"julia.enableTelemetry": true,
+
+	// Miscellaneous Settings
+	"diffEditor.ignoreTrimWhitespace": false,
+	"importCost.timeout": 700,
+	"errorLens.delay": 1000,
+	"diffEditor.experimental.showMoves": true,
+	"security.promptForLocalFileProtocolHandling": false,
+	"typescript.preferences.importModuleSpecifier": "relative",
+	"workbench.colorTheme": "One Dark Pro",
+	"redhat.telemetry.enabled": true,
+	"remoteHub.search.download.enabled": true,
+	"sync.autoDownload": true,
+	"sync.autoUpload": true,
+	"sync.gist": "",
+	"sync.quietSync": true,
+	"tabnine.experimentalAutoImports": true
 }
