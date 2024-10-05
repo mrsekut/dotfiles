@@ -21,6 +21,9 @@
     };
 
     initExtra = ''
+      alias "λ"=""
+      alias "$"=""
+
       source ${pkgs.zsh-syntax-highlighting}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
