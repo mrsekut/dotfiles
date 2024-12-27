@@ -27,7 +27,11 @@
 	"editor.unicodeHighlight.invisibleCharacters": false,
 
 	// File Management
-	"files.associations": { "*.jsx": "typescriptreact", "*.purs": "purescript" },
+	"files.associations": {
+		"*.jsx": "typescriptreact",
+		"*.purs": "purescript",
+		"*.module": "php"
+	},
 	"files.trimTrailingWhitespace": true,
 	"files.watcherExclude": {
 		"**/.git/objects/**": true,
@@ -51,7 +55,8 @@
 		"yaml": true,
 		"haskell": false,
 		"typescript": true,
-		"ini": true
+		"ini": true,
+		"rust": true
 	},
 	"githubPullRequests.pullBranch": "never",
 	"github.copilot.editor.enableAutoCompletions": true,
@@ -62,8 +67,6 @@
 
 	// Haskell Settings
 	"haskell.formattingProvider": "stylish-haskell",
-	"haskell.manageHLS": "GHCup",
-	"haskell.ghcupExecutablePath": "/Users/mrsekut/.ghcup/bin/ghcup",
 
 	// Terminal Settings
 	"terminal.integrated.commandsToSkipShell": ["language-julia.interrupt"],
@@ -171,8 +174,12 @@
 	"[php]": { "editor.defaultFormatter": "bmewburn.vscode-intelephense-client" },
 	"[purescript]": { "editor.defaultFormatter": "nwolverson.ide-purescript" },
 	"purescript.formatter": "purs-tidy",
-	"[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-	"[typescriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+	"[typescript]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features"
+	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features"
+	},
 	"[css]": {
 		"editor.defaultFormatter": "vscode.css-language-features"
 	},
@@ -183,7 +190,6 @@
 	"prettier.useTabs": true,
 	"rust.checkOnSave": true,
 	"rust.formatOnSave": true,
-	"twig-language-2.formatting": false,
 	"typescript.referencesCodeLens.enabled": true,
 	"typescript.tsdk": "node_modules/typescript/lib",
 	"typescript.updateImportsOnFileMove.enabled": "always",
@@ -200,11 +206,24 @@
 	"security.promptForLocalFileProtocolHandling": false,
 	"typescript.preferences.importModuleSpecifier": "relative",
 	"workbench.colorTheme": "One Dark Pro",
-	"redhat.telemetry.enabled": true,
 	"remoteHub.search.download.enabled": true,
-	"sync.autoDownload": true,
-	"sync.autoUpload": true,
-	"sync.gist": "",
-	"sync.quietSync": true,
-	"tabnine.experimentalAutoImports": true
+	"tabnine.experimentalAutoImports": true,
+	"hadolint.hadolintPath": "/nix/store/qxng2a025jiv5qran4z7bfc7qwvdnc6l-hadolint",
+	"[python]": {
+		"diffEditor.ignoreTrimWhitespace": true
+	},
+	"workbench.layoutControl.enabled": false,
+	"window.commandCenter": false,
+	"window.title": "${activeFolderMedium}${separator}${rootName}",
+	"intelephense.environment.phpVersion": "8.1.0",
+	"twig-language-2.braceLine": true,
+	"twig-language-2.bracePadding": true,
+	"twig-language-2.braces": true,
+	"twig-language-2.braceStyle": "collapse",
+	"twig-language-2.commentLine": true,
+	"twig-language-2.comments": true,
+	"twig-language-2.compressedCss": true,
+	"twig-language-2.correct": true,
+	"twig-language-2.cssInsertLines": true,
+	"twig-language-2.elseLine": true
 }
