@@ -6,7 +6,7 @@
   home = {
     username = "mrsekut";
     homeDirectory = "/Users/mrsekut";
-    stateVersion = "23.11";
+    stateVersion = "24.11";
   };
 
   imports = [
