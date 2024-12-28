@@ -42,7 +42,7 @@
       aa = "add --all";
       ac = "!git add --all && git commit";
       ca = "commit --amend";
-      fixup = "!zsh -c 'source ${builtins.toString ./.}/git-fixup.zsh'";
+      fixup = "!${builtins.toString ./.}/git-fixup";
 
       # branch
       co = "checkout";
