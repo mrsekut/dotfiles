@@ -20,6 +20,7 @@ nix-uninstall:
 
 
 nix-apply:
+  mkdir -p $HOME/.config/home-manager
   ln -s $HOME/Desktop/dev/github.com/mrsekut/dotfiles/nix/home.nix $HOME/.config/home-manager/home.nix # できればこれなしでやりたい
   nix run . switch
 
