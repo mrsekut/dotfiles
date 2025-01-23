@@ -10,7 +10,10 @@
   };
 
   outputs = { nixpkgs, home-manager, ...}: {
-    defaultPackage.x86_64-darwin = home-manager.defaultPackage.x86_64-darwin;
+    defaultPackage = {
+      x86_64-darwin = home-manager.defaultPackage.x86_64-darwin;
+      aarch64-darwin = home-manager.defaultPackage.aarch64-darwin;
+    };
 
     homeConfigurations = {
       "mrsekut" = home-manager.lib.homeManagerConfiguration {
@@ -18,5 +21,4 @@
       };
     };
   };
-
 }
