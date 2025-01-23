@@ -22,7 +22,6 @@ folke.vscode-monorepo-workspace
 foxundermoon.shell-format
 github.copilot
 github.copilot-chat
-github.copilot-labs
 github.remotehub
 github.vscode-github-actions
 github.vscode-pull-request-github
@@ -35,7 +34,6 @@ ics.japanese-proofreading
 ionutvmi.path-autocomplete
 jeff-hykin.polacode-2019
 jetpack-io.devbox
-jpoissonnier.vscode-styled-components
 justusadam.language-haskell
 kamikillerto.vscode-colorize
 kisstkondoros.vscode-gutter-preview
@@ -57,7 +55,7 @@ ms-toolsai.jupyter-renderers
 ms-toolsai.vscode-jupyter-cell-tags
 ms-toolsai.vscode-jupyter-slideshow
 ms-vscode.atom-keybindings
-ms-vscode.node-debug2
+ms-vscode.azure-repos
 ms-vscode.remote-repositories
 ms-vscode.test-adapter-converter
 msjsdiag.vscode-react-native
@@ -81,7 +79,6 @@ tombonnike.vscode-status-bar-format-toggle
 tyriar.sort-lines
 vitest.explorer
 vscodevim.vim
-wakatime.vscode-wakatime
 wayou.vscode-todo-highlight
 whatwedo.twig
 wix.vscode-import-cost
