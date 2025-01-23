@@ -44,7 +44,7 @@
     ./git
     ./utils
     ./gyazo
-    # ./warp
+    ./warp
     ./karabiner
   ];
 }
