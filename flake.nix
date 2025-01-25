@@ -9,16 +9,18 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, ...}: {
-    defaultPackage = {
-      x86_64-darwin = home-manager.defaultPackage.x86_64-darwin;
-      aarch64-darwin = home-manager.defaultPackage.aarch64-darwin;
-    };
+  outputs = { nixpkgs, home-manager, ...}:
+    let
+      system = "aarch64-darwin";
+      # system = "x86_64-darwin";
 
-    homeConfigurations = {
-      "mrsekut" = home-manager.lib.homeManagerConfiguration {
-        modules = [ ./nix/home.nix ]; # TODO: 見てない
+      pkgs = nixpkgs.legacyPackages.${system};
+    in {
+      homeConfigurations = {
+        "mrsekut" = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+          modules = [ ./nix/home.nix ];
+        };
       };
-    };
   };
 }
