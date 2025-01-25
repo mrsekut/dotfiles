@@ -13,6 +13,7 @@
     # nix
     ./nix
     ./direnv
+    ./devbox
 
     # commands
     ./bat
