@@ -1,10 +1,16 @@
 { pkgs, ... }:
 
 {
-  programs.zsh.sessionVariables.EDITOR = "vim";
+  programs.zsh.sessionVariables.EDITOR = "nvim";
 
-  programs.vim = {
+  programs.neovim = {
     enable = true;
-    extraConfig = builtins.readFile ./dot.vimrc;
+    vimAlias = true;
+    extraConfig = builtins.readFile ./init.vim;
+    # plugins = with pkgs.vimPlugins; [
+    #     auto-pairs
+    #     lightline-vim
+    #     # ...
+    #   ];
   };
 }
