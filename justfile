@@ -20,7 +20,7 @@ nix-uninstall:
 
 
 nix-apply:
-	home-manager switch --flake .#mrsekut
+  nix run home-manager -- switch --flake .#mrsekut
 
 
 
