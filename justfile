@@ -28,25 +28,8 @@ nix-apply:
 # Nix Darwin
 # =================
 
-nix-darwin-install:
-	#!/usr/bin/env bash
-	mkdir -p $HOME/.nixpkgs
-	ln -s {{dotfilesPath}}/nix-darwin/darwin-configuration.nix $HOME/.nixpkgs/darwin-configuration.nix
-	nix-build https://github.com/LnL7/nix-darwin/archive/master.tar.gz -A installer
-	./result/bin/darwin-installer
-
-
 nix-darwin-apply:
-	#!/usr/bin/env bash
-	darwin-rebuild switch
-
-
-nix-darwin-update:
-	#!/usr/bin/env bash
-	nix-channel --update darwin
-	darwin-rebuild changelog
-
-
+  nix run nix-darwin -- switch --flake .#mrsekut-darwin
 
 
 # =================
