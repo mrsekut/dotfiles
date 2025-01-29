@@ -1,16 +1,14 @@
 { ... }:
 
 {
+  # https://github.com/LnL7/nix-darwin/blob/master/modules/system/defaults/dock.nix
   system.defaults.dock = {
-    autohide = true;
-    autohide-delay = "0.0";
-    autohide-time-modifier = "1.0";
-    tilesize = 50;
-    static-only = false;
-    showhidden = false;
-    show-recents = false;
-    show-process-indicators = true;
+    appswitcher-all-displays = true;                  # appswitcher(cmd-tab)を全てのディスプレイに表示する
+    enable-spring-load-actions-on-all-items = true;   # Dock上のdirにfileをDrag&Hoverすると自動で開く
+    minimize-to-application = true;                   # 最小化したウィンドウをアプリのアイコンに収納する
+    mru-spaces = false;                               # 最近使ったスペースを自動的に並び替えない
     orientation = "bottom";
-    mru-spaces = false;
+    tilesize = 50;
+    autohide = true;
   };
 }
