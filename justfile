@@ -29,7 +29,7 @@ nix-apply:
 # =================
 
 nix-darwin-apply:
-  nix run nix-darwin -- switch --flake .#mrsekut-darwin
+  nix run nix-darwin -- switch --flake .#mrsekut
 
 
 # =================

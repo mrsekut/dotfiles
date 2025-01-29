@@ -27,9 +27,9 @@
     };
 
     darwinConfigurations = {
-      mrsekut-darwin = nix-darwin.lib.darwinSystem {
+      mrsekut = nix-darwin.lib.darwinSystem {
         system = system;
-        modules = [ ./nix-darwin/default.nix ];
+        modules = [ ./nix-darwin/configuration.nix ];
       };
     };
   };
