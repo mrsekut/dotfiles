@@ -21,4 +21,10 @@ set laststatus=2            " ステータスラインを常に表示
 set wildmode=list:longest   " コマンド補完をリスト表示
 set nowrap                  " 行を折り返さない
 
+set expandtab      " タブをスペースに変換
+set shiftwidth=2   " 自動インデントの幅を2スペースに設定
+set softtabstop=2  " タブキーを押したときのスペース数を2に設定
+set tabstop=2      " タブを2スペース幅に設定
+
+
 nmap <Esc><Esc> :nohlsearch<CR><Esc> " ESCを2回押すと検索ハイライトを解除
