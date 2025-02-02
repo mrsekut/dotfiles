@@ -28,11 +28,11 @@
     casks = [
       "orbstack"
       "fork"
+      "warp"
 
       # 存在するか知らないが、いったん書いておく
       # "google-chrome",
       # "vscode",
-      # "warp",
       # "karabiner-elements",
       # "MonitorControl",
       # "Toggl",
