@@ -33,8 +33,7 @@
       "monitorcontrol"
       "raycast"
       "visual-studio-code"
-
-      # "karabiner-elements",
+      "karabiner-elements"
       # "zoom"
     ];
   };
