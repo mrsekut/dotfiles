@@ -30,16 +30,13 @@
       "gyazo"
       "fork"
       "warp"
+      "monitorcontrol"
 
       # 存在するか知らないが、いったん書いておく
       # "google-chrome",
       # "vscode",
       # "karabiner-elements",
-      # "MonitorControl",
-      # "Toggl",
-      # "Google IME",
       # "Raycast",
-      # "Gyazo"
       # "zoom"
     ];
   };
