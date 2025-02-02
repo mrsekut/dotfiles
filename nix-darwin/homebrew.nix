@@ -26,6 +26,7 @@
     # ]
 
     casks = [
+      "orbstack"
       "fork"
 
       # 存在するか知らないが、いったん書いておく
@@ -33,7 +34,6 @@
       # "vscode",
       # "warp",
       # "karabiner-elements",
-      # "orbStack",
       # "MonitorControl",
       # "Toggl",
       # "Google IME",
