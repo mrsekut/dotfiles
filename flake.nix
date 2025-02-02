@@ -15,8 +15,12 @@
     };
 
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
-    homebrew-core = {
-      url = "github:homebrew/homebrew-core";
+    homebrew-cask = {
+      url = "github:homebrew/homebrew-cask";
+      flake = false;
+    };
+    homebrew-bundle = {
+      url = "github:homebrew/homebrew-bundle";
       flake = false;
     };
   };
@@ -26,7 +30,8 @@
     home-manager,
     nix-darwin,
     nix-homebrew,
-    homebrew-core,
+    homebrew-cask,
+    homebrew-bundle,
     ...
   } @inputs : let
     system = "aarch64-darwin";

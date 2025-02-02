@@ -7,9 +7,39 @@
     mutableTaps = false;
 
     taps = {
-      "homebrew/homebrew-core" = inputs.homebrew-core;
-      # "homebrew/homebrew-cask" = inputs.homebrew-cask;
-      # "homebrew/homebrew-bundle" = inputs.homebrew-bundle;
+      "homebrew/homebrew-cask" = inputs.homebrew-cask;
+      "homebrew/homebrew-bundle" = inputs.homebrew-bundle;
     };
+  };
+
+  homebrew = {
+    enable = true;
+    # onActivation = {
+    #   autoUpdate = true;
+    #   # cleanup = "uninstall";
+    # };
+
+    # taps = [ ];
+    # brews = [ ];
+    # masApps = [
+    #   "xcode"
+    # ]
+
+    casks = [
+      "fork"
+
+      # 存在するか知らないが、いったん書いておく
+      # "google-chrome",
+      # "vscode",
+      # "warp",
+      # "karabiner-elements",
+      # "orbStack",
+      # "MonitorControl",
+      # "Toggl",
+      # "Google IME",
+      # "Raycast",
+      # "Gyazo"
+      # "zoom"
+    ];
   };
 }
