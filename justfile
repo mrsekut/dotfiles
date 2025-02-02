@@ -20,15 +20,14 @@ nix-uninstall:
 
 
 nix-apply:
+  just home-manager-apply
+  just darwin-apply
+
+
+home-manager-apply:
   nix run home-manager -- switch --flake .#mrsekut
 
-
-
-# =================
-# Nix Darwin
-# =================
-
-nix-darwin-apply:
+darwin-apply:
   nix run nix-darwin -- switch --flake .#mrsekut
 
 
