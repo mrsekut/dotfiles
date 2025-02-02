@@ -32,10 +32,8 @@
       "warp"
       "monitorcontrol"
       "raycast"
+      "visual-studio-code"
 
-      # 存在するか知らないが、いったん書いておく
-      # "google-chrome",
-      # "vscode",
       # "karabiner-elements",
       # "zoom"
     ];
