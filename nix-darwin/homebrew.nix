@@ -27,6 +27,7 @@
 
     casks = [
       "orbstack"
+      "gyazo"
       "fork"
       "warp"
 
