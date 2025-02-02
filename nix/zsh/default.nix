@@ -43,11 +43,6 @@
       # emacs for zsh
       bindkey -e
 
-
-      # my modular dotfiles
-      source "$HOME/Desktop/dev/github.com/mrsekut/dotfiles/zsh/export.zsh"
-
-
       # ctrl-rでhistoryをfzfを使って表示
       function select-history() {
         BUFFER=$(history -n -r 1 | fzf --no-sort +m --query "$LBUFFER" --prompt="History > ")
