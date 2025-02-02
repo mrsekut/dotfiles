@@ -31,12 +31,12 @@
       "fork"
       "warp"
       "monitorcontrol"
+      "raycast"
 
       # 存在するか知らないが、いったん書いておく
       # "google-chrome",
       # "vscode",
       # "karabiner-elements",
-      # "Raycast",
       # "zoom"
     ];
   };
