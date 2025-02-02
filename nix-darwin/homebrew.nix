@@ -34,6 +34,7 @@
       "raycast"
       "visual-studio-code"
       "karabiner-elements"
+      # "chrome"
       # "zoom"
     ];
   };
