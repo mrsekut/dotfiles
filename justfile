@@ -38,9 +38,10 @@ nix-darwin-apply:
 
 # dotfilesの内容をlocalに適用する
 vscode-apply:
-	bash vscode/settings/index.sh
-	bash vscode/keybindings/index.sh
-	bash vscode/extensions/apply.sh
+  bash vscode/settings/index.sh
+  bash vscode/keybindings/index.sh
+  bash vscode/snippets/index.sh
+  bash vscode/extensions/apply.sh
 
 
 # localの内容をdotfilesに適用する
