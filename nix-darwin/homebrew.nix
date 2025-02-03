@@ -1,4 +1,4 @@
-{inputs, ...}: {
+{ homebrew-cask, homebrew-bundle, ... }: {
   nix-homebrew = {
     enable = true;
     enableRosetta = true;
@@ -7,8 +7,8 @@
     mutableTaps = false;
 
     taps = {
-      "homebrew/homebrew-cask" = inputs.homebrew-cask;
-      "homebrew/homebrew-bundle" = inputs.homebrew-bundle;
+      "homebrew/homebrew-cask" = homebrew-cask;
+      "homebrew/homebrew-bundle" = homebrew-bundle;
     };
   };
 

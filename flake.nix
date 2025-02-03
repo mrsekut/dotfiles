@@ -48,7 +48,7 @@
 
     darwinConfigurations = {
       mrsekut = nix-darwin.lib.darwinSystem {
-        specialArgs = {inherit inputs;};
+        specialArgs = {inherit homebrew-cask homebrew-bundle;};
         system = system;
         modules = [
           ./nix-darwin/configuration.nix
