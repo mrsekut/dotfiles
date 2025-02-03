@@ -2,7 +2,6 @@
 
 {
   imports = [
-    # languages
     # ./purescript
     # ./idris
     # ./ocaml
