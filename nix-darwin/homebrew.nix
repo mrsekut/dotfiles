@@ -22,8 +22,10 @@
     # taps = [ ];
     # brews = [ ];
     # masApps = [
+    #   "toggl"
     #   "xcode"
-    # ]
+    #   "zoom"
+    # ];
 
     casks = [
       "orbstack"
@@ -34,8 +36,7 @@
       "raycast"
       "visual-studio-code"
       "karabiner-elements"
-      # "chrome"
-      # "zoom"
+      # "google-chrome"
     ];
   };
 }
