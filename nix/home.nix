@@ -10,13 +10,9 @@
   };
 
   imports = [
+    ./nix
     ./editors
     ./languages
-
-    # nix
-    ./nix
-    ./direnv
-    ./devbox
 
     # commands
     ./bat
