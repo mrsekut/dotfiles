@@ -10,6 +10,9 @@
   };
 
   imports = [
+    ./editors
+    ./languages
+
     # nix
     ./nix
     ./direnv
@@ -26,12 +29,6 @@
     ./starship
     ./zsh
 
-    # editors
-    ./vim
-    # ./emacs
-
-    # languages
-    ./languages
 
     # others
     ./git
