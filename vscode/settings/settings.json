@@ -225,5 +225,7 @@
 	"twig-language-2.compressedCss": true,
 	"twig-language-2.correct": true,
 	"twig-language-2.cssInsertLines": true,
-	"twig-language-2.elseLine": true
+	"twig-language-2.elseLine": true,
+	"nix.enableLanguageServer": true,
+	"nix.formatterPath": "nixfmt"
 }

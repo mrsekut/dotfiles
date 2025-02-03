@@ -2,7 +2,6 @@ akamud.vscode-theme-onelight
 amodio.restore-editors
 anseki.vscode-color
 ast-grep.ast-grep-vscode
-bbenoist.nix
 bierner.markdown-mermaid
 bmewburn.vscode-intelephense-client
 bpruitt-goddard.mermaid-markdown-syntax-highlighting
@@ -34,6 +33,7 @@ ics.japanese-proofreading
 ionutvmi.path-autocomplete
 jeff-hykin.polacode-2019
 jetpack-io.devbox
+jnoortheen.nix-ide
 justusadam.language-haskell
 kamikillerto.vscode-colorize
 kisstkondoros.vscode-gutter-preview
