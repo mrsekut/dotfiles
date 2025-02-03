@@ -13,6 +13,7 @@
     ./nix
     ./editors
     ./languages
+    ./terminals
 
     # commands
     ./bat
@@ -21,16 +22,10 @@
     ./ast-grep
     ./fzf
 
-    # shell
-    ./starship
-    ./zsh
-
-
     # others
     ./git
     ./utils
     ./gyazo
-    ./warp
     ./karabiner
   ];
 }
