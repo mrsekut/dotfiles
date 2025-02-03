@@ -31,7 +31,6 @@
       "orbstack"
       "gyazo"
       "fork"
-      "warp"
       "monitorcontrol"
       "raycast"
       "visual-studio-code"

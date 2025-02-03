@@ -33,7 +33,7 @@
     homebrew-cask,
     homebrew-bundle,
     ...
-  } @inputs : let
+  }: let
     system = "aarch64-darwin";
     # system = "x86_64-darwin";
 
@@ -54,6 +54,7 @@
           ./nix-darwin/configuration.nix
           nix-homebrew.darwinModules.nix-homebrew
           ./nix-darwin/homebrew.nix
+          ./nix/terminals/warp/brew.nix
         ];
       };
     };
