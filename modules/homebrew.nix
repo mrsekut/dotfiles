@@ -32,7 +32,6 @@
       "fork"
       "monitorcontrol"
       "raycast"
-      "visual-studio-code"
       "karabiner-elements"
       "google-chrome"
     ];

@@ -56,6 +56,7 @@
           ./modules/homebrew.nix
           ./modules/terminals/warp/brew.nix
           ./modules/gyazo/brew.nix
+          ./modules/editors/vscode/brew.nix
         ];
       };
     };
