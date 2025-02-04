@@ -38,12 +38,6 @@ $ just nix-install
 $ just nix-apply
 ```
 
-### install [nix-darwin](https://github.com/LnL7/nix-darwin)
-
-```bash
-$ just nix-darwin-install
-```
-
 ## Reference
 
 - [mrsekut-p/modular dotfiles in nix](https://scrapbox.io/mrsekut-p/modular_dotfiles_in_nix)
