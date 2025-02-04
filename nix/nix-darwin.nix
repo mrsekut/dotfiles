@@ -1,13 +1,13 @@
-{ config, pkgs, ... }:
+{ ... }:
 
 {
   system.stateVersion = 5;
 
   imports = [
     # <home-manager/nix-darwin>
-    ./dock.nix
-    ./trackpad.nix
-    ./keyboard.nix
+    ./darwin/dock.nix
+    ./darwin/trackpad.nix
+    ./darwin/keyboard.nix
     # ./fonts.nix
   ];
 }

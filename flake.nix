@@ -51,9 +51,9 @@
         specialArgs = {inherit homebrew-cask homebrew-bundle;};
         system = system;
         modules = [
-          ./nix-darwin/configuration.nix
+          ./nix/nix-darwin.nix
           nix-homebrew.darwinModules.nix-homebrew
-          ./nix-darwin/homebrew.nix
+          ./nix/homebrew.nix
           ./nix/terminals/warp/brew.nix
           ./nix/gyazo/brew.nix
         ];
