@@ -55,6 +55,7 @@
           nix-homebrew.darwinModules.nix-homebrew
           ./nix-darwin/homebrew.nix
           ./nix/terminals/warp/brew.nix
+          ./nix/gyazo/brew.nix
         ];
       };
     };

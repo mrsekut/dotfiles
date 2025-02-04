@@ -29,7 +29,6 @@
 
     casks = [
       "orbstack"
-      "gyazo"
       "fork"
       "monitorcontrol"
       "raycast"
