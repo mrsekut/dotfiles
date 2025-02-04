@@ -37,12 +37,12 @@ darwin-apply:
 
 # dotfilesの内容をlocalに適用する
 vscode-apply:
-  bash vscode/settings/index.sh
-  bash vscode/keybindings/index.sh
-  bash vscode/snippets/index.sh
-  bash vscode/extensions/apply.sh
+  bash modules/editors/vscode/settings/index.sh
+  bash modules/editors/vscode/keybindings/index.sh
+  bash modules/editors/vscode/snippets/index.sh
+  bash modules/editors/vscode/extensions/apply.sh
 
 
 # localの内容をdotfilesに適用する
 vscode-save:
-	bash vscode/extensions/save.sh
+	bash modules/editors/vscode/extensions/save.sh
