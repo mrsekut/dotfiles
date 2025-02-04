@@ -21,11 +21,11 @@
 
     # taps = [ ];
     # brews = [ ];
-    # masApps = [
-    #   "toggl"
-    #   "xcode"
-    #   "zoom"
-    # ];
+    masApps = {
+      "toggl" = 1291898086;
+      # "xcode"
+      # "zoom"
+    };
 
     casks = [
       "orbstack"
