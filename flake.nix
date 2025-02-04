@@ -42,7 +42,7 @@
     homeConfigurations = {
       mrsekut = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        modules = [ ./nix/home.nix ];
+        modules = [ ./nix/home-manager.nix ];
       };
     };
 
