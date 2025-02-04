@@ -26,6 +26,6 @@
     ./git
     ./utils
     ./gyazo
-    ./karabiner
+    ./keyboard/karabiner
   ];
 }

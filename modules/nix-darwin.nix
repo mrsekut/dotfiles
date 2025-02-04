@@ -7,7 +7,7 @@
     # <home-manager/nix-darwin>
     ./darwin/dock.nix
     ./darwin/trackpad.nix
-    ./darwin/keyboard.nix
+    ./keyboard/darwin.nix
     # ./fonts.nix
   ];
 }
