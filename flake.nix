@@ -42,7 +42,7 @@
     homeConfigurations = {
       mrsekut = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        modules = [ ./nix/home-manager.nix ];
+        modules = [ ./modules/home-manager.nix ];
       };
     };
 
@@ -51,11 +51,11 @@
         specialArgs = {inherit homebrew-cask homebrew-bundle;};
         system = system;
         modules = [
-          ./nix/nix-darwin.nix
+          ./modules/nix-darwin.nix
           nix-homebrew.darwinModules.nix-homebrew
-          ./nix/homebrew.nix
-          ./nix/terminals/warp/brew.nix
-          ./nix/gyazo/brew.nix
+          ./modules/homebrew.nix
+          ./modules/terminals/warp/brew.nix
+          ./modules/gyazo/brew.nix
         ];
       };
     };
