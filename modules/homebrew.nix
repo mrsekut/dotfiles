@@ -25,7 +25,6 @@
       "toggl" = 1291898086;
       "kindle" = 302584613;
       # "xcode"
-      # "zoom"
     };
 
     casks = [
@@ -35,6 +34,7 @@
       "raycast"
       "karabiner-elements"
       "google-chrome"
+      "zoom"
     ];
   };
 }
