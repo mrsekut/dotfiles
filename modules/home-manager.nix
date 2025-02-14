@@ -27,5 +27,6 @@
     ./utils
     ./gyazo
     ./keyboard/karabiner
+    ./gomi
   ];
 }
