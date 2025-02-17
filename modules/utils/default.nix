@@ -13,5 +13,6 @@
 
     bash
     zlib
+    awscli2
   ];
 }
