@@ -6,5 +6,6 @@
     nodePackages.npm-check-updates
     nodejs_23
     yarn
+    bun
   ];
 }
