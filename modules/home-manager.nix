@@ -14,6 +14,7 @@
     ./editors
     ./languages
     ./terminals
+    ./claude
 
     # commands
     ./bat
