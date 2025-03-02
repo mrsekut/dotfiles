@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
   home.packages = with pkgs; [
@@ -59,6 +59,13 @@
       ds = "!zsh -c 'source ${builtins.toString ./.}/git-delete-squashed.zsh' foo"; # delete squash TODO: `foo` is a hack
       rd = "!f() { git switch develop && git pull && git switch $1 && git rebase develop; }; f"; # ref: https://scrapbox.io/mrsekut-p/λ_git_rd
     };
-
   };
+
+  home.activation.installGhExtensions = lib.hm.dag.entryAfter ["installPackages"] ''
+    PATH="${pkgs.git}/bin:$PATH"
+    PATH="${pkgs.gh}/bin:$PATH"
+    if ! gh extension list | grep -q 'kawarimidoll/gh-q'; then
+      run gh extension install kawarimidoll/gh-q
+    fi
+  '';
 }
