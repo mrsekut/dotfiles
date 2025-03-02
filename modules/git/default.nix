@@ -3,7 +3,7 @@
 {
   home.packages = with pkgs; [
     git
-    hub
+    gh
 
     git-absorb
   ];
@@ -55,7 +55,7 @@
       po-f = "push --force-with-lease";
       pro = "!git push -u origin $(git symbolic-ref --short HEAD) && git see";
       pull-f = "!f() { git fetch origin $(git rev-parse --abbrev-ref HEAD) && git reset --hard origin/$(git rev-parse --abbrev-ref HEAD); }; f";
-      see = "!hub browse -- pull/$(git symbolic-ref --short HEAD)";
+      see = "!gh repo view --web";
 
       # その他のスクリプト操作
       ds = "!zsh -c 'source ${builtins.toString ./.}/git-delete-squashed.zsh' foo"; # delete squash TODO: `foo` is a hack
