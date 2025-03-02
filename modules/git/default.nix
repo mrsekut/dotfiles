@@ -4,8 +4,6 @@
   home.packages = with pkgs; [
     git
     gh
-
-    git-absorb
   ];
 
   programs.git = {
