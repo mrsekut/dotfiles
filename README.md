@@ -1,13 +1,8 @@
 ## Installation
 
-Manually create a directory that matches the root of ghq
-
-```bash
-$ mkdir -p ~/Desktop/dev/github.com/mrsekut
-$ cd ~/Desktop/dev/github.com/mrsekut
-$ git clone https://github.com/mrsekut/dotfiles.git
-$ cd dotfiles
-```
+> **Note**:
+> Download the zip file from GitHub, since Git is not available during the initial setup.
+> You can place it on the Desktop as the directory will be deleted after the setup.
 
 ### install [just](https://github.com/casey/just)
 
