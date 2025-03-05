@@ -51,7 +51,6 @@
       # remote
       po = "push origin head";
       po-f = "push --force-with-lease";
-      pro = "!git push -u origin $(git symbolic-ref --short HEAD) && git see";
       pull-f = "!f() { git fetch origin $(git rev-parse --abbrev-ref HEAD) && git reset --hard origin/$(git rev-parse --abbrev-ref HEAD); }; f";
       see = "!gh repo view --web";
 
@@ -61,6 +60,7 @@
     };
   };
 
+  # 実行前に gh auth で login が必要
   home.activation.installGhExtensions = lib.hm.dag.entryAfter ["installPackages"] ''
     PATH="${pkgs.git}/bin:$PATH"
     PATH="${pkgs.gh}/bin:$PATH"
