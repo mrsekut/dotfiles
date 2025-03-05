@@ -1,6 +1,7 @@
 { ... }:
 
 {
+  nix.enable = false;
   system.stateVersion = 5;
 
   imports = [
