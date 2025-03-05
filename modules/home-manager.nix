@@ -26,7 +26,6 @@
     # others
     ./git
     ./utils
-    ./gyazo
     ./keyboard/karabiner
     ./gomi
   ];
