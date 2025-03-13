@@ -28,6 +28,7 @@
     };
 
     casks = [
+      "chatgpt"
       "orbstack"
       "fork"
       "monitorcontrol"
