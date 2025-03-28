@@ -23,9 +23,16 @@
       url = "github:homebrew/homebrew-bundle";
       flake = false;
     };
+
+    # mrsekut's libraries
+    git-fixup = {
+      url = "github:mrsekut/git-fixup";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
+    git-fixup,
     nixpkgs,
     home-manager,
     nix-darwin,
@@ -42,6 +49,9 @@
     homeConfigurations = {
       mrsekut = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
+        extraSpecialArgs = {
+          git-fixup = git-fixup.packages.${system}.default;
+        };
         modules = [ ./modules/home-manager.nix ];
       };
     };

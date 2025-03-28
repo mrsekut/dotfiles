@@ -1,9 +1,10 @@
-{ pkgs, lib, ... }:
+{ pkgs, lib, git-fixup, ... }:
 
 {
   home.packages = with pkgs; [
     git
     gh
+    git-fixup
   ];
 
   programs.git = {
@@ -40,7 +41,7 @@
       aa = "add --all";
       ac = "!git add --all && git commit";
       ca = "commit --amend";
-      fixup = "!${builtins.toString ./.}/git-fixup";
+      fixup = "!git-fixup";
 
       # branch
       co = "checkout";
