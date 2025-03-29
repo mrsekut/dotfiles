@@ -4,7 +4,7 @@
 	"debug.console.fontSize": 16,
 	"window.zoomLevel": -0.5,
 	"window.openFoldersInNewWindow": "on",
-	"workbench.startupEditor": "welcomePage",
+	"workbench.startupEditor": "none",
 
 	// Editor Settings
 	"editor.bracketPairColorization.enabled": true,
@@ -227,5 +227,16 @@
 	"twig-language-2.cssInsertLines": true,
 	"twig-language-2.elseLine": true,
 	"nix.enableLanguageServer": true,
-	"nix.formatterPath": "nixfmt"
+	"nix.formatterPath": "nixfmt",
+	"notebook.editorOptionsCustomizations": {
+		"editor.tabSize": 4,
+		"editor.indentSize": 4,
+		"editor.insertSpaces": true
+	},
+	"editor.inlayHints.enabled": "offUnlessPressed",
+	"[dockerfile]": {
+		"editor.defaultFormatter": "ms-azuretools.vscode-docker"
+	},
+	"haskell.manageHLS": "PATH",
+	"cline.preferredLanguage": "Japanese - 日本語"
 }
