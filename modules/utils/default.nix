@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, gyou, ... }:
 
 {
   home.packages = with pkgs; [
@@ -14,5 +14,7 @@
     bash
     zlib
     awscli2
+
+    gyou
   ];
 }

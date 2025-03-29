@@ -29,16 +29,21 @@
       url = "github:mrsekut/git-fixup";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    gyou = {
+      url = "github:mrsekut/gyou";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
-    git-fixup,
     nixpkgs,
     home-manager,
     nix-darwin,
     nix-homebrew,
     homebrew-cask,
     homebrew-bundle,
+    git-fixup,
+    gyou,
     ...
   }: let
     system = "aarch64-darwin";
@@ -51,6 +56,7 @@
         inherit pkgs;
         extraSpecialArgs = {
           git-fixup = git-fixup.packages.${system}.default;
+          gyou = gyou.packages.${system}.default;
         };
         modules = [ ./modules/home-manager.nix ];
       };
