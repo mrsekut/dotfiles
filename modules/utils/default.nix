@@ -3,7 +3,7 @@
 {
   home.packages = with pkgs; [
     cloc
-    jq
+    # jq
     ghq
     # gnused
 
@@ -13,7 +13,7 @@
 
     bash
     zlib
-    awscli2
+    # awscli2
 
     gyou
   ];
