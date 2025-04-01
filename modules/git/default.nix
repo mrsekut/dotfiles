@@ -3,7 +3,7 @@
 {
   home.packages = with pkgs; [
     git
-    gh
+    # gh
     git-fixup
   ];
 
