@@ -27,6 +27,8 @@
       flake = false;
     };
 
+    codex.url = "github:herp-inc-hq/codex";
+
     # mrsekut's libraries
     git-fixup = {
       url = "github:mrsekut/git-fixup";
@@ -41,6 +43,7 @@
   outputs = {
     nixpkgs,
     home-manager,
+    codex,
     nix-darwin,
     nix-homebrew,
     homebrew-cask,
@@ -55,13 +58,20 @@
     pkgs = nixpkgs.legacyPackages.${system};
   in {
     homeConfigurations = {
+      config.codex.enable = true;
       mrsekut = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
+
         extraSpecialArgs = {
           git-fixup = git-fixup.packages.${system}.default;
           gyou = gyou.packages.${system}.default;
         };
-        modules = [ ./modules/home-manager.nix ];
+
+        modules = [
+          ./modules/home-manager.nix
+          codex.hmModule.${system}
+          { codex.enable = true; }
+        ];
       };
     };
 
