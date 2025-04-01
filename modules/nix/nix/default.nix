@@ -3,11 +3,11 @@
 {
   nix = {
     package = pkgs.nixVersions.stable;
-    settings = {
-      experimental-features = ''
-        nix-command flakes
-      '';
-    };
+    # settings = {
+    #   experimental-features = ''
+    #     nix-command flakes
+    #   '';
+    # };
   };
 
   home.packages = with pkgs; [
