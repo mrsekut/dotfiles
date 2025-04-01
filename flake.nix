@@ -26,6 +26,8 @@
       flake = false;
     };
 
+    codex.url = "github:herp-inc-hq/codex";
+
     # mrsekut's libraries
     git-fixup = {
       url = "github:mrsekut/git-fixup";
@@ -41,6 +43,7 @@
     {
       nixpkgs,
       home-manager,
+      codex,
       nix-darwin,
       nix-homebrew,
       homebrew-cask,
@@ -69,30 +72,37 @@
         inherit claude-code-override;
       };
       homeConfigurations = {
+        config.codex.enable = true;
         mrsekut = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
+
           extraSpecialArgs = {
             git-fixup = git-fixup.packages.${system}.default;
             gyou = gyou.packages.${system}.default;
             inherit claude-code-override;
           };
-          modules = [ ./modules/home-manager.nix ];
-        };
-      };
 
-      darwinConfigurations = {
-        mrsekut = nix-darwin.lib.darwinSystem {
-          specialArgs = { inherit homebrew-cask homebrew-bundle; };
-          system = system;
           modules = [
-            ./modules/nix-darwin.nix
-            nix-homebrew.darwinModules.nix-homebrew
-            ./modules/homebrew.nix
-            ./modules/terminals/warp/brew.nix
-            ./modules/gyazo/brew.nix
-            ./modules/claude/brew.nix
-            ./modules/editors/vscode/brew.nix
+            ./modules/home-manager.nix
+            codex.hmModule.${system}
+            { codex.enable = true; }
           ];
+        };
+
+        darwinConfigurations = {
+          mrsekut = nix-darwin.lib.darwinSystem {
+            specialArgs = { inherit homebrew-cask homebrew-bundle; };
+            system = system;
+            modules = [
+              ./modules/nix-darwin.nix
+              nix-homebrew.darwinModules.nix-homebrew
+              ./modules/homebrew.nix
+              ./modules/terminals/warp/brew.nix
+              ./modules/gyazo/brew.nix
+              ./modules/claude/brew.nix
+              ./modules/editors/vscode/brew.nix
+            ];
+          };
         };
       };
     };
