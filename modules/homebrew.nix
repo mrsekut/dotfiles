@@ -31,8 +31,8 @@
       "wtp"
     ];
     masApps = {
-      "toggl" = 1291898086;
-      "kindle" = 302584613;
+      # "toggl" = 1291898086;
+      # "kindle" = 302584613;
       # "xcode"
     };
 
