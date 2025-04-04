@@ -14,8 +14,8 @@
 
   programs.git = {
     enable = true;
-    userName = "mrsekut";
-    userEmail = "k.cloudspider@gmail.com";
+    userName = "kota-marusue_herpinc";
+    userEmail = "kota.marusue@herp.co.jp";
 
     extraConfig = {
       core = {
