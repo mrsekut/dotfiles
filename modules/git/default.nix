@@ -14,6 +14,8 @@
 
   programs.git = {
     enable = true;
+    userName = "kota-marusue_herpinc";
+    userEmail = "kota.marusue@herp.co.jp";
 
     settings = {
       user = {
