@@ -61,6 +61,12 @@
     };
   };
 
+  # gitignore for global
+  home.file.gitignore = {
+    target = ".config/git/ignore";
+    source = "${builtins.toString ./.}/gitignore";
+  };
+
   # 実行前に gh auth で login が必要
   home.activation.installGhExtensions = lib.hm.dag.entryAfter ["installPackages"] ''
     PATH="${pkgs.git}/bin:$PATH"
