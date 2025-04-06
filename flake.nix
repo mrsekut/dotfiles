@@ -72,6 +72,7 @@
           ./modules/homebrew.nix
           ./modules/terminals/warp/brew.nix
           ./modules/gyazo/brew.nix
+          ./modules/claude/brew.nix
           ./modules/editors/vscode/brew.nix
         ];
       };
