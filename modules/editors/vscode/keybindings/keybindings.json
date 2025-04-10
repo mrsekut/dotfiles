@@ -94,10 +94,6 @@
 		"when": "editorHasSelection"
 	},
 	{
-		"key": "cmd+k cmd+k",
-		"command": "copilot-labs.use-brush-picker"
-	},
-	{
 		"key": "ctrl+shift+e",
 		"command": "editor.action.marker.nextInFiles",
 		"when": "editorFocus"
@@ -156,5 +152,30 @@
 		"key": "cmd+[",
 		"command": "-editor.action.outdentLines",
 		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "shift+cmd+c",
+		"command": "-workbench.action.terminal.openNativeConsole",
+		"when": "!terminalFocus"
+	},
+	{
+		"key": "shift+cmd+c",
+		"command": "copyRelativeFilePath",
+		"when": "!editorFocus"
+	},
+	{
+		"key": "shift+alt+cmd+c",
+		"command": "-copyRelativeFilePath",
+		"when": "!editorFocus"
+	},
+	{
+		"key": "cmd+k",
+		"command": "aipopup.action.modal.generate",
+		"when": "editorFocus && !composerBarIsVisible"
+	},
+	{
+		"key": "shift+cmd+k",
+		"command": "-aipopup.action.modal.generate",
+		"when": "editorFocus && !composerBarIsVisible"
 	}
 ]
