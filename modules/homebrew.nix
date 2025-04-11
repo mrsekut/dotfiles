@@ -37,6 +37,7 @@
       "google-chrome"
       "zoom"
       "cursor"
+      "arc"
     ];
   };
 }
