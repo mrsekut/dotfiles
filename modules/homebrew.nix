@@ -36,6 +36,8 @@
       "karabiner-elements"
       "google-chrome"
       "zoom"
+      "cursor"
+      "arc"
     ];
   };
 }
