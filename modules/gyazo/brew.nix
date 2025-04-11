@@ -2,7 +2,7 @@
 
   homebrew = {
     casks = [
-      "gyazo"
+      # "gyazo"
     ];
   };
 }
