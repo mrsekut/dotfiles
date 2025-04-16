@@ -238,5 +238,13 @@
 		"editor.defaultFormatter": "ms-azuretools.vscode-docker"
 	},
 	"haskell.manageHLS": "PATH",
-	"cline.preferredLanguage": "Japanese - 日本語"
+	"cline.preferredLanguage": "Japanese - 日本語",
+	"roo-cline.allowedCommands": [
+		"npm test",
+		"npm install",
+		"tsc",
+		"git log",
+		"git diff",
+		"git show"
+	]
 }
