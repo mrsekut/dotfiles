@@ -246,5 +246,10 @@
 		"git log",
 		"git diff",
 		"git show"
-	]
+	],
+
+	// Cursor Settings
+	"cursor.cpp.disabledLanguages": ["scminput", "haskell"],
+	"cursor.diffs.useCharacterLevelDiffs": true,
+	"cursor.terminal.usePreviewBox": true
 }
