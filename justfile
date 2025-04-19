@@ -35,14 +35,19 @@ darwin-apply:
 # VSCode
 # =================
 
-# dotfilesの内容をlocalに適用する
-vscode-apply:
-  bash modules/editors/vscode/settings/index.sh
-  bash modules/editors/vscode/keybindings/index.sh
+# vscodeのaliasを貼る (初回のみ)
+vscode-init:
   bash modules/editors/vscode/snippets/index.sh
+  bash modules/editors/vscode/settings/index.sh
+
+# dotfilesの内容をlocalに適用する
+vscode-apply-snippets:
+  bash modules/editors/vscode/snippets/index.sh
+
+# dotfilesの内容をlocalに適用する
+vscode-apply-extensions:
   bash modules/editors/vscode/extensions/apply.sh
 
-
-# localの内容をdotfilesに適用する
-vscode-save:
+# dotfilesを更新する
+vscode-save-extensions-to-dotfiles:
 	bash modules/editors/vscode/extensions/save.sh
