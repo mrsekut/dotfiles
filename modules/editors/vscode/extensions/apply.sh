@@ -1,20 +1,54 @@
 #!/bin/sh
 # dotfiles内のextensionsを正として、localの拡張を上書きする
 
-CURRENT=$(cd $(dirname $0) && pwd)
-VSCODE_SETTING_DIR=~/Library/Application\ Support/Code/User
+CURRENT=$(cd "$(dirname "$0")" && pwd)
 
-# Backup current extensions list
-code --list-extensions > "$CURRENT/backup_extensions"
+backup_extensions() {
+  TARGET_NAME="$1"
+  CMD="$2"
+  BACKUP_FILE="$CURRENT/backups/${TARGET_NAME}/extensions"
 
-# Install extensions from dotfiles that are not in local
-comm -23 <(sort "$CURRENT/extensions") <(sort "$CURRENT/backup_extensions") | while read -r extension; do
-  code --install-extension "$extension"
-  echo "Installed $extension"
-done
+  mkdir -p "$CURRENT/backups/${TARGET_NAME}"
+  $CMD --list-extensions > "$BACKUP_FILE"
+  echo "Current $TARGET_NAME extensions backed up."
+}
 
-# Uninstall extensions that are in local but not in dotfiles
-comm -13 <(sort "$CURRENT/extensions") <(sort "$CURRENT/backup_extensions") | while read -r extension; do
-  code --uninstall-extension "$extension"
-  echo "Uninstalled $extension"
-done
+install_missing_extensions() {
+  TARGET_NAME="$1"
+  CMD="$2"
+  EXTENSIONS_FILE="$CURRENT/extensions"
+  BACKUP_FILE="$CURRENT/backups/${TARGET_NAME}/extensions"
+
+  comm -23 <(sort "$EXTENSIONS_FILE") <(sort "$BACKUP_FILE") | while read -r extension; do
+    if [ -n "$extension" ]; then
+      $CMD --install-extension "$extension"
+      echo "Installed $extension for $TARGET_NAME"
+    fi
+  done
+}
+
+uninstall_extra_extensions() {
+  TARGET_NAME="$1"
+  CMD="$2"
+  EXTENSIONS_FILE="$CURRENT/extensions"
+  BACKUP_FILE="$CURRENT/backups/${TARGET_NAME}/extensions"
+
+  comm -13 <(sort "$EXTENSIONS_FILE") <(sort "$BACKUP_FILE") | while read -r extension; do
+    if [ -n "$extension" ]; then
+      $CMD --uninstall-extension "$extension"
+      echo "Uninstalled $extension for $TARGET_NAME"
+    fi
+  done
+}
+
+# === 実行 ===
+
+# vscode
+backup_extensions "vscode" "code"
+install_missing_extensions "vscode" "code"
+uninstall_extra_extensions "vscode" "code"
+
+# cursor
+backup_extensions "cursor" "cursor"
+install_missing_extensions "cursor" "cursor"
+uninstall_extra_extensions "cursor" "cursor"
