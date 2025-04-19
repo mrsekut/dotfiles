@@ -18,6 +18,7 @@
 
     shellAliases = {
       c = "clear";
+      mvup = "${builtins.toString ./.}/mvup.sh";
     };
 
     initExtra = ''
