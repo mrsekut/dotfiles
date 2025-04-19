@@ -167,22 +167,8 @@
 
 	// Language-Specific Settings
 	"[haskell]": { "editor.defaultFormatter": "haskell.haskell" },
-	"[html]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-	"[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-	"[json]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-	"[jsonc]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-	"[php]": { "editor.defaultFormatter": "bmewburn.vscode-intelephense-client" },
 	"[purescript]": { "editor.defaultFormatter": "nwolverson.ide-purescript" },
 	"purescript.formatter": "purs-tidy",
-	"[typescript]": {
-		"editor.defaultFormatter": "vscode.typescript-language-features"
-	},
-	"[typescriptreact]": {
-		"editor.defaultFormatter": "vscode.typescript-language-features"
-	},
-	"[css]": {
-		"editor.defaultFormatter": "vscode.css-language-features"
-	},
 
 	// Additional Language Settings
 	"deno.path": "/nix/store/6xvnjz2grdah9kawh9qcf2d6gh0pda23-deno-1.16.2/bin/deno",
