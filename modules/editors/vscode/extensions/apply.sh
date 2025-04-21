@@ -49,6 +49,6 @@ install_missing_extensions "vscode" "code"
 uninstall_extra_extensions "vscode" "code"
 
 # cursor
-backup_extensions "cursor" "cursor"
-install_missing_extensions "cursor" "cursor"
-uninstall_extra_extensions "cursor" "cursor"
+# backup_extensions "cursor" "cursor"
+# install_missing_extensions "cursor" "cursor"
+# uninstall_extra_extensions "cursor" "cursor"
