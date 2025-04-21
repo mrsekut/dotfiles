@@ -31,6 +31,8 @@
       "wtp"
     ];
     masApps = {
+      "okta-verify" = 490179405;
+      "meetingbar" = 1532419400;
       # "toggl" = 1291898086;
       # "kindle" = 302584613;
       # "xcode"
