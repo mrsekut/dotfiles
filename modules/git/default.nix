@@ -5,7 +5,10 @@
   ...
 }:
 
-{
+let
+  ghqRoot = "~/Desktop/dev";
+
+in {
   home.packages = with pkgs; [
     git
     # gh
@@ -16,6 +19,19 @@
     enable = true;
     userName = "kota-marusue_herpinc";
     userEmail = "kota.marusue@herp.co.jp";
+
+    includes = [
+      {
+        condition = "gitdir:${ghqRoot}/github.com/mrsekut/";
+        contents = {
+          user = {
+            name = "mrsekut";
+            email = "k.cloudspider@gmail.com";
+          };
+        };
+      }
+    ];
+
 
     extraConfig = {
       core = {
@@ -30,7 +46,7 @@
       fetch.prune = true;
       color.ui = true;
       help.autocorrect = 1;
-      ghq.root = "~/Desktop/dev";
+      ghq.root = ghqRoot;
     };
 
     delta.enable = true;
