@@ -5,23 +5,37 @@
   ...
 }:
 
+let
+  ghqRoot = "~/Desktop/dev";
+
+in
 {
   home.packages = with pkgs; [
     git
-    # gh
+    gh
     git-fixup
     bun
   ];
 
   programs.git = {
     enable = true;
-    userName = "kota-marusue_herpinc";
-    userEmail = "kota.marusue@herp.co.jp";
+
+    includes = [
+      {
+        condition = "gitdir:${ghqRoot}/github.com/mrsekut/";
+        contents = {
+          user = {
+            name = "mrsekut";
+            email = "k.cloudspider@gmail.com";
+          };
+        };
+      }
+    ];
 
     settings = {
       user = {
-        name = "mrsekut";
-        email = "k.cloudspider@gmail.com";
+        userName = "kota-marusue_herpinc";
+        userEmail = "kota.marusue@herp.co.jp";
       };
       core = {
         ignorecase = false;
