@@ -61,6 +61,10 @@
     };
   };
 
+  programs.zsh.shellAliases = {
+    ghrc = "${builtins.toString ./.}/gh_repo_create.zsh";
+  };
+
   # gitignore for global
   home.file.gitignore = {
     target = ".config/git/ignore";
