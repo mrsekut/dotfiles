@@ -29,8 +29,7 @@
 	// File Management
 	"files.associations": {
 		"*.jsx": "typescriptreact",
-		"*.purs": "purescript",
-		"*.module": "php"
+		".env*": "env"
 	},
 	"files.trimTrailingWhitespace": true,
 	"files.watcherExclude": {
