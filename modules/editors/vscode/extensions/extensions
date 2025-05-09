@@ -21,11 +21,14 @@ github.remotehub
 github.vscode-github-actions
 github.vscode-pull-request-github
 grapecity.gc-excelviewer
+graphql.vscode-graphql
+graphql.vscode-graphql-syntax
 haskell.haskell
 htmlhint.vscode-htmlhint
 humao.rest-client
 ics.japanese-proofreading
 ionutvmi.path-autocomplete
+irongeek.vscode-env
 jetpack-io.devbox
 jnoortheen.nix-ide
 justusadam.language-haskell
