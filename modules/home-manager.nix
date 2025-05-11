@@ -1,4 +1,4 @@
-{ ... }:
+{ lib, ... }:
 
 {
   programs.home-manager.enable = true;
@@ -8,6 +8,11 @@
     homeDirectory = "/Users/mrsekut";
     stateVersion = "24.11";
   };
+
+  nixpkgs.config.allowUnfreePredicate = pkg:
+    builtins.elem (lib.getName pkg) [
+      "claude-code"
+    ];
 
   imports = [
     ./nix
