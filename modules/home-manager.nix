@@ -12,6 +12,7 @@
   nixpkgs.config.allowUnfreePredicate = pkg:
     builtins.elem (lib.getName pkg) [
       "claude-code"
+      "terraform"
     ];
 
   imports = [
@@ -20,6 +21,7 @@
     ./languages
     ./terminals
     ./claude
+    ./terraform
 
     # commands
     ./bat
