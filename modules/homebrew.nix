@@ -34,7 +34,7 @@
       "okta-verify" = 490179405;
       "meetingbar" = 1532419400;
       "tootrain" = 1579538917;
-      # "toggl" = 1291898086;
+      "toggl" = 1291898086;
       # "kindle" = 302584613;
       # "xcode"
     };
