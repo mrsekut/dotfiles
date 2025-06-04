@@ -236,5 +236,6 @@
 	// Cursor Settings
 	"cursor.cpp.disabledLanguages": ["scminput", "haskell"],
 	"cursor.diffs.useCharacterLevelDiffs": true,
-	"cursor.terminal.usePreviewBox": true
+	"cursor.terminal.usePreviewBox": true,
+	"update.releaseTrack": "prerelease"
 }
