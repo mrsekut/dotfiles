@@ -76,11 +76,11 @@
         "nixpkgs-2111": "nixpkgs-2111"
       },
       "locked": {
-        "lastModified": 1739176038,
-        "narHash": "sha256-LFejT8ctAG6TUYIK2pNeYriGqD/9gxshc83KNWSQ8+w=",
+        "lastModified": 1744878204,
+        "narHash": "sha256-fs9mPxkrUZMbj7XRAcGU6WyhWkb18qssJ9aKumhnfCo=",
         "owner": "herp-inc-hq",
         "repo": "codex",
-        "rev": "b60a7c09ad5380cb340369f15a6cf09b6d08b527",
+        "rev": "c5e4f34dc8d056ef5790796e7621f6335313b560",
         "type": "github"
       },
       "original": {
