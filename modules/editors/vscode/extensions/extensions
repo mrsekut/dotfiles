@@ -1,6 +1,7 @@
 4ops.terraform
 akamud.vscode-theme-onelight
 anseki.vscode-color
+anthropic.claude-code
 ast-grep.ast-grep-vscode
 bpruitt-goddard.mermaid-markdown-syntax-highlighting
 bradlc.vscode-tailwindcss
@@ -9,14 +10,13 @@ davidhouchin.whitespace-plus
 dbaeumer.vscode-eslint
 docker.docker
 eamodio.gitlens
+effectful-tech.effect-vscode
 eiminsasete.apacheconf-snippets
 esbenp.prettier-vscode
 fabiospampinato.vscode-search-open-all-results
 figma.figma-vscode-extension
 folke.vscode-monorepo-workspace
 foxundermoon.shell-format
-github.copilot
-github.copilot-chat
 github.remotehub
 github.vscode-github-actions
 github.vscode-pull-request-github
