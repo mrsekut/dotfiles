@@ -191,5 +191,13 @@
 		"key": "ctrl+shift+`",
 		"command": "-workbench.action.terminal.new",
 		"when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
-	}
+    },
+    {
+        "key": "shift+enter",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": {
+            "text": "\\\r\n"
+        },
+        "when": "terminalFocus"
+    }
 ]
