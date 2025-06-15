@@ -1,8 +1,13 @@
 { ... }:
 
 {
-  nix.enable = false;
+  nix = {
+    settings = {
+      experimental-features = [ "nix-command" "flakes" ];
+    };
+  };
   system.stateVersion = 5;
+  system.primaryUser = "mrsekut";
 
   imports = [
     # <home-manager/nix-darwin>

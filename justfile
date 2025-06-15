@@ -28,7 +28,7 @@ home-manager-apply:
   nix run home-manager -- switch --flake .#mrsekut
 
 darwin-apply:
-  nix run nix-darwin -- switch --flake .#mrsekut
+  sudo nix run nix-darwin -- switch --flake .#mrsekut
 
 
 # =================
