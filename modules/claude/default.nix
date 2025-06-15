@@ -1,5 +1,5 @@
 
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
   home.packages = with pkgs; [
@@ -14,4 +14,16 @@
   programs.git.aliases = {
     c-commit = "!git commit -m \"$(claude -p 'Look at the staged git changes and return only a summary title in English')\"";
   };
+
+  # Claude commandsを実ファイルとしてコピー
+  home.activation.claudeCommands = lib.hm.dag.entryAfter ["writeBoundary"] ''
+    mkdir -p $HOME/.claude/commands
+    for file in ${./commands}/*.md; do
+      if [ -f "$file" ]; then
+        filename=$(basename "$file")
+        cp -f "$file" "$HOME/.claude/commands/$filename"
+        chmod 644 "$HOME/.claude/commands/$filename"
+      fi
+    done
+  '';
 }
