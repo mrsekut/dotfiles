@@ -1,0 +1,2 @@
+- 型定義は interface ではなく、type を使用する
+- for よりも map などの method を優先して使用する
