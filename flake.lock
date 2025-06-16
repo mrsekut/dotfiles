@@ -386,23 +386,35 @@
         "homebrew-cask": "homebrew-cask",
         "nix-darwin": "nix-darwin",
         "nix-homebrew": "nix-homebrew",
-        "nixpkgs": "nixpkgs",
-        "satococoa-tap": "satococoa-tap"
+        "nixpkgs": "nixpkgs_4"
       }
     },
-    "satococoa-tap": {
-      "flake": false,
+    "rust-overlay": {
+      "inputs": {
+        "flake-utils": [
+          "codex",
+          "clap4shell",
+          "cargo2nix",
+          "flake-utils"
+        ],
+        "nixpkgs": [
+          "codex",
+          "clap4shell",
+          "cargo2nix",
+          "nixpkgs"
+        ]
+      },
       "locked": {
-        "lastModified": 1762353362,
-        "narHash": "sha256-CG6UbwyTuPEmYJoyn6aoWz6OV1OC4/jA7qdKWNafj/Y=",
-        "owner": "satococoa",
-        "repo": "homebrew-tap",
-        "rev": "9d3d18532ad9ffb512be17657d46b44a94c27f1b",
+        "lastModified": 1653878966,
+        "narHash": "sha256-T51Gck/vrJZi1m+uTbhEFTRgZmE59sydVONadADv358=",
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "rev": "8526d618af012a923ca116be9603e818b502a8db",
         "type": "github"
       },
       "original": {
-        "owner": "satococoa",
-        "repo": "homebrew-tap",
+        "owner": "oxalica",
+        "repo": "rust-overlay",
         "type": "github"
       }
     },
