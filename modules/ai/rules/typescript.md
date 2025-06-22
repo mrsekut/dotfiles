@@ -1,2 +1,5 @@
 - 型定義は interface ではなく、type を使用する
 - for よりも map などの method を優先して使用する
+- できるだけ let は使わず、const を使用
+- 外部で使われていない場合は export しない
+- 使用していない import や変数は削除

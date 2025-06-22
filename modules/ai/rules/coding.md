@@ -27,15 +27,6 @@
 
 ## 実装パターン
 
-### 型定義
-
-```typescript
-// ブランデッド型で型安全性を確保
-type Branded<T, B> = T & { _brand: B };
-type Money = Branded<number, "Money">;
-type Email = Branded<string, "Email">;
-```
-
 ### 値オブジェクト
 
 - 不変
@@ -84,6 +75,36 @@ function createMoney(amount: number): Result<Money, Error> {
    - 外部サービスや DB へのアクセスを抽象化
    - テスト用モックを用意
 
+## ディレクトリ構成
+
+### Package by Feature
+
+機能単位でコードを整理し、関連するコードを同じ場所にまとめる
+
+```
+src/
+  features/
+    auth/
+      components/
+      hooks/
+      services/
+      types/
+      tests/
+    user/
+      components/
+      hooks/
+      services/
+      types/
+      tests/
+```
+
+利点:
+
+- 機能の変更が局所化される
+- 関連するコードが近くにある
+- 依存関係が明確になる
+- 機能の削除が容易
+
 ## プラクティス
 
 - 小さく始めて段階的に拡張
@@ -97,6 +118,8 @@ function createMoney(amount: number): Result<Money, Error> {
 - 不変更新パターンの活用
 - 早期リターンで条件分岐をフラット化
 - エラーとユースケースの列挙型定義
+- main 関数を上部に配置
+- コミット前にコードフォーマットを実行
 
 ## テスト戦略
 
