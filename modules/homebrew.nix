@@ -1,4 +1,5 @@
-{ homebrew-cask, homebrew-bundle, ... }: {
+{ homebrew-cask, homebrew-bundle, ... }:
+{
   nix-homebrew = {
     enable = true;
     enableRosetta = true;
