@@ -1,10 +1,8 @@
-<!-- ref: https://github.com/mizchi/ailab/blob/main/.cline/rules/coding.md -->
-
 # コーディングプラクティス
 
 ## 原則
 
-### 関数型アプローチ (FP)
+### 関数型アプローチ
 
 - 純粋関数を優先
 - 不変データ構造を使用
@@ -25,6 +23,14 @@
 - 小さな単位で反復
 - 継続的なリファクタリング
 
+### 使っていないものは消す
+
+- 使用していない変数や関数は消す
+- 使用していない import は消す
+- 使用していないライブラリは消す
+- 不要になったファイルは消す
+- 先を見越して過剰な method を先に定義しない
+
 ## 実装パターン
 
 ### 値オブジェクト
@@ -33,14 +39,6 @@
 - 値に基づく同一性
 - 自己検証
 - ドメイン操作を持つ
-
-```typescript
-// 作成関数はバリデーション付き
-function createMoney(amount: number): Result<Money, Error> {
-	if (amount < 0) return err(new Error("負の金額不可"));
-	return ok(amount as Money);
-}
-```
 
 ### エンティティ
 
@@ -79,23 +77,26 @@ function createMoney(amount: number): Result<Money, Error> {
 
 ### Package by Feature
 
-機能単位でコードを整理し、関連するコードを同じ場所にまとめる
+機能単位でコードを整理し、関連するファイルをすべて同じフォルダにまとめる構造。
+コンポーネント・hooks・サービス・型・テストなどを技術単位でディレクトリを分けるのではなく、機能単位でまとめることで、必要なファイルを一箇所で把握しやすくなる。
+各 feature ディレクトリの内部でも package by feature の原則を適用する。
+無理にディレクトリで分類する必要はなくフラットに配置すれば良い。7 個以上のファイルがある場合は、サブディレクトリを作成しても良い。
 
 ```
 src/
   features/
     auth/
-      components/
-      hooks/
-      services/
-      types/
-      tests/
+      LoginForm.tsx
+      useLogin.ts
+      service.ts
+      types.ts
+      test.ts
     user/
-      components/
-      hooks/
-      services/
-      types/
-      tests/
+      UserProfile.tsx
+      useUserProfile.ts
+      service.ts
+      types.ts
+      test.ts
 ```
 
 利点:
