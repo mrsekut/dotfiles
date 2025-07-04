@@ -50,6 +50,7 @@
       "google-chrome"
       "zoom"
       "cursor"
+      "obsidian"
     ];
   };
 }
