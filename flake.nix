@@ -38,47 +38,63 @@
     };
   };
 
-  outputs = {
-    nixpkgs,
-    home-manager,
-    nix-darwin,
-    nix-homebrew,
-    homebrew-cask,
-    homebrew-bundle,
-    git-fixup,
-    gyou,
-    ...
-  }: let
-    system = "aarch64-darwin";
-    # system = "x86_64-darwin";
+  outputs =
+    {
+      nixpkgs,
+      home-manager,
+      nix-darwin,
+      nix-homebrew,
+      homebrew-cask,
+      homebrew-bundle,
+      git-fixup,
+      gyou,
+      ...
+    }:
+    let
+      system = "aarch64-darwin";
+      # system = "x86_64-darwin";
 
-    pkgs = nixpkgs.legacyPackages.${system};
-  in {
-    homeConfigurations = {
-      mrsekut = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        extraSpecialArgs = {
-          git-fixup = git-fixup.packages.${system}.default;
-          gyou = gyou.packages.${system}.default;
+      pkgs = import nixpkgs {
+        inherit system;
+        config.allowUnfreePredicate =
+          pkg:
+          builtins.elem (nixpkgs.lib.getName pkg) [
+            "claude-code"
+            "terraform"
+          ];
+      };
+      claude-code-override = pkgs.callPackage ./modules/claude/override.nix { };
+    in
+    {
+      packages.${system} = {
+        inherit claude-code-override;
+      };
+      homeConfigurations = {
+        mrsekut = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+          extraSpecialArgs = {
+            git-fixup = git-fixup.packages.${system}.default;
+            gyou = gyou.packages.${system}.default;
+            inherit claude-code-override;
+          };
+          modules = [ ./modules/home-manager.nix ];
         };
-        modules = [ ./modules/home-manager.nix ];
       };
-    };
 
-    darwinConfigurations = {
-      mrsekut = nix-darwin.lib.darwinSystem {
-        specialArgs = {inherit homebrew-cask homebrew-bundle;};
-        system = system;
-        modules = [
-          ./modules/nix-darwin.nix
-          nix-homebrew.darwinModules.nix-homebrew
-          ./modules/homebrew.nix
-          ./modules/terminals/warp/brew.nix
-          ./modules/gyazo/brew.nix
-          ./modules/claude/brew.nix
-          ./modules/editors/vscode/brew.nix
-        ];
+      darwinConfigurations = {
+        mrsekut = nix-darwin.lib.darwinSystem {
+          specialArgs = { inherit homebrew-cask homebrew-bundle; };
+          system = system;
+          modules = [
+            ./modules/nix-darwin.nix
+            nix-homebrew.darwinModules.nix-homebrew
+            ./modules/homebrew.nix
+            ./modules/terminals/warp/brew.nix
+            ./modules/gyazo/brew.nix
+            ./modules/claude/brew.nix
+            ./modules/editors/vscode/brew.nix
+          ];
+        };
       };
     };
-  };
 }

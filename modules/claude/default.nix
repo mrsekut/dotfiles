@@ -1,9 +1,8 @@
-
-{ pkgs, lib, ... }:
+{ lib, claude-code-override, ... }:
 
 {
-  home.packages = with pkgs; [
-    claude-code
+  home.packages = [
+    claude-code-override
   ];
 
   programs.zsh.shellAliases = {
@@ -16,7 +15,7 @@
   };
 
   # Claude commandsを実ファイルとしてコピー
-  home.activation.claudeCommands = lib.hm.dag.entryAfter ["writeBoundary"] ''
+  home.activation.claudeCommands = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
     mkdir -p $HOME/.claude/commands
     for file in ${./commands}/*.md; do
       if [ -f "$file" ]; then
