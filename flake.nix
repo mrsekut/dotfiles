@@ -16,7 +16,6 @@
 
     nix-homebrew = {
       url = "github:zhaofengli-wip/nix-homebrew";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
     homebrew-cask = {
       url = "github:homebrew/homebrew-cask";
