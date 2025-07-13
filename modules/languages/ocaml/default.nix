@@ -4,7 +4,7 @@
   home.packages = with pkgs; [ opam ];
 
   programs.zsh = {
-    initExtra = ''
+    initContent = ''
       eval `opam config env`
     '';
   };

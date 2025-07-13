@@ -18,7 +18,7 @@
     };
 
     # https://scrapbox.io/mrsekut-p/DIRENV_WARN_TIMEOUT
-    initExtra = ''
+    initContent = ''
       export DIRENV_WARN_TIMEOUT=5s
     '';
   };

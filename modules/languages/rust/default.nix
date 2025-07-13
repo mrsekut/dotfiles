@@ -6,7 +6,7 @@
   ];
 
   programs.zsh = {
-    initExtra = ''
+    initContent = ''
       export PATH=$HOME/.cargo/bin:$PATH
     '';
   };

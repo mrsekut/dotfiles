@@ -21,7 +21,7 @@
       mvup = "${builtins.toString ./.}/mvup.sh";
     };
 
-    initExtra = ''
+    initContent = ''
       alias "λ"=""
       alias "$"=""
 
