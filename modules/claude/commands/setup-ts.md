@@ -10,29 +10,92 @@ TypeScript プロジェクトの初期セットアップを支援してくださ
 
 ## typecheck
 
-- 最も厳しい tsconfig の定義
 - 型チェックを実行するコマンドを用意
+  - `bun run typecheck`
+- 最も厳しい tsconfig の定義
+
+```tsconfig.json
+{
+  "compilerOptions": {
+    "strict": true,
+    "allowUnusedLabels": false,
+    "allowUnreachableCode": false,
+    "exactOptionalPropertyTypes": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+
+    "isolatedModules": true,
+
+    "checkJs": true,
+
+    "esModuleInterop": true,
+    "skipLibCheck": true
+  },
+}
+```
 
 ## test
 
 - vitest などのテストフレームワークを導入する
 - テストを実行するコマンドを用意
 
+```package.json
+"scripts": {
+  "test": "vitest"
+}
+```
+
 ## lint
 
 - 厳しめの ESLint 設定を定義
-- コマンドを用意
+- チェックと修正を同時にできるコマンドを用意
+
+```package.json
+"scripts": {
+  "lint": "eslint . --fix"
+}
+```
 
 ## format
 
 - prettier のルールを定義
-- コマンドを用意
+- チェックと修正を同時にできるコマンドを用意
+
+```package.json
+"scripts": {
+  "format": "prettier --write ."
+}
+```
 
 ## MCP
 
 - 必要であれば MCP を導入する
 - .mcp.json を用意する
-- 使えることを確認する
+
+## Claude Code Hooks
+
+```.claude/settings.json
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bun run typecheck"
+          }
+        ]
+      }
+    ]
+  }
+}
+```
 
 ## ci
 
@@ -70,7 +133,7 @@ TypeScript プロジェクトの初期セットアップを支援してくださ
     "typecheck": "tsc --noEmit",
     "lint": "eslint . --ext .ts,.tsx --fix",
     "format": "prettier --write .",
-    "test": "vitest run",
+    "test": "vitest",
     "check": "bun run typecheck && bun run lint && bun run format && bun run test"
   }
   ```
