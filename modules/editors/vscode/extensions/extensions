@@ -1,7 +1,5 @@
 akamud.vscode-theme-onelight
 anseki.vscode-color
-anthropic.claude-code
-ast-grep.ast-grep-vscode
 bpruitt-goddard.mermaid-markdown-syntax-highlighting
 bradlc.vscode-tailwindcss
 christian-kohler.path-intellisense
@@ -41,6 +39,7 @@ ms-azuretools.vscode-containers
 ms-azuretools.vscode-docker
 ms-ceintl.vscode-language-pack-ja
 ms-playwright.playwright
+ms-python.debugpy
 ms-python.mypy-type-checker
 ms-python.python
 ms-python.vscode-pylance
@@ -57,7 +56,6 @@ pkief.material-icon-theme
 prisma.prisma
 romanpeshkov.vscode-text-tables
 rust-lang.rust-analyzer
-saoudrizwan.claude-dev
 shardulm94.trailing-spaces
 simonsiefke.svg-preview
 spywhere.guides
