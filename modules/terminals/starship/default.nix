@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ ... }:
 
 {
   programs.starship = {
@@ -6,6 +6,7 @@
 
     settings = {
       aws.disabled = true;
+      gcloud.disabled = true;
 
       character = {
         success_symbol = "λ";
