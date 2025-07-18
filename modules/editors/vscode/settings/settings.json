@@ -1,12 +1,9 @@
 {
-	// General Settings
 	"atomKeymap.promptV3Features": true,
 	"debug.console.fontSize": 16,
 	"window.zoomLevel": -0.5,
 	"window.openFoldersInNewWindow": "on",
 	"workbench.startupEditor": "none",
-
-	// Editor Settings
 	"editor.bracketPairColorization.enabled": true,
 	"editor.codeActionsOnSave": ["source.fixAll.eslint"],
 	"editor.cursorBlinking": "smooth",
@@ -25,8 +22,6 @@
 	"editor.suggestSelection": "first",
 	"editor.tabSize": 2,
 	"editor.unicodeHighlight.invisibleCharacters": false,
-
-	// File Management
 	"files.associations": {
 		"*.jsx": "typescriptreact",
 		".env*": "env"
@@ -37,15 +32,11 @@
 		"**/.git/subtree-cache/**": true,
 		"**/node_modules/**": true
 	},
-
-	// Git Settings
 	"git.autofetch": true,
 	"git.experimental.mergeEditor": true,
 	"git.confirmSync": false,
 	"gitlens.currentLine.scrollable": false,
 	"gitlens.views.worktrees.files.layout": "list",
-
-	// GitHub Copilot Settings
 	"github.copilot.enable": {
 		"*": true,
 		"plaintext": true,
@@ -59,22 +50,20 @@
 	},
 	"githubPullRequests.pullBranch": "never",
 	"github.copilot.editor.enableAutoCompletions": true,
-
-	// Emmet Settings
-	"emmet.includeLanguages": { "twig": "html", "haskell": "html" },
-	"emmet.syntaxProfiles": { "javascript": "jsx", "typescript": "tsx" },
-
-	// Haskell Settings
+	"emmet.includeLanguages": {
+		"twig": "html",
+		"haskell": "html"
+	},
+	"emmet.syntaxProfiles": {
+		"javascript": "jsx",
+		"typescript": "tsx"
+	},
 	"haskell.formattingProvider": "stylish-haskell",
-
-	// Terminal Settings
 	"terminal.integrated.commandsToSkipShell": ["language-julia.interrupt"],
 	"terminal.integrated.env.osx": {
 		"FIG_NEW_SESSION": "1"
 	},
 	"terminal.integrated.fontSize": 16,
-
-	// Todo Highlight Settings
 	"todohighlight.keywords": [
 		{
 			"text": "NOTE:",
@@ -112,12 +101,15 @@
 			"backgroundColor": "#E0F8E0"
 		}
 	],
-
-	// Vim Settings
 	"vim.easymotion": true,
 	"vim.foldfix": true,
 	"vim.hlsearch": true,
-	"vim.insertModeKeyBindings": [{ "before": ["j", "j"], "after": ["<Esc>"] }],
+	"vim.insertModeKeyBindings": [
+		{
+			"before": ["j", "j"],
+			"after": ["<Esc>"]
+		}
+	],
 	"vim.leader": "space",
 	"vim.replaceWithRegister": true,
 	"vim.smartRelativeLine": true,
@@ -149,8 +141,6 @@
 			"after": [":", "s", "p", "<Enter>"]
 		}
 	],
-
-	// Workbench Settings
 	"workbench.colorCustomizations": {
 		"statusBar.background": "#005f5f",
 		"statusBar.noFolderBackground": "#005f5f",
@@ -163,13 +153,9 @@
 	"workbench.iconTheme": "material-icon-theme",
 	"workbench.localHistory.enabled": false,
 	"workbench.sideBar.location": "left",
-
-	// Language-Specific Settings
-	"[haskell]": { "editor.defaultFormatter": "haskell.haskell" },
-	"[purescript]": { "editor.defaultFormatter": "nwolverson.ide-purescript" },
-	"purescript.formatter": "purs-tidy",
-
-	// Additional Language Settings
+	"[haskell]": {
+		"editor.defaultFormatter": "haskell.haskell"
+	},
 	"deno.path": "/nix/store/6xvnjz2grdah9kawh9qcf2d6gh0pda23-deno-1.16.2/bin/deno",
 	"javascript.updateImportsOnFileMove.enabled": "always",
 	"prettier.useTabs": true,
@@ -182,8 +168,6 @@
 	"julia.symbolCacheDownload": true,
 	"editor.accessibilitySupport": "off",
 	"julia.enableTelemetry": true,
-
-	// Miscellaneous Settings
 	"diffEditor.ignoreTrimWhitespace": false,
 	"importCost.timeout": 700,
 	"errorLens.delay": 1000,
@@ -197,7 +181,6 @@
 	"[python]": {
 		"diffEditor.ignoreTrimWhitespace": true
 	},
-	"workbench.layoutControl.enabled": false,
 	"window.commandCenter": false,
 	"window.title": "${activeFolderMedium}${separator}${rootName}",
 	"intelephense.environment.phpVersion": "8.1.0",
@@ -232,8 +215,6 @@
 		"git diff",
 		"git show"
 	],
-
-	// Cursor Settings
 	"cursor.cpp.disabledLanguages": ["scminput", "haskell"],
 	"cursor.diffs.useCharacterLevelDiffs": true,
 	"cursor.terminal.usePreviewBox": true,
