@@ -15,6 +15,8 @@
     zlib
     # awscli2
 
+    google-cloud-sdk
+
     gyou
   ];
 }
