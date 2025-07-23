@@ -61,6 +61,7 @@
       see = "!gh repo view --web";
 
       # worktree
+      w = "worktree";
       mk = "!f() { \
         branch=$1; \
         git worktree prune && \
