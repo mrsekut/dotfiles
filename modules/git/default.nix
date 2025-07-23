@@ -66,7 +66,6 @@
         git worktree prune && \
         git worktree add -b \"$branch\" \".worktrees/$branch\" \"HEAD\"; \
       }; f"; # e.g. git mk feature/awesome-refactor
-      mkcd = "!f() { mk $1 && cd \".worktrees/$1\"; }; f"; # e.g. git mkcd feature/awesome-refactor
 
       # その他のスクリプト操作
       ds = "!zsh -c 'source ${builtins.toString ./.}/git-delete-squashed.zsh' foo"; # delete squash TODO: `foo` is a hack
