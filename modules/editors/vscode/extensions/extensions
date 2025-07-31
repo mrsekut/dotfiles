@@ -1,5 +1,8 @@
+4ops.terraform
 akamud.vscode-theme-onelight
+altimateai.vscode-altimate-mcp-server
 anseki.vscode-color
+ast-grep.ast-grep-vscode
 bpruitt-goddard.mermaid-markdown-syntax-highlighting
 bradlc.vscode-tailwindcss
 christian-kohler.path-intellisense
@@ -20,11 +23,11 @@ github.vscode-pull-request-github
 grapecity.gc-excelviewer
 graphql.vscode-graphql
 graphql.vscode-graphql-syntax
-hashicorp.terraform
 haskell.haskell
 htmlhint.vscode-htmlhint
 humao.rest-client
 ics.japanese-proofreading
+innoverio.vscode-dbt-power-user
 ionutvmi.path-autocomplete
 irongeek.vscode-env
 jetpack-io.devbox
@@ -56,11 +59,12 @@ pkief.material-icon-theme
 prisma.prisma
 romanpeshkov.vscode-text-tables
 rust-lang.rust-analyzer
+samuelcolvin.jinjahtml
+saoudrizwan.claude-dev
 shardulm94.trailing-spaces
 simonsiefke.svg-preview
 spywhere.guides
 sysoev.language-stylus
-thisismanta.stylus-supremacy
 tombonnike.vscode-status-bar-format-toggle
 tyriar.sort-lines
 vitest.explorer
