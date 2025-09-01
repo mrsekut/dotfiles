@@ -76,6 +76,7 @@
 
   programs.zsh.shellAliases = {
     ghrc = "${builtins.toString ./.}/gh_repo_create.zsh";
+    wtcd = "cd $(git worktree list | fzf | awk '{print \$1}')";
   };
 
   # gitignore for global
