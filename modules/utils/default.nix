@@ -18,6 +18,7 @@
     google-cloud-sdk
 
     uv # `uvx test-opensearch-mcp` したいので一時的に追加
+    argo
     gyou
   ];
 }
