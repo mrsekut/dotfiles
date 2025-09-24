@@ -88,21 +88,21 @@
             { codex.enable = true; }
           ];
         };
+      };
 
-        darwinConfigurations = {
-          mrsekut = nix-darwin.lib.darwinSystem {
-            specialArgs = { inherit homebrew-cask homebrew-bundle; };
-            system = system;
-            modules = [
-              ./modules/nix-darwin.nix
-              nix-homebrew.darwinModules.nix-homebrew
-              ./modules/homebrew.nix
-              ./modules/terminals/warp/brew.nix
-              ./modules/gyazo/brew.nix
-              ./modules/claude/brew.nix
-              ./modules/editors/vscode/brew.nix
-            ];
-          };
+      darwinConfigurations = {
+        mrsekut = nix-darwin.lib.darwinSystem {
+          specialArgs = { inherit homebrew-cask homebrew-bundle; };
+          system = system;
+          modules = [
+            ./modules/nix-darwin.nix
+            nix-homebrew.darwinModules.nix-homebrew
+            ./modules/homebrew.nix
+            ./modules/terminals/warp/brew.nix
+            ./modules/gyazo/brew.nix
+            ./modules/claude/brew.nix
+            ./modules/editors/vscode/brew.nix
+          ];
         };
       };
     };
