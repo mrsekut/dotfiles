@@ -44,11 +44,11 @@ uninstall_extra_extensions() {
 # === 実行 ===
 
 # vscode
-backup_extensions "vscode" "code"
-install_missing_extensions "vscode" "code"
-uninstall_extra_extensions "vscode" "code"
+# backup_extensions "vscode" "code"
+# install_missing_extensions "vscode" "code"
+# uninstall_extra_extensions "vscode" "code"
 
 # cursor
-# backup_extensions "cursor" "cursor"
-# install_missing_extensions "cursor" "cursor"
-# uninstall_extra_extensions "cursor" "cursor"
+backup_extensions "cursor" "cursor"
+install_missing_extensions "cursor" "cursor"
+uninstall_extra_extensions "cursor" "cursor"
