@@ -177,5 +177,8 @@
 	"cursor.cpp.disabledLanguages": ["scminput", "haskell"],
 	"cursor.diffs.useCharacterLevelDiffs": true,
 	"cursor.terminal.usePreviewBox": true,
-	"update.releaseTrack": "prerelease"
+	"update.releaseTrack": "prerelease",
+	"yaml.schemas": {
+    "kubernetes": ["*.yml","*.yaml"]
+	}
 }
