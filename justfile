@@ -44,19 +44,19 @@ update-claude-code:
 # VSCode
 # =================
 
-# vscodeのaliasを貼る (初回のみ)
-vscode-init:
-  bash modules/editors/vscode/snippets/index.sh
-  bash modules/editors/vscode/settings/index.sh
+# cursorのaliasを貼る (初回のみ)
+cursor-init:
+  bash modules/editors/cursor/snippets/index.sh
+  bash modules/editors/cursor/settings/index.sh
 
 # dotfilesの内容をlocalに適用する
-vscode-apply-snippets:
-  bash modules/editors/vscode/snippets/index.sh
+cursor-apply-snippets:
+  bash modules/editors/cursor/snippets/index.sh
 
 # dotfilesの内容をlocalに適用する
-vscode-apply-extensions:
-  bash modules/editors/vscode/extensions/apply.sh
+cursor-apply-extensions:
+  bash modules/editors/cursor/extensions/apply.sh
 
 # dotfilesを更新する
-vscode-save-extensions-to-dotfiles:
-	bash modules/editors/vscode/extensions/save.sh
+cursor-save-extensions-to-dotfiles:
+	bash modules/editors/cursor/extensions/save.sh
