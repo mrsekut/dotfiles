@@ -46,7 +46,7 @@ update-claude-code:
 
 # cursorのaliasを貼る (初回のみ)
 cursor-init:
-  bash modules/editors/cursor/snippets/index.sh
+  bash modules/editors/cursor/keybindings/index.sh
   bash modules/editors/cursor/settings/index.sh
 
 # dotfilesの内容をlocalに適用する
