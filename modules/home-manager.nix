@@ -29,5 +29,6 @@
     ./utils
     ./keyboard/karabiner
     ./gomi
+    ./kubernetes
   ];
 }
