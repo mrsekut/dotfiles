@@ -51,7 +51,6 @@
 	"githubPullRequests.pullBranch": "never",
 	"github.copilot.editor.enableAutoCompletions": true,
 	"emmet.includeLanguages": {
-		"twig": "html",
 		"haskell": "html"
 	},
 	"emmet.syntaxProfiles": {
@@ -66,23 +65,9 @@
 	"terminal.integrated.fontSize": 16,
 	"todohighlight.keywords": [
 		{
-			"text": "NOTE:",
-			"color": "#FF8000",
-			"border": "1px solid #FF8000",
-			"borderRadius": "2px",
-			"backgroundColor": "#F5D0A9"
-		},
-		{
 			"text": "TODO:",
 			"color": "red",
 			"border": "1px solid red",
-			"borderRadius": "2px",
-			"backgroundColor": "rgba(0,0,0,.2)"
-		},
-		{
-			"text": "PENDING:",
-			"color": "#00FFFF",
-			"border": "1px solid #00FFFF",
 			"borderRadius": "2px",
 			"backgroundColor": "rgba(0,0,0,.2)"
 		},
@@ -92,13 +77,6 @@
 			"border": "1px solid #D358F7",
 			"borderRadius": "2px",
 			"backgroundColor": "rgba(0,0,0,.2)"
-		},
-		{
-			"text": "QUESTION:",
-			"color": "#3ADF00",
-			"border": "1px solid #3ADF00",
-			"borderRadius": "2px",
-			"backgroundColor": "#E0F8E0"
 		}
 	],
 	"vim.easymotion": true,
@@ -184,16 +162,6 @@
 	"window.commandCenter": false,
 	"window.title": "${activeFolderMedium}${separator}${rootName}",
 	"intelephense.environment.phpVersion": "8.1.0",
-	"twig-language-2.braceLine": true,
-	"twig-language-2.bracePadding": true,
-	"twig-language-2.braces": true,
-	"twig-language-2.braceStyle": "collapse",
-	"twig-language-2.commentLine": true,
-	"twig-language-2.comments": true,
-	"twig-language-2.compressedCss": true,
-	"twig-language-2.correct": true,
-	"twig-language-2.cssInsertLines": true,
-	"twig-language-2.elseLine": true,
 	"nix.enableLanguageServer": true,
 	"nix.formatterPath": "nixfmt",
 	"notebook.editorOptionsCustomizations": {
@@ -206,15 +174,6 @@
 		"editor.defaultFormatter": "ms-azuretools.vscode-docker"
 	},
 	"haskell.manageHLS": "PATH",
-	"cline.preferredLanguage": "Japanese - 日本語",
-	"roo-cline.allowedCommands": [
-		"npm test",
-		"npm install",
-		"tsc",
-		"git log",
-		"git diff",
-		"git show"
-	],
 	"cursor.cpp.disabledLanguages": ["scminput", "haskell"],
 	"cursor.diffs.useCharacterLevelDiffs": true,
 	"cursor.terminal.usePreviewBox": true,
