@@ -33,5 +33,5 @@ create_symlink() {
   echo "$FILENAME: Symlink created for $(basename "$TARGET_DIR")"
 }
 
-backup "$VSCODE_SETTING_DIR" "vscode" && create_symlink "$VSCODE_SETTING_DIR"
+# backup "$VSCODE_SETTING_DIR" "vscode" && create_symlink "$VSCODE_SETTING_DIR"
 backup "$CURSOR_SETTING_DIR" "cursor" && create_symlink "$CURSOR_SETTING_DIR"

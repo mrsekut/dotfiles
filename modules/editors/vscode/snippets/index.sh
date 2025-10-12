@@ -42,5 +42,5 @@ create_symlink() {
   done
 }
 
-backup "$VSCODE_SNIPPETS_DIR" "vscode" && create_symlink "$VSCODE_SNIPPETS_DIR"
+# backup "$VSCODE_SNIPPETS_DIR" "vscode" && create_symlink "$VSCODE_SNIPPETS_DIR"
 backup "$CURSOR_SNIPPETS_DIR" "cursor" && create_symlink "$CURSOR_SNIPPETS_DIR"
