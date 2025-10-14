@@ -14,9 +14,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nix-homebrew = {
-      url = "github:zhaofengli-wip/nix-homebrew";
-    };
+    nix-homebrew = { url = "github:zhaofengli-wip/nix-homebrew"; };
     homebrew-cask = {
       url = "github:homebrew/homebrew-cask";
       flake = false;
@@ -39,38 +37,20 @@
     };
   };
 
-  outputs =
-    {
-      nixpkgs,
-      home-manager,
-      codex,
-      nix-darwin,
-      nix-homebrew,
-      homebrew-cask,
-      homebrew-bundle,
-      git-fixup,
-      gyou,
-      ...
-    }:
+  outputs = { nixpkgs, home-manager, codex, nix-darwin, nix-homebrew
+    , homebrew-cask, homebrew-bundle, git-fixup, gyou, ... }:
     let
       system = "aarch64-darwin";
       # system = "x86_64-darwin";
 
       pkgs = import nixpkgs {
         inherit system;
-        config.allowUnfreePredicate =
-          pkg:
-          builtins.elem (nixpkgs.lib.getName pkg) [
-            "claude-code"
-            "terraform"
-          ];
+        config.allowUnfreePredicate = pkg:
+          builtins.elem (nixpkgs.lib.getName pkg) [ "claude-code" "terraform" ];
       };
       claude-code-override = pkgs.callPackage ./modules/claude/override.nix { };
-    in
-    {
-      packages.${system} = {
-        inherit claude-code-override;
-      };
+    in {
+      packages.${system} = { inherit claude-code-override; };
       homeConfigurations = {
         config.codex.enable = true;
         mrsekut = home-manager.lib.homeManagerConfiguration {
@@ -101,7 +81,7 @@
             ./modules/terminals/warp/brew.nix
             ./modules/gyazo/brew.nix
             ./modules/claude/brew.nix
-            ./modules/editors/vscode/brew.nix
+            ./modules/editors/cursor/brew.nix
           ];
         };
       };
