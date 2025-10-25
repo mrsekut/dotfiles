@@ -25,6 +25,7 @@
         autosquash = true;
         autostash = true;
       };
+      rerere.enabled = true;
       merge.conflictstyle = "diff3";
       # pull.rebase = true;
       fetch.prune = true;
