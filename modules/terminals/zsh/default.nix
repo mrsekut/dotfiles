@@ -17,7 +17,6 @@
     # };
 
     shellAliases = {
-      c = "clear";
       mvup = "${builtins.toString ./.}/mvup.sh";
       cdd = "cd ~/Desktop";
       mkcd = ''f(){ mkdir -p "$1"; cd "$1" }; f'';
