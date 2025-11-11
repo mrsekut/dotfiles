@@ -210,7 +210,24 @@
         "homebrew-cask": "homebrew-cask",
         "nix-darwin": "nix-darwin",
         "nix-homebrew": "nix-homebrew",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "satococoa-tap": "satococoa-tap"
+      }
+    },
+    "satococoa-tap": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1762353362,
+        "narHash": "sha256-CG6UbwyTuPEmYJoyn6aoWz6OV1OC4/jA7qdKWNafj/Y=",
+        "owner": "satococoa",
+        "repo": "homebrew-tap",
+        "rev": "9d3d18532ad9ffb512be17657d46b44a94c27f1b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "satococoa",
+        "repo": "homebrew-tap",
+        "type": "github"
       }
     },
     "systems": {

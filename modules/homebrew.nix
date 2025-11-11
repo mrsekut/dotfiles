@@ -1,4 +1,9 @@
-{ homebrew-cask, homebrew-bundle, ... }:
+{
+  homebrew-cask,
+  homebrew-bundle,
+  satococoa-tap,
+  ...
+}:
 {
   nix-homebrew = {
     enable = true;
@@ -10,6 +15,7 @@
     taps = {
       "homebrew/homebrew-cask" = homebrew-cask;
       "homebrew/homebrew-bundle" = homebrew-bundle;
+      "satococoa/homebrew-tap" = satococoa-tap;
     };
   };
 
@@ -21,7 +27,9 @@
     # };
 
     # taps = [ ];
-    # brews = [ ];
+    brews = [
+      "wtp"
+    ];
     masApps = {
       "toggl" = 1291898086;
       "kindle" = 302584613;

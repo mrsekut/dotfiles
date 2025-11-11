@@ -25,6 +25,10 @@
       url = "github:homebrew/homebrew-bundle";
       flake = false;
     };
+    satococoa-tap = {
+      url = "github:satococoa/homebrew-tap";
+      flake = false;
+    };
 
     # mrsekut's libraries
     git-fixup = {
@@ -45,6 +49,7 @@
       nix-homebrew,
       homebrew-cask,
       homebrew-bundle,
+      satococoa-tap,
       git-fixup,
       gyou,
       ...
@@ -82,7 +87,7 @@
 
       darwinConfigurations = {
         mrsekut = nix-darwin.lib.darwinSystem {
-          specialArgs = { inherit homebrew-cask homebrew-bundle; };
+          specialArgs = { inherit homebrew-cask homebrew-bundle satococoa-tap; };
           system = system;
           modules = [
             ./modules/nix-darwin.nix
@@ -92,6 +97,7 @@
             ./modules/gyazo/brew.nix
             ./modules/claude/brew.nix
             ./modules/editors/cursor/brew.nix
+            ./modules/wtp/brew.nix
           ];
         };
       };

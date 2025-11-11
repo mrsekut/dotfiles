@@ -30,5 +30,6 @@
     ./keyboard/karabiner
     ./gomi
     ./kubernetes
+    ./wtp
   ];
 }
