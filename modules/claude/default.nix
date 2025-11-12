@@ -1,8 +1,8 @@
-{ claude-code-override, ... }:
+{ pkgs, ... }:
 
 {
   home.packages = [
-    claude-code-override
+    pkgs.claude-code
   ];
 
   programs.zsh.shellAliases = {

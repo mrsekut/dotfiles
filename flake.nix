@@ -83,7 +83,6 @@
           extraSpecialArgs = {
             git-fixup = git-fixup.packages.${system}.default;
             gyou = gyou.packages.${system}.default;
-            inherit claude-code-override;
           };
 
           modules = [
