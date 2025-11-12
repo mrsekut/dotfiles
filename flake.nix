@@ -69,6 +69,7 @@
             "claude-code"
             "terraform"
           ];
+        overlays = [ codex.overlays.default ];
       };
       claude-code-override = pkgs.callPackage ./modules/claude/override.nix { };
     in
@@ -87,7 +88,7 @@
 
           modules = [
             ./modules/home-manager.nix
-            codex.hmModule.${system}
+            codex.homeModules.default
             { codex.enable = true; }
           ];
         };
