@@ -36,6 +36,6 @@ function wtp-remove() {
     "$wtp_cmd" remove "$path"
   else
     echo "Removing worktree with options: $path $option"
-    "$wtp_cmd" remove $option "$path"
+    "$wtp_cmd" remove ${=option} "$path"
   fi
 }
