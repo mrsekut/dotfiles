@@ -60,6 +60,7 @@
       po-f = "push --force-with-lease";
       pull-f = "!f() { git fetch origin $(git rev-parse --abbrev-ref HEAD) && git reset --hard origin/$(git rev-parse --abbrev-ref HEAD); }; f";
       see = "!gh repo view --web";
+      tagpush = "!f() { git tag \"$1\" && git push origin \"$1\"; }; f";
 
       # その他のスクリプト操作
       ds = "!zsh -c 'source ${builtins.toString ./.}/git-delete-squashed.zsh' foo"; # delete squash TODO: `foo` is a hack
