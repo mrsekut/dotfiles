@@ -61,14 +61,6 @@
       pull-f = "!f() { git fetch origin $(git rev-parse --abbrev-ref HEAD) && git reset --hard origin/$(git rev-parse --abbrev-ref HEAD); }; f";
       see = "!gh repo view --web";
 
-      # worktree
-      w = "worktree";
-      mk = "!f() { \
-        branch=$1; \
-        git worktree prune && \
-        git worktree add -b \"$branch\" \".worktrees/$branch\" \"HEAD\"; \
-      }; f"; # e.g. git mk feature/awesome-refactor
-
       # その他のスクリプト操作
       ds = "!zsh -c 'source ${builtins.toString ./.}/git-delete-squashed.zsh' foo"; # delete squash TODO: `foo` is a hack
       rd = "!f() { git switch develop && git pull && git switch $1 && git rebase develop; }; f"; # ref: https://scrapbox.io/mrsekut-p/λ_git_rd
