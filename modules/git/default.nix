@@ -14,10 +14,12 @@
 
   programs.git = {
     enable = true;
-    userName = "mrsekut";
-    userEmail = "k.cloudspider@gmail.com";
 
-    extraConfig = {
+    settings = {
+      user = {
+        name = "mrsekut";
+        email = "k.cloudspider@gmail.com";
+      };
       core = {
         ignorecase = false;
       };
@@ -32,40 +34,43 @@
       color.ui = true;
       help.autocorrect = 1;
       ghq.root = "~/Desktop/dev";
+
+      alias = {
+        # log
+        graph = "log --graph --date-order --pretty=format:\"%C(magenta)<%h> %C(yellow)%ad %C(green)(%cr) %C(cyan)[%an] %C(white)%d%C(reset) %s\" --all --date=short";
+
+        # status
+        ssb = "status --short --branch";
+
+        # add, commit
+        aa = "add --all";
+        ac = "!git add --all && git commit";
+        ca = "commit --amend";
+        fixup = "!git-fixup";
+
+        # branch
+        co = "checkout";
+        sw = "switch";
+        md = "merge develop";
+        bd = "!zsh -c 'source ${builtins.toString ./.}/git-remove-branch.zsh'";
+
+        # remote
+        po = "push origin head";
+        po-f = "push --force-with-lease";
+        pull-f = "!f() { git fetch origin $(git rev-parse --abbrev-ref HEAD) && git reset --hard origin/$(git rev-parse --abbrev-ref HEAD); }; f";
+        see = "!gh repo view --web";
+        tagpush = "!f() { git tag \"$1\" && git push origin \"$1\"; }; f";
+
+        # その他のスクリプト操作
+        ds = "!zsh -c 'source ${builtins.toString ./.}/git-delete-squashed.zsh' foo"; # delete squash TODO: `foo` is a hack
+        rd = "!f() { git switch develop && git pull && git switch $1 && git rebase develop; }; f"; # ref: https://scrapbox.io/mrsekut-p/λ_git_rd
+      };
     };
+  };
 
-    delta.enable = true;
-
-    aliases = {
-      # log
-      graph = "log --graph --date-order --pretty=format:\"%C(magenta)<%h> %C(yellow)%ad %C(green)(%cr) %C(cyan)[%an] %C(white)%d%C(reset) %s\" --all --date=short";
-
-      # status
-      ssb = "status --short --branch";
-
-      # add, commit
-      aa = "add --all";
-      ac = "!git add --all && git commit";
-      ca = "commit --amend";
-      fixup = "!git-fixup";
-
-      # branch
-      co = "checkout";
-      sw = "switch";
-      md = "merge develop";
-      bd = "!zsh -c 'source ${builtins.toString ./.}/git-remove-branch.zsh'";
-
-      # remote
-      po = "push origin head";
-      po-f = "push --force-with-lease";
-      pull-f = "!f() { git fetch origin $(git rev-parse --abbrev-ref HEAD) && git reset --hard origin/$(git rev-parse --abbrev-ref HEAD); }; f";
-      see = "!gh repo view --web";
-      tagpush = "!f() { git tag \"$1\" && git push origin \"$1\"; }; f";
-
-      # その他のスクリプト操作
-      ds = "!zsh -c 'source ${builtins.toString ./.}/git-delete-squashed.zsh' foo"; # delete squash TODO: `foo` is a hack
-      rd = "!f() { git switch develop && git pull && git switch $1 && git rebase develop; }; f"; # ref: https://scrapbox.io/mrsekut-p/λ_git_rd
-    };
+  programs.delta = {
+    enable = true;
+    enableGitIntegration = true;
   };
 
   programs.zsh.shellAliases = {
