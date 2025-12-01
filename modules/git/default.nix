@@ -21,11 +21,11 @@ in
 
     includes = [
       {
-        condition = "gitdir:${ghqRoot}/github.com/mrsekut/";
+        condition = "gitdir:${ghqRoot}/github.com/herp-inc-hq/";
         contents = {
           user = {
-            name = "mrsekut";
-            email = "k.cloudspider@gmail.com";
+            name = "kota-marusue_herpinc";
+            email = "kota.marusue@herp.co.jp";
           };
         };
       }
@@ -33,8 +33,8 @@ in
 
     settings = {
       user = {
-        userName = "kota-marusue_herpinc";
-        userEmail = "kota.marusue@herp.co.jp";
+        name = "mrsekut";
+        email = "k.cloudspider@gmail.com";
       };
       core = {
         ignorecase = false;
