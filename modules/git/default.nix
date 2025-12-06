@@ -10,6 +10,7 @@
     git
     gh
     git-fixup
+    bun
   ];
 
   programs.git = {
@@ -52,7 +53,7 @@
         co = "checkout";
         sw = "switch";
         md = "merge develop";
-        bd = "!zsh -c 'source ${builtins.toString ./.}/git-remove-branch.zsh'";
+        bd = "!${pkgs.bun}/bin/bun run ${./scripts/git-remove-branch.ts}";
 
         # remote
         po = "push origin head";
@@ -74,7 +75,7 @@
   };
 
   programs.zsh.shellAliases = {
-    ghrc = "${builtins.toString ./.}/gh_repo_create.zsh";
+    ghrc = "${pkgs.bun}/bin/bun run ${./scripts/gh-repo-create.ts}";
     wtcd = "cd $(git worktree list | fzf | awk '{print \$1}')";
   };
 
