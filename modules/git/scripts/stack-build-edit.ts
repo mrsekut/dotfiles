@@ -1,10 +1,8 @@
 #!/usr/bin/env bun
 import { $ } from 'bun';
-import { unlinkSync, existsSync, writeFileSync } from 'fs';
+import { unlinkSync } from 'fs';
 import { tmpdir } from 'os';
 import { join } from 'path';
-
-const GROUP_FILE = join(tmpdir(), `stack-build-groups-${process.pid}.txt`);
 
 main();
 
@@ -23,13 +21,7 @@ async function main(): Promise<void> {
     process.exit(0);
   }
 
-  // Initialize empty group file
-  writeFileSync(GROUP_FILE, '');
-
-  const groups = await selectWithFzfGrouping(commits);
-
-  cleanup();
-
+  const groups = await editAndParseGroups(commits);
   if (groups.size === 0) {
     console.log('No groups defined');
     process.exit(0);
@@ -62,7 +54,7 @@ function parseArgs(): { from: string | null; base: string | null } {
 
 function showUsage(): void {
   console.log(
-    'Usage: git stack-build --from <source-branch> [--base <base-branch>]',
+    'Usage: git stack-build-edit --from <source-branch> [--base <base-branch>]',
   );
 }
 
@@ -83,113 +75,82 @@ async function getCommits(source: string, base: string): Promise<string[]> {
   }
 }
 
-async function selectWithFzfGrouping(
+async function editAndParseGroups(
   commits: string[],
 ): Promise<Map<number, string[]>> {
-  const input = commits.join('\n');
+  const tmpFile = join(tmpdir(), `stack-build-${Date.now()}.txt`);
 
-  // Script to update group assignment
-  const updateScript = (num: number) => `
-    hash=$(echo {} | cut -d' ' -f1)
-    grep -v " $hash$" "${GROUP_FILE}" > "${GROUP_FILE}.tmp" 2>/dev/null || true
-    echo "${num} $hash" >> "${GROUP_FILE}.tmp"
-    mv "${GROUP_FILE}.tmp" "${GROUP_FILE}"
-  `;
+  const content = `# Separate groups with blank lines
+# Delete lines to exclude commits
+# Save and close to continue
+#
+# Example:
+#   a1b2c3d feat: add auth
+#   b2c3d4e feat: add login
+#
+#   c3d4e5f feat: add api
+#
+#   d4e5f6g feat: add tests
+#
 
-  const previewScript = `
-    if [ -s "${GROUP_FILE}" ]; then
-      echo "=== Current Groups ==="
-      for i in 1 2 3 4 5 6 7 8 9; do
-        matches=$(grep "^$i " "${GROUP_FILE}" 2>/dev/null | cut -d' ' -f2)
-        if [ -n "$matches" ]; then
-          echo ""
-          echo "Group $i:"
-          echo "$matches" | while read h; do
-            echo "  $h"
-          done
-        fi
-      done
-    else
-      echo "Press 1-9 to assign commits to groups"
-    fi
-  `;
+${commits.join('\n')}
+`;
 
-  const proc = Bun.spawn(
-    [
-      'fzf',
-      '--multi',
-      '--reverse',
-      '--ansi',
-      '--header',
-      '1-9: assign to group, Enter: confirm',
-      '--preview',
-      previewScript,
-      '--preview-window',
-      'right:40%',
-      '--bind',
-      `1:execute-silent(${updateScript(1)})+down`,
-      '--bind',
-      `2:execute-silent(${updateScript(2)})+down`,
-      '--bind',
-      `3:execute-silent(${updateScript(3)})+down`,
-      '--bind',
-      `4:execute-silent(${updateScript(4)})+down`,
-      '--bind',
-      `5:execute-silent(${updateScript(5)})+down`,
-      '--bind',
-      `6:execute-silent(${updateScript(6)})+down`,
-      '--bind',
-      `7:execute-silent(${updateScript(7)})+down`,
-      '--bind',
-      `8:execute-silent(${updateScript(8)})+down`,
-      '--bind',
-      `9:execute-silent(${updateScript(9)})+down`,
-    ],
-    {
-      stdin: new Response(input),
-      stdout: 'pipe',
-      stderr: 'inherit',
-    },
-  );
+  await Bun.write(tmpFile, content);
 
+  const editor = process.env.EDITOR || 'vim';
+  const proc = Bun.spawn([editor, tmpFile], {
+    stdin: 'inherit',
+    stdout: 'inherit',
+    stderr: 'inherit',
+  });
   await proc.exited;
 
-  return parseGroupFile();
-}
+  const edited = await Bun.file(tmpFile).text();
 
-async function parseGroupFile(): Promise<Map<number, string[]>> {
-  const groups = new Map<number, string[]>();
-
-  if (!existsSync(GROUP_FILE)) {
-    return groups;
+  try {
+    unlinkSync(tmpFile);
+  } catch {
+    // ignore
   }
 
-  const content = await Bun.file(GROUP_FILE).text();
-  const lines = content.split('\n');
+  return parseGroups(edited);
+}
 
-  for (const line of lines) {
-    const match = line.trim().match(/^(\d+)\s+([a-f0-9]+)$/);
-    if (match) {
-      const groupNum = parseInt(match[1], 10);
-      const hash = match[2];
+function parseGroups(content: string): Map<number, string[]> {
+  const groups = new Map<number, string[]>();
+  let currentGroup = 1;
+  let hasCommitsInCurrentGroup = false;
 
-      if (!groups.has(groupNum)) {
-        groups.set(groupNum, []);
+  for (const line of content.split('\n')) {
+    const trimmed = line.trim();
+
+    // Skip comments
+    if (trimmed.startsWith('#')) continue;
+
+    // Empty line = new group (if current group has commits)
+    if (!trimmed) {
+      if (hasCommitsInCurrentGroup) {
+        currentGroup++;
+        hasCommitsInCurrentGroup = false;
       }
-      groups.get(groupNum)!.push(hash);
+      continue;
+    }
+
+    // Parse commit hash
+    const match = trimmed.match(/^([a-f0-9]+)/);
+    if (match) {
+      const hash = match[1];
+
+      if (!groups.has(currentGroup)) {
+        groups.set(currentGroup, []);
+      }
+      groups.get(currentGroup)!.push(hash);
+      hasCommitsInCurrentGroup = true;
     }
   }
 
   return groups;
-}
-
-function cleanup(): void {
-  try {
-    if (existsSync(GROUP_FILE)) unlinkSync(GROUP_FILE);
-    if (existsSync(GROUP_FILE + '.tmp')) unlinkSync(GROUP_FILE + '.tmp');
-  } catch {
-    // ignore
-  }
 }
 
 async function askBranchNames(
@@ -240,7 +201,7 @@ async function createBranches(
       }
 
       currentBase = branchName;
-    } catch {
+    } catch (error) {
       console.error(`✗ Failed at branch '${branchName}'`);
       console.error('  Resolve conflicts and continue manually');
       process.exit(1);

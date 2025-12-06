@@ -68,6 +68,7 @@
 
         # その他のスクリプト操作
         stack-build = "!${pkgs.bun}/bin/bun run ${./scripts/stack-build.ts}";
+        stack-build-edit = "!${pkgs.bun}/bin/bun run ${./scripts/stack-build-edit.ts}";
         rd = "!f() { git switch develop && git pull && git switch $1 && git rebase develop; }; f"; # ref: https://scrapbox.io/mrsekut-p/λ_git_rd
       };
     };
