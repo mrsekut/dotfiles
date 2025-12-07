@@ -46,7 +46,7 @@ async function main(): Promise<void> {
   console.log('\nDone!');
 }
 
-const parseArgs = () => {
+function parseArgs(): Args {
   const args = Bun.argv.slice(2);
 
   const findArg = (flag: string) => {
@@ -57,19 +57,20 @@ const parseArgs = () => {
   return {
     from: findArg('--from'),
     base: findArg('--base'),
-  } as const satisfies Args;
-};
+  };
+}
 
-const showUsage = () => {
+function showUsage(): void {
   console.log(
     'Usage: git stack-branch --from <source-branch> [--base <base-branch>]',
   );
-};
+}
 
-const getCurrentBranch = async () =>
-  (await $`git rev-parse --abbrev-ref HEAD`.quiet().text()).trim();
+async function getCurrentBranch(): Promise<string> {
+  return (await $`git rev-parse --abbrev-ref HEAD`.quiet().text()).trim();
+}
 
-const getCommits = async (source: string, base: string) => {
+async function getCommits(source: string, base: string): Promise<string[]> {
   try {
     const result = await $`git log --oneline ${base}..${source}`.quiet().text();
     return result
@@ -79,9 +80,9 @@ const getCommits = async (source: string, base: string) => {
   } catch {
     return [];
   }
-};
+}
 
-const editAndParseGroups = async (commits: string[]): Promise<Group[]> => {
+async function editAndParseGroups(commits: string[]): Promise<Group[]> {
   const tmpFile = join(tmpdir(), `stack-${Date.now()}.txt`);
 
   const content = `# Separate groups with blank lines
@@ -119,9 +120,9 @@ ${commits.join('\n')}
   }
 
   return parseGroups(edited);
-};
+}
 
-const parseGroups = (content: string): Group[] => {
+function parseGroups(content: string): Group[] {
   const lines = content.split('\n');
 
   const isComment = (line: string) => line.trim().startsWith('#');
@@ -161,9 +162,9 @@ const parseGroups = (content: string): Group[] => {
         },
       ]
     : finalState.groups;
-};
+}
 
-const askBranchNames = async (groups: Group[]): Promise<BranchDef[]> => {
+async function askBranchNames(groups: Group[]): Promise<BranchDef[]> {
   console.log('');
 
   const results = await groups.reduce<Promise<BranchDef[]>>(
@@ -184,12 +185,12 @@ const askBranchNames = async (groups: Group[]): Promise<BranchDef[]> => {
   );
 
   return results;
-};
+}
 
-const createBranches = async (
+async function createBranches(
   branchDefs: BranchDef[],
   initialBase: string,
-): Promise<void> => {
+): Promise<void> {
   console.log('\nCreating branches...');
 
   await branchDefs.reduce<Promise<string>>(async (basePromise, def) => {
@@ -214,9 +215,9 @@ const createBranches = async (
       process.exit(1);
     }
   }, Promise.resolve(initialBase));
-};
+}
 
-const prompt = async (message: string): Promise<string | null> => {
+async function prompt(message: string): Promise<string | null> {
   process.stdout.write(message);
 
   const proc = Bun.spawn(
@@ -232,4 +233,4 @@ const prompt = async (message: string): Promise<string | null> => {
 
   const trimmed = output.trim();
   return trimmed || null;
-};
+}
