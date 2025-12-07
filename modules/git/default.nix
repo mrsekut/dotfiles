@@ -67,6 +67,7 @@
         tagpush = "!f() { git tag \"$1\" && git push origin \"$1\"; }; f";
 
         # その他のスクリプト操作
+        stack-branch = "!${pkgs.bun}/bin/bun run ${./scripts/stack-branch.ts}";
         rd = "!f() { git switch develop && git pull && git switch $1 && git rebase develop; }; f"; # ref: https://scrapbox.io/mrsekut-p/λ_git_rd
       };
     };
