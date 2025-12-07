@@ -1,16 +1,23 @@
 #!/usr/bin/env bun
 import { $ } from 'bun';
+import { parseArgs } from 'util';
 
 main();
 
 async function main(): Promise<void> {
-  const source = parseArgs();
-  if (!source) {
+  const { values } = parseArgs({
+    args: Bun.argv.slice(2),
+    options: {
+      base: { type: 'string', short: 'b' },
+    },
+  });
+
+  if (!values.base) {
     showUsage();
     process.exit(1);
   }
 
-  const commits = await getCommits(source);
+  const commits = await getCommits(values.base);
   if (commits.length === 0) {
     console.log('No commits to cherry-pick');
     process.exit(0);
@@ -25,25 +32,8 @@ async function main(): Promise<void> {
   await cherryPick(selected);
 }
 
-function parseArgs(): string | null {
-  const args = Bun.argv.slice(2);
-  const baseIndex = args.indexOf('--base');
-
-  if (baseIndex !== -1 && args[baseIndex + 1]) {
-    return args[baseIndex + 1];
-  }
-
-  // 位置引数としても受け付ける
-  if (args.length > 0 && !args[0].startsWith('-')) {
-    return args[0];
-  }
-
-  return null;
-}
-
 function showUsage(): void {
-  console.log('Usage: git cherry-pick-i --base <source-branch>');
-  console.log('       git cherry-pick-i <source-branch>');
+  console.log('Usage: git cp-i --base <source-branch>');
 }
 
 async function getCommits(source: string): Promise<string[]> {

@@ -3,8 +3,8 @@ import { $ } from 'bun';
 import { unlinkSync } from 'fs';
 import { tmpdir } from 'os';
 import { join } from 'path';
+import { parseArgs } from 'util';
 
-type Args = { from: string | null; base: string | null };
 type Group = { groupNum: number; hashes: string[] };
 type BranchDef = { groupNum: number; branchName: string; hashes: string[] };
 
@@ -19,15 +19,27 @@ main();
  * コミットをグループ化し、各グループごとにブランチを作成する
  */
 async function main(): Promise<void> {
-  const args = parseArgs();
-  if (!args.from) {
+  const { values } = parseArgs({
+    args: Bun.argv.slice(2),
+    options: {
+      from: {
+        type: 'string',
+        short: 'f',
+      },
+      base: {
+        type: 'string',
+        short: 'b',
+        default: await getCurrentBranch(),
+      },
+    },
+  });
+
+  if (!values.from) {
     showUsage();
     process.exit(1);
   }
 
-  const base = args.base ?? (await getCurrentBranch());
-
-  const commits = await getCommits(args.from, base);
+  const commits = await getCommits(values.from, values.base);
   if (commits.length === 0) {
     console.log('No commits to cherry-pick');
     process.exit(0);
@@ -41,23 +53,9 @@ async function main(): Promise<void> {
 
   const branchDefs = await askBranchNames(groups);
 
-  await createBranches(branchDefs, base);
+  await createBranches(branchDefs, values.base);
 
   console.log('\nDone!');
-}
-
-function parseArgs(): Args {
-  const args = Bun.argv.slice(2);
-
-  const findArg = (flag: string) => {
-    const index = args.indexOf(flag);
-    return index !== -1 && args[index + 1] ? args[index + 1] : null;
-  };
-
-  return {
-    from: findArg('--from'),
-    base: findArg('--base'),
-  };
 }
 
 function showUsage(): void {

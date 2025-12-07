@@ -1,36 +1,36 @@
 #!/usr/bin/env bun
 import { $ } from 'bun';
 import { basename } from 'path';
-
-type Visibility = '--public' | '--private';
+import { parseArgs } from 'util';
 
 main();
 
 async function main(): Promise<void> {
-  const visibility = parseArgs();
+  const { values } = parseArgs({
+    args: Bun.argv.slice(2),
+    options: {
+      public: { type: 'boolean' },
+      private: { type: 'boolean' },
+    },
+  });
+
+  const visibility = (() => {
+    if (values.public) return '--public';
+    if (values.private) return '--private';
+    return null;
+  })();
+
   if (!visibility) {
-    showUsage();
+    console.log('Usage: ghrc [--public|--private]');
+    process.exit(1);
   }
 
   const name = basename(process.cwd());
 
   try {
     await $`gh repo create ${name} ${visibility} --source=. --push`;
-  } catch (error) {
+  } catch {
     console.error('Failed to create repository');
     process.exit(1);
   }
-}
-
-function parseArgs(): Visibility | null {
-  const arg = Bun.argv[2];
-  if (arg === '--public' || arg === '--private') {
-    return arg;
-  }
-  return null;
-}
-
-function showUsage(): void {
-  console.log('Usage: ghrc [--public|--private]');
-  process.exit(1);
 }
