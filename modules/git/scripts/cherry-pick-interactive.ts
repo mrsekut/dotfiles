@@ -4,7 +4,7 @@ import { parseArgs } from 'util';
 
 main();
 
-async function main(): Promise<void> {
+async function main() {
   const { values } = parseArgs({
     args: Bun.argv.slice(2),
     options: {
@@ -32,24 +32,24 @@ async function main(): Promise<void> {
   await cherryPick(selected);
 }
 
-function showUsage(): void {
+function showUsage() {
   console.log('Usage: git cp-i --base <source-branch>');
 }
 
-async function getCommits(source: string): Promise<string[]> {
+async function getCommits(source: string) {
   try {
     const result = await $`git log --oneline HEAD..${source}`.quiet().text();
     return result
       .split('\n')
       .filter(line => line.trim())
-      .reverse(); // 古い順にする
+      .reverse();
   } catch {
     console.error(`Failed to get commits from ${source}`);
     process.exit(1);
   }
 }
 
-async function selectWithFzf(commits: string[]): Promise<string[]> {
+async function selectWithFzf(commits: string[]) {
   const input = commits.join('\n');
 
   const proc = Bun.spawn(
@@ -84,7 +84,7 @@ async function selectWithFzf(commits: string[]): Promise<string[]> {
     .map(line => line.split(' ')[0]); // hashだけ抽出
 }
 
-async function cherryPick(hashes: string[]): Promise<void> {
+async function cherryPick(hashes: string[]) {
   for (const hash of hashes) {
     try {
       await $`git cherry-pick ${hash}`;
