@@ -55,6 +55,10 @@
         md = "merge develop";
         bd = "!${pkgs.bun}/bin/bun run ${./scripts/git-remove-branch.ts}";
 
+        # cherry-pick
+        cp = "cherry-pick";
+        cp-i = "!${pkgs.bun}/bin/bun run ${./scripts/cherry-pick-interactive.ts}";
+
         # remote
         po = "push origin head";
         po-f = "push --force-with-lease";
@@ -63,7 +67,6 @@
         tagpush = "!f() { git tag \"$1\" && git push origin \"$1\"; }; f";
 
         # その他のスクリプト操作
-        cherry-pick-i = "!${pkgs.bun}/bin/bun run ${./scripts/cherry-pick-i.ts}";
         rd = "!f() { git switch develop && git pull && git switch $1 && git rebase develop; }; f"; # ref: https://scrapbox.io/mrsekut-p/λ_git_rd
       };
     };
