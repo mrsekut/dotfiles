@@ -7,5 +7,6 @@
     nodejs_latest
     yarn
     bun
+    ni
   ];
 }
