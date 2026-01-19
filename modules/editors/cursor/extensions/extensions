@@ -70,6 +70,7 @@ prisma.prisma
 redhat.vscode-yaml
 romanpeshkov.vscode-text-tables
 rust-lang.rust-analyzer
+samuelcolvin.jinjahtml
 shardulm94.trailing-spaces
 simonsiefke.svg-preview
 spywhere.guides
@@ -77,6 +78,7 @@ sysoev.language-stylus
 thisismanta.stylus-supremacy
 tombonnike.vscode-status-bar-format-toggle
 tyriar.sort-lines
+visualjj.visualjj
 vitest.explorer
 vscodevim.vim
 wayou.vscode-todo-highlight

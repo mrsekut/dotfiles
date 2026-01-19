@@ -26,6 +26,7 @@
 
     # others
     ./git
+    ./jujutsu
     ./utils
     ./keyboard/karabiner
     ./gomi
