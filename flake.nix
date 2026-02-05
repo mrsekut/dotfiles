@@ -39,6 +39,15 @@
       url = "github:mrsekut/gyou";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # Agent Skills
+    agent-skills = {
+      url = "github:Kyure-A/agent-skills-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    skills-config = {
+      url = "path:./modules/agent-skills";
+    };
   };
 
   outputs =
@@ -52,6 +61,8 @@
       satococoa-tap,
       git-fixup,
       gyou,
+      agent-skills,
+      skills-config,
       ...
     }:
     let
@@ -81,7 +92,11 @@
             gyou = gyou.packages.${system}.default;
             inherit claude-code-override;
           };
-          modules = [ ./modules/home-manager.nix ];
+          modules = [
+            agent-skills.homeManagerModules.default
+            skills-config.homeManagerModules.default
+            ./modules/home-manager.nix
+          ];
         };
       };
 

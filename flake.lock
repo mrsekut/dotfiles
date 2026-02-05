@@ -1,5 +1,42 @@
 {
   "nodes": {
+    "agent-skills": {
+      "inputs": {
+        "home-manager": "home-manager",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1770218103,
+        "narHash": "sha256-InxSZomi7ajBm+d5dN3Yah5mh7+pTb3iuI3U380sqQ8=",
+        "owner": "Kyure-A",
+        "repo": "agent-skills-nix",
+        "rev": "2e53d1a4c0fe78d758b99f5df0f79d558498002e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Kyure-A",
+        "repo": "agent-skills-nix",
+        "type": "github"
+      }
+    },
+    "anthropic-skills": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1770171633,
+        "narHash": "sha256-8tANLG91vLbC30IFpEakPBN9bUjJJldpvX28w9e9y80=",
+        "owner": "anthropics",
+        "repo": "skills",
+        "rev": "a5bcdd7e58cdff48566bf876f0a72a2008dcefbc",
+        "type": "github"
+      },
+      "original": {
+        "owner": "anthropics",
+        "repo": "skills",
+        "type": "github"
+      }
+    },
     "brew-src": {
       "flake": false,
       "locked": {
@@ -96,6 +133,27 @@
       }
     },
     "home-manager": {
+      "inputs": {
+        "nixpkgs": [
+          "agent-skills",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1766387499,
+        "narHash": "sha256-AjK3/UKDzeXFeYNLVBaJ3+HLE9he1g5UrlNd4/BM3eA=",
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "rev": "527ad07e6625302b648ed3b28c34b62a79bd103e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "type": "github"
+      }
+    },
+    "home-manager_2": {
       "inputs": {
         "nixpkgs": [
           "nixpkgs"
@@ -203,15 +261,17 @@
     },
     "root": {
       "inputs": {
+        "agent-skills": "agent-skills",
         "git-fixup": "git-fixup",
         "gyou": "gyou",
-        "home-manager": "home-manager",
+        "home-manager": "home-manager_2",
         "homebrew-bundle": "homebrew-bundle",
         "homebrew-cask": "homebrew-cask",
         "nix-darwin": "nix-darwin",
         "nix-homebrew": "nix-homebrew",
         "nixpkgs": "nixpkgs",
-        "satococoa-tap": "satococoa-tap"
+        "satococoa-tap": "satococoa-tap",
+        "skills-config": "skills-config"
       }
     },
     "satococoa-tap": {
@@ -229,6 +289,20 @@
         "repo": "homebrew-tap",
         "type": "github"
       }
+    },
+    "skills-config": {
+      "inputs": {
+        "anthropic-skills": "anthropic-skills"
+      },
+      "locked": {
+        "path": "./modules/agent-skills",
+        "type": "path"
+      },
+      "original": {
+        "path": "./modules/agent-skills",
+        "type": "path"
+      },
+      "parent": []
     },
     "systems": {
       "locked": {

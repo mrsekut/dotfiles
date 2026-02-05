@@ -15,6 +15,7 @@
     ./languages
     ./terminals
     ./claude
+    ./agent-skills
     ./terraform
 
     # commands
