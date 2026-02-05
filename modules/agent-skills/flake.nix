@@ -23,10 +23,14 @@
           path = intellectronica-skills;
           subdir = "skills";
         };
+        sources.local = {
+          path = ./skills;
+        };
 
         skills.enable = [
           "skill-creator"
           "context7"
+          "nix-shell-deps"
         ];
       };
     };
