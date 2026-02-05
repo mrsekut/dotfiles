@@ -205,6 +205,22 @@
         "type": "github"
       }
     },
+    "intellectronica-skills": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1770201278,
+        "narHash": "sha256-QC0jxIZpuKSlSjurl8A3vzh77ZFTCwoL+3HonRXIavQ=",
+        "owner": "intellectronica",
+        "repo": "agent-skills",
+        "rev": "326f2466f4b752abb8f31f5b70d3b98dfeebbac0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "intellectronica",
+        "repo": "agent-skills",
+        "type": "github"
+      }
+    },
     "nix-darwin": {
       "inputs": {
         "nixpkgs": [
@@ -292,7 +308,8 @@
     },
     "skills-config": {
       "inputs": {
-        "anthropic-skills": "anthropic-skills"
+        "anthropic-skills": "anthropic-skills",
+        "intellectronica-skills": "intellectronica-skills"
       },
       "locked": {
         "path": "./modules/agent-skills",

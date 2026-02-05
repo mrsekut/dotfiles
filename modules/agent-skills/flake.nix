@@ -6,27 +6,28 @@
       url = "github:anthropics/skills";
       flake = false;
     };
-    # Add more skill sources here:
-    # my-skills = { url = "github:me/my-skills"; flake = false; };
+    intellectronica-skills = {
+      url = "github:intellectronica/agent-skills";
+      flake = false;
+    };
   };
 
-  outputs = { self, anthropic-skills, ... }: {
+  outputs = { self, anthropic-skills, intellectronica-skills, ... }: {
     homeManagerModules.default = {
       programs.agent-skills = {
         sources.anthropic = {
           path = anthropic-skills;
           subdir = "skills";
         };
+        sources.intellectronica = {
+          path = intellectronica-skills;
+          subdir = "skills";
+        };
 
-        # Enable specific skills
-        # See: https://github.com/anthropics/skills/tree/main/skills
         skills.enable = [
           "skill-creator"
-          # "frontend-design"
-          # "algorithmic-art"
+          "context7"
         ];
-
-        # Or enable all: skills.enableAll = true;
       };
     };
   };
