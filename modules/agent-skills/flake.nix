@@ -10,9 +10,13 @@
       url = "github:intellectronica/agent-skills";
       flake = false;
     };
+    sdd-skills = {
+      url = "github:mrsekut/sdd-skills";
+      flake = false;
+    };
   };
 
-  outputs = { self, anthropic-skills, intellectronica-skills, ... }: {
+  outputs = { self, anthropic-skills, intellectronica-skills, sdd-skills, ... }: {
     homeManagerModules.default = {
       programs.agent-skills = {
         sources.anthropic = {
@@ -26,11 +30,15 @@
         sources.local = {
           path = ./skills;
         };
+        sources.sdd = {
+          path = sdd-skills;
+        };
 
         skills.enable = [
           "skill-creator"
           "context7"
           "nix-shell-deps"
+          "sdd"
         ];
       };
     };

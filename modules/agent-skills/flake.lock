@@ -3,11 +3,11 @@
     "anthropic-skills": {
       "flake": false,
       "locked": {
-        "lastModified": 1770171633,
-        "narHash": "sha256-8tANLG91vLbC30IFpEakPBN9bUjJJldpvX28w9e9y80=",
+        "lastModified": 1770412772,
+        "narHash": "sha256-9FGubcwHcGBJcKl02aJ+YsTMiwDOdgU/FHALjARG51c=",
         "owner": "anthropics",
         "repo": "skills",
-        "rev": "a5bcdd7e58cdff48566bf876f0a72a2008dcefbc",
+        "rev": "1ed29a03dc852d30fa6ef2ca53a67dc2c2c2c563",
         "type": "github"
       },
       "original": {
@@ -35,7 +35,24 @@
     "root": {
       "inputs": {
         "anthropic-skills": "anthropic-skills",
-        "intellectronica-skills": "intellectronica-skills"
+        "intellectronica-skills": "intellectronica-skills",
+        "sdd-skills": "sdd-skills"
+      }
+    },
+    "sdd-skills": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1770987846,
+        "narHash": "sha256-AYO92l77QjuEv/lbR55s5iSnrGA3xiWXmBHOB9H4IS8=",
+        "owner": "mrsekut",
+        "repo": "sdd-skills",
+        "rev": "b4db2e7964958270b009f3a193e25e4ca6e17231",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mrsekut",
+        "repo": "sdd-skills",
+        "type": "github"
       }
     }
   },
