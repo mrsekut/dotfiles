@@ -36,6 +36,11 @@ skills-update:
   nix flake lock --update-input skills-config
 
 
+# flake.lockを更新
+flake-update:
+  nix flake update
+
+
 home-manager-apply:
   nix run home-manager -- switch --flake .#mrsekut
 
