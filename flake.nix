@@ -40,6 +40,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # nix-index-database (for comma)
+    nix-index-database = {
+      url = "github:Mic92/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # Agent Skills
     agent-skills = {
       url = "github:Kyure-A/agent-skills-nix";
@@ -61,6 +67,7 @@
       satococoa-tap,
       git-fixup,
       gyou,
+      nix-index-database,
       agent-skills,
       skills-config,
       ...
@@ -93,6 +100,7 @@
             inherit claude-code-override;
           };
           modules = [
+            nix-index-database.hmModules.nix-index
             agent-skills.homeManagerModules.default
             skills-config.homeManagerModules.default
             ./modules/home-manager.nix
