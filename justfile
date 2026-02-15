@@ -49,15 +49,6 @@ darwin-apply:
 
 
 # =================
-# Claude Code
-# =================
-
-# claude-codeを最新バージョンに更新
-update-claude-code:
-  bash modules/claude/update.sh
-
-
-# =================
 # VSCode
 # =================
 

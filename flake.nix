@@ -85,19 +85,14 @@
             "terraform"
           ];
       };
-      claude-code-override = pkgs.callPackage ./modules/claude/override.nix { };
     in
     {
-      packages.${system} = {
-        inherit claude-code-override;
-      };
       homeConfigurations = {
         mrsekut = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           extraSpecialArgs = {
             git-fixup = git-fixup.packages.${system}.default;
             gyou = gyou.packages.${system}.default;
-            inherit claude-code-override;
           };
           modules = [
             nix-index-database.hmModules.nix-index
