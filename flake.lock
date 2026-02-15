@@ -208,11 +208,11 @@
     "intellectronica-skills": {
       "flake": false,
       "locked": {
-        "lastModified": 1770201278,
-        "narHash": "sha256-QC0jxIZpuKSlSjurl8A3vzh77ZFTCwoL+3HonRXIavQ=",
+        "lastModified": 1771067294,
+        "narHash": "sha256-tpTZaoW4wSDh7IL3PTjceApPdUtRCUXo9EVP/vQh4DE=",
         "owner": "intellectronica",
         "repo": "agent-skills",
-        "rev": "326f2466f4b752abb8f31f5b70d3b98dfeebbac0",
+        "rev": "6c81c34e75e75be10951e7abe7dd285e97e145b9",
         "type": "github"
       },
       "original": {
@@ -309,11 +309,11 @@
     "sdd-skills": {
       "flake": false,
       "locked": {
-        "lastModified": 1770987846,
-        "narHash": "sha256-AYO92l77QjuEv/lbR55s5iSnrGA3xiWXmBHOB9H4IS8=",
+        "lastModified": 1771128287,
+        "narHash": "sha256-iXmJndcse6lKz05WOwFw04yQypUJia8w4a6XLvNAqP0=",
         "owner": "mrsekut",
         "repo": "sdd-skills",
-        "rev": "b4db2e7964958270b009f3a193e25e4ca6e17231",
+        "rev": "f60344e7129869b77b7bd07376961c274e5dadd0",
         "type": "github"
       },
       "original": {
