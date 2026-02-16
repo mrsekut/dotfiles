@@ -58,7 +58,6 @@
 
         # cherry-pick
         cp = "cherry-pick";
-        cp-i = "!${pkgs.bun}/bin/bun run ${./scripts/cherry-pick-interactive.ts}";
 
         # remote
         po = "push origin head";
