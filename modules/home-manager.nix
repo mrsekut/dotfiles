@@ -32,5 +32,6 @@
     ./gomi
     ./kubernetes
     ./wtp
+    ./yazi
   ];
 }
