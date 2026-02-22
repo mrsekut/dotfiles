@@ -2,7 +2,10 @@
 
 {
   home.packages = with pkgs; [
-    rustup
+    rustc
+    cargo
+    clippy
+    rustfmt
   ];
 
   programs.zsh = {
