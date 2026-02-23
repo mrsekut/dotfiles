@@ -181,5 +181,8 @@
 	"yaml.schemas": {
 		"kubernetes": ["*.yml", "*.yaml"]
 	},
-	"commentTranslate.targetLanguage": "ja"
+	"commentTranslate.targetLanguage": "ja",
+	"commentTranslate.browse.mode": "inplace",
+	"docker.extension.enableComposeLanguageServer": false,
+	"python.defaultInterpreterPath": "/opt/homebrew/bin/python3"
 }
