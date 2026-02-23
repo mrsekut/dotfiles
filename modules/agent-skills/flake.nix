@@ -14,9 +14,13 @@
       url = "github:mrsekut/sdd-skills";
       flake = false;
     };
+    mrsekut-skills = {
+      url = "github:mrsekut/agent-skills";
+      flake = false;
+    };
   };
 
-  outputs = { self, anthropic-skills, intellectronica-skills, sdd-skills, ... }: {
+  outputs = { self, anthropic-skills, intellectronica-skills, sdd-skills, mrsekut-skills, ... }: {
     homeManagerModules.default = {
       programs.agent-skills = {
         sources.anthropic = {
@@ -33,12 +37,16 @@
         sources.sdd = {
           path = sdd-skills;
         };
+        sources.mrsekut = {
+          path = mrsekut-skills;
+        };
 
         skills.enable = [
           "skill-creator"
           "context7"
           "nix-shell-deps"
           "sdd"
+          "chrome-store-submit"
         ];
       };
     };

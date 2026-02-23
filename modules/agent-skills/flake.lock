@@ -32,10 +32,27 @@
         "type": "github"
       }
     },
+    "mrsekut-skills": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1771832869,
+        "narHash": "sha256-rdGEuiSX3+yogJgd4ZWWkNb3FUadEdFZSGdJ4P/Ww0k=",
+        "owner": "mrsekut",
+        "repo": "agent-skills",
+        "rev": "19d8190091e31b8a7c0148cf010692748f025b66",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mrsekut",
+        "repo": "agent-skills",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "anthropic-skills": "anthropic-skills",
         "intellectronica-skills": "intellectronica-skills",
+        "mrsekut-skills": "mrsekut-skills",
         "sdd-skills": "sdd-skills"
       }
     },
