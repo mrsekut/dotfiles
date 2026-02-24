@@ -51,8 +51,21 @@
       url = "github:Kyure-A/agent-skills-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    skills-config = {
-      url = "path:./modules/agent-skills";
+    anthropic-skills = {
+      url = "github:anthropics/skills";
+      flake = false;
+    };
+    intellectronica-skills = {
+      url = "github:intellectronica/agent-skills";
+      flake = false;
+    };
+    sdd-skills = {
+      url = "github:mrsekut/sdd-skills";
+      flake = false;
+    };
+    mrsekut-skills = {
+      url = "github:mrsekut/agent-skills";
+      flake = false;
     };
   };
 
@@ -69,7 +82,10 @@
       gyou,
       nix-index-database,
       agent-skills,
-      skills-config,
+      anthropic-skills,
+      intellectronica-skills,
+      sdd-skills,
+      mrsekut-skills,
       ...
     }:
     let
@@ -93,11 +109,12 @@
           extraSpecialArgs = {
             git-fixup = git-fixup.packages.${system}.default;
             gyou = gyou.packages.${system}.default;
+            inherit anthropic-skills intellectronica-skills sdd-skills mrsekut-skills;
           };
           modules = [
             nix-index-database.hmModules.nix-index
             agent-skills.homeManagerModules.default
-            skills-config.homeManagerModules.default
+            ./modules/agent-skills.nix
             ./modules/home-manager.nix
           ];
         };

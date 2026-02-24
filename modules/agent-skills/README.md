@@ -5,15 +5,17 @@ Claude Code等のAIエージェント向けスキルを管理するモジュー�
 ## 構造
 
 ```
-modules/agent-skills/
-├── flake.nix      # スキルソースの定義 + 有効化するスキルの選択
-├── flake.lock     # スキルソースのバージョン固定（自動生成）
-├── default.nix    # agent-skillsの有効化とインストール先設定
-└── README.md
+modules/
+├── agent-skills.nix       # スキルソースの定義 + 有効化するスキルの選択
+├── agent-skills/
+│   ├── default.nix        # agent-skillsの有効化とインストール先設定
+│   ├── skills/            # ローカルスキル
+│   └── README.md
 ```
 
-- `flake.nix` - child flakeとして独立したinputsを持つ。スキルソースの追加・スキルの有効化はここ
-- `default.nix` - メインのhome-manager.nixからインポートされる。基本的に編集不要
+- `agent-skills.nix` - スキルソースの追加・スキルの有効化はここ
+- `agent-skills/default.nix` - メインのhome-manager.nixからインポートされる。基本的に編集不要
+- スキルソースのinputsはroot `flake.nix` で管理
 
 ## インストール先
 
@@ -46,7 +48,7 @@ cat ~/.claude/skills/skill-creator/SKILL.md
 
 ## スキルの追加・変更
 
-`flake.nix` の `skills.enable` を編集:
+`modules/agent-skills.nix` の `skills.enable` を編集:
 
 ```nix
 skills.enable = [
@@ -57,24 +59,34 @@ skills.enable = [
 
 ## 新しいスキルソースの追加
 
-`flake.nix` を編集:
+1. root `flake.nix` の inputs に追加:
 
 ```nix
 inputs = {
-  anthropic-skills = { url = "github:anthropics/skills"; flake = false; };
   my-skills = { url = "github:someone/my-skills"; flake = false; };  # 追加
 };
+```
 
-outputs = { self, anthropic-skills, my-skills, ... }: {
-  homeManagerModules.default = {
-    programs.agent-skills = {
-      sources.anthropic = { path = anthropic-skills; subdir = "skills"; };
-      sources.mine = { path = my-skills; };  # 追加
+2. root `flake.nix` の outputs と extraSpecialArgs に追加:
 
-      skills.enable = [ "skill-creator" "some-skill-from-mine" ];
-    };
+```nix
+outputs = { ..., my-skills, ... }:
+  # ...
+  extraSpecialArgs = {
+    inherit ... my-skills;  # 追加
   };
-};
+```
+
+3. `modules/agent-skills.nix` で source と enable を設定:
+
+```nix
+{ ..., my-skills, ... }:
+{
+  programs.agent-skills = {
+    sources.mine = { path = my-skills; };  # 追加
+    skills.enable = [ "skill-creator" "some-skill-from-mine" ];
+  };
+}
 ```
 
 ## 参考

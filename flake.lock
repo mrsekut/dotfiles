@@ -314,17 +314,20 @@
     "root": {
       "inputs": {
         "agent-skills": "agent-skills",
+        "anthropic-skills": "anthropic-skills",
         "git-fixup": "git-fixup",
         "gyou": "gyou",
         "home-manager": "home-manager_2",
         "homebrew-bundle": "homebrew-bundle",
         "homebrew-cask": "homebrew-cask",
+        "intellectronica-skills": "intellectronica-skills",
+        "mrsekut-skills": "mrsekut-skills",
         "nix-darwin": "nix-darwin",
         "nix-homebrew": "nix-homebrew",
         "nix-index-database": "nix-index-database",
         "nixpkgs": "nixpkgs",
         "satococoa-tap": "satococoa-tap",
-        "skills-config": "skills-config"
+        "sdd-skills": "sdd-skills"
       }
     },
     "satococoa-tap": {
@@ -358,23 +361,6 @@
         "repo": "sdd-skills",
         "type": "github"
       }
-    },
-    "skills-config": {
-      "inputs": {
-        "anthropic-skills": "anthropic-skills",
-        "intellectronica-skills": "intellectronica-skills",
-        "mrsekut-skills": "mrsekut-skills",
-        "sdd-skills": "sdd-skills"
-      },
-      "locked": {
-        "path": "./modules/agent-skills",
-        "type": "path"
-      },
-      "original": {
-        "path": "./modules/agent-skills",
-        "type": "path"
-      },
-      "parent": []
     },
     "systems": {
       "locked": {

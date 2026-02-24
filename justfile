@@ -20,20 +20,13 @@ nix-uninstall:
 
 
 nix-apply:
-  just skills-lock
   just home-manager-apply
   just darwin-apply
 
 
-# agent-skillsのchild flakeをlock
-skills-lock:
-  cd modules/agent-skills && nix flake lock
-
-
 # agent-skillsのスキルソースを更新
 skills-update:
-  cd modules/agent-skills && nix flake update
-  nix flake lock --update-input skills-config
+  nix flake lock --update-input anthropic-skills --update-input intellectronica-skills --update-input sdd-skills --update-input mrsekut-skills
 
 
 # flake.lockを更新
