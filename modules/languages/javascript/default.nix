@@ -9,4 +9,11 @@
     bun
     ni
   ];
+
+  programs.zsh = {
+    initContent = ''
+      # bun linkしたパッケージを直接実行できるようにする
+      export PATH=$HOME/.bun/bin:$PATH
+    '';
+  };
 }
