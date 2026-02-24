@@ -9,6 +9,7 @@
     # ./java # for alloy
     # ./lean
 
+    ./go
     ./python
     ./rust
   ];
