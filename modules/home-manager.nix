@@ -10,6 +10,7 @@
   };
 
   imports = [
+    ./options.nix
     ./nix
     ./editors
     ./languages

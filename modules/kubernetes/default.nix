@@ -1,9 +1,9 @@
-{ pkgs, ... }:
+{ pkgs, config, lib, ... }:
 
 {
-  home.packages = with pkgs; [
+  home.packages = lib.optionals config.dotfiles.isPersonal (with pkgs; [
     kubectl
-  ];
+  ]);
 
   programs.zsh = {
     shellAliases = {

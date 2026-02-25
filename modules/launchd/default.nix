@@ -1,6 +1,6 @@
-{ ... }:
+{ config, lib, ... }:
 
-{
+lib.mkIf config.dotfiles.isPersonal {
   launchd.agents.prototyping-runner = {
     enable = true;
     config = {

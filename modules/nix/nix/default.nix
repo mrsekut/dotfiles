@@ -1,9 +1,9 @@
-{ pkgs, ... }:
+{ pkgs, config, lib, ... }:
 
 {
   nix = {
     package = pkgs.nixVersions.stable;
-    settings = {
+    settings = lib.mkIf config.dotfiles.isPersonal {
       experimental-features = ''
         nix-command flakes
       '';

@@ -101,38 +101,66 @@
             "terraform"
           ];
       };
+
+      commonHomeModules = [
+        nix-index-database.hmModules.nix-index
+        agent-skills.homeManagerModules.default
+        ./modules/agent-skills.nix
+        ./modules/home-manager.nix
+      ];
+
+      commonExtraSpecialArgs = {
+        git-fixup = git-fixup.packages.${system}.default;
+        gyou = gyou.packages.${system}.default;
+        inherit anthropic-skills intellectronica-skills sdd-skills mrsekut-skills;
+      };
+
+      commonDarwinModules = [
+        ./modules/nix-darwin.nix
+        nix-homebrew.darwinModules.nix-homebrew
+        ./modules/homebrew.nix
+        ./modules/terminals/warp/brew.nix
+        ./modules/claude/brew.nix
+        ./modules/editors/cursor/brew.nix
+        ./modules/wtp/brew.nix
+      ];
     in
     {
       homeConfigurations = {
-        mrsekut = home-manager.lib.homeManagerConfiguration {
+        "mrsekut@personal" = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
-          extraSpecialArgs = {
-            git-fixup = git-fixup.packages.${system}.default;
-            gyou = gyou.packages.${system}.default;
-            inherit anthropic-skills intellectronica-skills sdd-skills mrsekut-skills;
-          };
-          modules = [
-            nix-index-database.hmModules.nix-index
-            agent-skills.homeManagerModules.default
-            ./modules/agent-skills.nix
-            ./modules/home-manager.nix
+          extraSpecialArgs = commonExtraSpecialArgs;
+          modules = commonHomeModules ++ [
+            { dotfiles.profile = "personal"; }
+            ./modules/profiles/personal.nix
+          ];
+        };
+
+        "mrsekut@work" = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+          extraSpecialArgs = commonExtraSpecialArgs;
+          modules = commonHomeModules ++ [
+            { dotfiles.profile = "work"; }
+            ./modules/profiles/work.nix
           ];
         };
       };
 
       darwinConfigurations = {
-        mrsekut = nix-darwin.lib.darwinSystem {
+        "mrsekut@personal" = nix-darwin.lib.darwinSystem {
           specialArgs = { inherit homebrew-cask homebrew-bundle satococoa-tap; };
           system = system;
-          modules = [
-            ./modules/nix-darwin.nix
-            nix-homebrew.darwinModules.nix-homebrew
-            ./modules/homebrew.nix
-            ./modules/terminals/warp/brew.nix
+          modules = commonDarwinModules ++ [
             ./modules/gyazo/brew.nix
-            ./modules/claude/brew.nix
-            ./modules/editors/cursor/brew.nix
-            ./modules/wtp/brew.nix
+            ./modules/profiles/personal-darwin.nix
+          ];
+        };
+
+        "mrsekut@work" = nix-darwin.lib.darwinSystem {
+          specialArgs = { inherit homebrew-cask homebrew-bundle satococoa-tap; };
+          system = system;
+          modules = commonDarwinModules ++ [
+            ./modules/profiles/work-darwin.nix
           ];
         };
       };

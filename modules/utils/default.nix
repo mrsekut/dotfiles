@@ -1,9 +1,8 @@
-{ pkgs, gyou, ... }:
+{ pkgs, config, lib, gyou, ... }:
 
 {
   home.packages = with pkgs; [
     cloc
-    jq
     ghq
     # gnused
 
@@ -13,8 +12,10 @@
 
     bash
     zlib
-    awscli2
 
     gyou
+  ] ++ lib.optionals config.dotfiles.isPersonal [
+    jq
+    awscli2
   ];
 }
