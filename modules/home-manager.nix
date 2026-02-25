@@ -33,5 +33,6 @@
     ./kubernetes
     ./wtp
     ./yazi
+    ./launchd
   ];
 }
