@@ -19,11 +19,6 @@ nix-uninstall:
   /nix/nix-installer uninstall
 
 
-nix-apply profile="personal":
-  just home-manager-apply {{profile}}
-  just darwin-apply {{profile}}
-
-
 # agent-skillsのスキルソースを更新
 skills-update:
   nix flake lock --update-input anthropic-skills --update-input intellectronica-skills --update-input sdd-skills --update-input mrsekut-skills
@@ -33,12 +28,25 @@ skills-update:
 flake-update:
   nix flake update
 
+nix-apply-personal:
+  just home-manager-apply-personal
+  just darwin-apply-personal
 
-home-manager-apply profile="personal":
-  nix run home-manager -- switch --flake '.#mrsekut@{{profile}}'
+nix-apply-work:
+  just home-manager-apply-work
+  just darwin-apply-work
 
-darwin-apply profile="personal":
-  sudo nix run nix-darwin -- switch --flake '.#mrsekut@{{profile}}'
+home-manager-apply-personal:
+  nix run home-manager -- switch --flake '.#mrsekut@personal'
+
+home-manager-apply-work:
+  nix run home-manager -- switch --flake '.#mrsekut@work'
+
+darwin-apply-personal:
+  sudo nix run nix-darwin -- switch --flake '.#mrsekut@personal'
+
+darwin-apply-work:
+  sudo nix run nix-darwin -- switch --flake '.#mrsekut@work'
 
 
 # =================
