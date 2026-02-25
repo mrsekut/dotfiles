@@ -6,6 +6,10 @@
   ...
 }:
 
+let
+  ghqRoot = "~/Desktop/dev";
+
+in
 {
   home.packages = with pkgs; [
     git

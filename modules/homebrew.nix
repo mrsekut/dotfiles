@@ -32,6 +32,9 @@
     brews = [
     ];
     masApps = {
+      "okta-verify" = 490179405;
+      "meetingbar" = 1532419400;
+      "tootrain" = 1579538917;
       # "toggl" = 1291898086; # errorになるのでコメントアウト
       # "xcode"
     } // lib.optionalAttrs config.dotfiles.isPersonal {
