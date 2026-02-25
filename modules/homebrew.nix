@@ -2,6 +2,8 @@
   homebrew-cask,
   homebrew-bundle,
   satococoa-tap,
+  config,
+  lib,
   ...
 }:
 {
@@ -33,6 +35,8 @@
     masApps = {
       "toggl" = 1291898086;
       # "xcode"
+    } // lib.optionalAttrs config.dotfiles.isPersonal {
+      "kindle" = 302584613;
     };
 
     casks = [

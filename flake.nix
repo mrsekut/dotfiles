@@ -116,10 +116,12 @@
       };
 
       commonDarwinModules = [
+        ./modules/options.nix
         ./modules/nix-darwin.nix
         nix-homebrew.darwinModules.nix-homebrew
         ./modules/homebrew.nix
         ./modules/terminals/warp/brew.nix
+        ./modules/gyazo/brew.nix
         ./modules/claude/brew.nix
         ./modules/editors/cursor/brew.nix
         ./modules/wtp/brew.nix
@@ -151,8 +153,7 @@
           specialArgs = { inherit homebrew-cask homebrew-bundle satococoa-tap; };
           system = system;
           modules = commonDarwinModules ++ [
-            ./modules/gyazo/brew.nix
-            ./modules/profiles/personal-darwin.nix
+            { dotfiles.profile = "personal"; }
           ];
         };
 
@@ -160,6 +161,7 @@
           specialArgs = { inherit homebrew-cask homebrew-bundle satococoa-tap; };
           system = system;
           modules = commonDarwinModules ++ [
+            { dotfiles.profile = "work"; }
             ./modules/profiles/work-darwin.nix
           ];
         };
