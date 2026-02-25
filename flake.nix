@@ -30,6 +30,8 @@
       flake = false;
     };
 
+    codex.url = "github:herp-inc-hq/codex";
+
     # mrsekut's libraries
     git-fixup = {
       url = "github:mrsekut/git-fixup";
@@ -73,6 +75,7 @@
     {
       nixpkgs,
       home-manager,
+      codex,
       nix-darwin,
       nix-homebrew,
       homebrew-cask,
@@ -100,6 +103,7 @@
             "claude-code"
             "terraform"
           ];
+        overlays = [ codex.overlays.default ];
       };
 
       commonHomeModules = [
@@ -142,6 +146,8 @@
           extraSpecialArgs = commonExtraSpecialArgs;
           modules = commonHomeModules ++ [
             { dotfiles.profile = "work"; }
+            codex.homeModules.default
+            { codex.enable = true; }
           ];
         };
       };
