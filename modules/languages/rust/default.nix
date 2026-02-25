@@ -1,8 +1,11 @@
-{ pkgs, ... }:
+{ pkgs, config, lib, ... }:
 
-{
+lib.mkIf config.dotfiles.isPersonal {
   home.packages = with pkgs; [
-    rustup
+    rustc
+    cargo
+    clippy
+    rustfmt
   ];
 
   programs.zsh = {

@@ -1,6 +1,7 @@
 {
   pkgs,
   lib,
+  config,
   git-fixup,
   ...
 }:
@@ -14,15 +15,16 @@ in
     git
     gh
     git-fixup
+    lazygit
     bun
   ];
 
   programs.git = {
     enable = true;
 
-    includes = [
+    includes = lib.optionals config.dotfiles.isWork [
       {
-        condition = "gitdir:${ghqRoot}/github.com/herp-inc-hq/";
+        condition = "gitdir:~/Desktop/dev/github.com/herp-inc-hq/";
         contents = {
           user = {
             name = "kota-marusue_herpinc";
@@ -73,7 +75,6 @@ in
 
         # cherry-pick
         cp = "cherry-pick";
-        cp-i = "!${pkgs.bun}/bin/bun run ${./scripts/cherry-pick-interactive.ts}";
 
         # remote
         po = "push origin head";
@@ -85,6 +86,56 @@ in
         # その他のスクリプト操作
         stack-branch = "!${pkgs.bun}/bin/bun run ${./scripts/stack-branch.ts}";
         rd = "!f() { git switch develop && git pull && git switch $1 && git rebase develop; }; f"; # ref: https://scrapbox.io/mrsekut-p/λ_git_rd
+      };
+    };
+  };
+
+  programs.lazygit = {
+    enable = true;
+    enableZshIntegration = true; # `lg` コマンドで起動できる
+    settings = {
+      git = {
+        autoFetch = true;
+        autoRefresh = true;
+        fetchAll = true;
+        branchLogCmd = "git log --graph --color=always --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' {{branchName}} --"; # [3] での右側の表示
+        allBranchesLogCmds = [ # [1] Status にて `a` した時の表示
+          "git log --graph --date-order --pretty=format:\"%C(magenta)<%h> %C(yellow)%ad %C(green)(%cr) %C(cyan)[%an] %C(white)%d%C(reset) %s\" --all --date=short"
+        ];
+        pagers = [
+          {
+            colorArg = "always";
+            pager = "delta --dark --paging=never --side-by-side";
+          }
+        ];
+      };
+      gui = {
+        filterMode = "fuzzy";
+      };
+      customCommands = [
+        {
+          key = "G";
+          command = "gh pr view -w {{.SelectedLocalBranch.Name}}";
+          context = "localBranches";
+          description = "ブラウザでGithub PRを開く";
+        }
+        {
+          key = "G";
+          command = "gh pr view -w";
+          context = "commits";
+          description = "ブラウザでGithub PRを開く";
+        }
+        {
+          key = "b";
+          command = "git branch --merged master | grep -v '^[ *]*master' | xargs -r git branch -d";
+          context = "localBranches";
+          loadingText = "Pruning...";
+          description = "masterにマージ済みのローカルブランチを削除";
+        }
+      ];
+      keybinding.commits = {
+        moveDownCommit = "J";
+        moveUpCommit = "K";
       };
     };
   };

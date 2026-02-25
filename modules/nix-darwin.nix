@@ -1,8 +1,8 @@
-{ ... }:
+{ config, lib, ... }:
 
 {
   nix = {
-    enable = false;
+    enable = lib.mkIf config.dotfiles.isWork false;
     settings = {
       experimental-features = [ "nix-command" "flakes" ];
     };

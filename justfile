@@ -19,25 +19,26 @@ nix-uninstall:
   /nix/nix-installer uninstall
 
 
-nix-apply:
-  just home-manager-apply
-  just darwin-apply
+nix-apply profile="personal":
+  just home-manager-apply {{profile}}
+  just darwin-apply {{profile}}
 
 
-home-manager-apply:
-  nix run home-manager -- switch --flake .#mrsekut
-
-darwin-apply:
-  sudo nix run nix-darwin -- switch --flake .#mrsekut
+# agent-skillsのスキルソースを更新
+skills-update:
+  nix flake lock --update-input anthropic-skills --update-input intellectronica-skills --update-input sdd-skills --update-input mrsekut-skills
 
 
-# =================
-# Claude Code
-# =================
+# flake.lockを更新
+flake-update:
+  nix flake update
 
-# claude-codeを最新バージョンに更新
-update-claude-code:
-  bash modules/claude/update.sh
+
+home-manager-apply profile="personal":
+  nix run home-manager -- switch --flake '.#mrsekut@{{profile}}'
+
+darwin-apply profile="personal":
+  sudo nix run nix-darwin -- switch --flake '.#mrsekut@{{profile}}'
 
 
 # =================

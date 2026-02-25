@@ -10,11 +10,13 @@
   };
 
   imports = [
+    ./options.nix
     ./nix
     ./editors
     ./languages
     ./terminals
     ./claude
+    ./agent-skills
     ./terraform
 
     # commands
@@ -31,5 +33,7 @@
     ./gomi
     ./kubernetes
     ./wtp
+    ./yazi
+    ./launchd
   ];
 }
