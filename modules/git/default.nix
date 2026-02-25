@@ -4,6 +4,10 @@
   ...
 }:
 
+let
+  ghqRoot = "~/Desktop/dev";
+
+in
 {
   imports = [
     ./gh-extensions.nix
