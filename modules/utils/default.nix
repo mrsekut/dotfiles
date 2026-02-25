@@ -13,6 +13,10 @@
     bash
     zlib
 
+    google-cloud-sdk
+
+    uv # `uvx test-opensearch-mcp` したいので一時的に追加
+    argo-workflows
     gyou
   ] ++ lib.optionals config.dotfiles.isPersonal [
     jq
