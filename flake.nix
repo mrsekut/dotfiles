@@ -2,15 +2,19 @@
   description = "my dotfiles";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    # NOTE: codex が nix_2_29 を参照しているため、古い nixpkgs に固定 (2025-12-14)
+    # codex が nix_2_31 に対応したら nixos-unstable に戻す
+    nixpkgs.url = "github:nixos/nixpkgs/d02bcc33948ca19b0aaa0213fe987ceec1f4ebe1";
 
+    # NOTE: nixpkgs を固定したため、対応する home-manager も固定 (2025-12-14)
     home-manager = {
-      url = "github:nix-community/home-manager";
+      url = "github:nix-community/home-manager/58bf3ecb2d0bba7bdf363fc8a6c4d49b4d509d03";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # NOTE: nixpkgs 25.05 に合わせて nix-darwin-25.05 ブランチを使用
     nix-darwin = {
-      url = "github:LnL7/nix-darwin";
+      url = "github:LnL7/nix-darwin/nix-darwin-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -30,7 +34,10 @@
       flake = false;
     };
 
-    codex.url = "github:herp-inc-hq/codex";
+    codex = {
+      url = "github:herp-inc-hq/codex";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # mrsekut's libraries
     git-fixup = {
