@@ -1,6 +1,7 @@
 {
   pkgs,
   lib,
+  config,
   git-fixup,
   ...
 }:
@@ -16,6 +17,18 @@
 
   programs.git = {
     enable = true;
+
+    includes = lib.optionals config.dotfiles.isWork [
+      {
+        condition = "gitdir:~/Desktop/dev/github.com/herp-inc-hq/";
+        contents = {
+          user = {
+            name = "kota-marusue_herpinc";
+            email = "kota.marusue@herp.co.jp";
+          };
+        };
+      }
+    ];
 
     settings = {
       user = {

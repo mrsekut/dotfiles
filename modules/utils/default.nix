@@ -17,5 +17,9 @@
   ] ++ lib.optionals config.dotfiles.isPersonal [
     jq
     awscli2
+  ] ++ lib.optionals config.dotfiles.isWork [
+    google-cloud-sdk
+    uv
+    argo-workflows
   ];
 }

@@ -134,7 +134,6 @@
           extraSpecialArgs = commonExtraSpecialArgs;
           modules = commonHomeModules ++ [
             { dotfiles.profile = "personal"; }
-            ./modules/profiles/personal.nix
           ];
         };
 
@@ -143,7 +142,6 @@
           extraSpecialArgs = commonExtraSpecialArgs;
           modules = commonHomeModules ++ [
             { dotfiles.profile = "work"; }
-            ./modules/profiles/work.nix
           ];
         };
       };
@@ -162,7 +160,6 @@
           system = system;
           modules = commonDarwinModules ++ [
             { dotfiles.profile = "work"; }
-            ./modules/profiles/work-darwin.nix
           ];
         };
       };
