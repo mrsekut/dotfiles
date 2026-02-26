@@ -3,6 +3,7 @@
 {
   nix = {
     enable = lib.mkIf config.dotfiles.isWork false;
+    channel.enable = false;
     settings = {
       experimental-features = [ "nix-command" "flakes" ];
     };
