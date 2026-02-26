@@ -53,8 +53,8 @@
       "karabiner-elements"
       "google-chrome"
       "zoom"
+      "wispr-flow"
     ] ++ lib.optionals config.dotfiles.isWork [
-      "cursor"
       "obsidian"
     ];
   };
