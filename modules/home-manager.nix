@@ -17,6 +17,7 @@
     ./terminals
     ./claude
     ./agent-skills
+    ./1password
     ./openclaw
     ./terraform
 

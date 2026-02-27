@@ -105,6 +105,7 @@
         config.allowUnfreePredicate =
           pkg:
           builtins.elem (nixpkgs.lib.getName pkg) [
+            "1password-cli"
             "claude-code"
             "terraform"
           ];
@@ -129,6 +130,7 @@
         ./modules/nix-darwin.nix
         nix-homebrew.darwinModules.nix-homebrew
         ./modules/homebrew.nix
+        ./modules/1password/brew.nix
         ./modules/terminals/warp/brew.nix
         ./modules/gyazo/brew.nix
         ./modules/claude/brew.nix

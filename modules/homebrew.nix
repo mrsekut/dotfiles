@@ -44,7 +44,6 @@
     };
 
     casks = [
-      "1password"
       "chatgpt"
       "orbstack"
       "fork"
