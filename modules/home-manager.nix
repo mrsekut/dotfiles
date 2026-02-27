@@ -17,6 +17,7 @@
     ./terminals
     ./claude
     ./agent-skills
+    ./openclaw
     ./terraform
 
     # commands
