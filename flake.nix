@@ -67,12 +67,6 @@
       url = "github:mrsekut/agent-skills";
       flake = false;
     };
-
-    # OpenClaw
-    nix-openclaw = {
-      url = "github:openclaw/nix-openclaw";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs =
@@ -92,7 +86,6 @@
       intellectronica-skills,
       sdd-skills,
       mrsekut-skills,
-      nix-openclaw,
       ...
     }:
     let
@@ -101,7 +94,6 @@
 
       pkgs = import nixpkgs {
         inherit system;
-        overlays = [ nix-openclaw.overlays.default ];
         config.allowUnfreePredicate =
           pkg:
           builtins.elem (nixpkgs.lib.getName pkg) [
@@ -114,7 +106,6 @@
       commonHomeModules = [
         nix-index-database.hmModules.nix-index
         agent-skills.homeManagerModules.default
-        nix-openclaw.homeManagerModules.openclaw
         ./modules/agent-skills.nix
         ./modules/home-manager.nix
       ];

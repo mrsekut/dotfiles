@@ -37,26 +37,10 @@ nix-apply-work:
   just darwin-apply-work
 
 home-manager-apply-personal:
-  #!/usr/bin/env bash
-  set -euo pipefail
-  echo "Reading secrets from 1Password..."
-  export OPENCLAW_GATEWAY_TOKEN="$(op read 'op://Personal/OpenClaw/gateway-token' --account my.1password.com)"
-  export OPENCLAW_DISCORD_TOKEN="$(op read 'op://Personal/OpenClaw/discord-token' --account my.1password.com)"
-  ANTHROPIC_API_KEY="$(op read 'op://Personal/OpenClaw/anthropic-api-key' --account my.1password.com)"
+  nix run home-manager -- switch --flake '.#mrsekut@personal'
 
-  # ANTHROPIC_API_KEY をファイルキャッシュ（再起動時の launchd agent 用）
-  mkdir -p "$HOME/.secrets/openclaw"
-  printf '%s' "$ANTHROPIC_API_KEY" > "$HOME/.secrets/openclaw/anthropic-api-key"
-  chmod 600 "$HOME/.secrets/openclaw/anthropic-api-key"
-
-  nix run home-manager -- switch --impure --flake '.#mrsekut@personal'
-
-  # 現在のセッションにも即時反映
-  launchctl setenv ANTHROPIC_API_KEY "$ANTHROPIC_API_KEY"
-  launchctl kickstart -k "gui/$(id -u)/com.steipete.openclaw.gateway" 2>/dev/null || true
-
-home-manager-apply-workご視聴ありがとうございました。:
-  nix run home-manager -- switch --impure --flake '.#mrsekut@work'
+home-manager-apply-work:
+  nix run home-manager -- switch --flake '.#mrsekut@work'
 
 darwin-apply-personal:
   sudo nix run nix-darwin -- switch --flake '.#mrsekut@personal'
