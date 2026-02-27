@@ -25,6 +25,7 @@
       "nix-shell-deps"
       "sdd"
       "chrome-store-submit"
+      "bun-publish-setup"
     ];
   };
 }

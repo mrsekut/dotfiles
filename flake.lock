@@ -24,11 +24,11 @@
     "anthropic-skills": {
       "flake": false,
       "locked": {
-        "lastModified": 1770412772,
-        "narHash": "sha256-9FGubcwHcGBJcKl02aJ+YsTMiwDOdgU/FHALjARG51c=",
+        "lastModified": 1771993718,
+        "narHash": "sha256-mZZ0rlj/kju7we1h+MvUjgFAVjcZ/qKkMbNZfhfCSvk=",
         "owner": "anthropics",
         "repo": "skills",
-        "rev": "1ed29a03dc852d30fa6ef2ca53a67dc2c2c2c563",
+        "rev": "3d59511518591fa82e6cfcf0438d68dd5dad3e76",
         "type": "github"
       },
       "original": {
@@ -208,11 +208,11 @@
     "intellectronica-skills": {
       "flake": false,
       "locked": {
-        "lastModified": 1771067294,
-        "narHash": "sha256-tpTZaoW4wSDh7IL3PTjceApPdUtRCUXo9EVP/vQh4DE=",
+        "lastModified": 1772124974,
+        "narHash": "sha256-8MNwj37GeTpYnjf8eLw5Hv/wMO46dPsoodM/mFAEuAQ=",
         "owner": "intellectronica",
         "repo": "agent-skills",
-        "rev": "6c81c34e75e75be10951e7abe7dd285e97e145b9",
+        "rev": "9f7f750cdb158316fb57fcce755f7530fe1118e2",
         "type": "github"
       },
       "original": {
@@ -224,11 +224,11 @@
     "mrsekut-skills": {
       "flake": false,
       "locked": {
-        "lastModified": 1771892214,
-        "narHash": "sha256-O8JEX3bcV0Xkww4cKftFMVrXQwDyPCcGI88vTlvFKhc=",
+        "lastModified": 1772203391,
+        "narHash": "sha256-9ZVSdGlb2hwA4JSntDzcr4E529SH3Yy9fuMAnZVf82M=",
         "owner": "mrsekut",
         "repo": "agent-skills",
-        "rev": "8d97a4af02b16130b016e959c40f935b4d8b6817",
+        "rev": "663acb0368209f6bc42aa4417629d49c2e425cdf",
         "type": "github"
       },
       "original": {
