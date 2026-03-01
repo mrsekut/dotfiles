@@ -26,6 +26,7 @@
       "sdd"
       "chrome-store-submit"
       "bun-publish-setup"
+      "tech-article-writer"
     ];
   };
 }
