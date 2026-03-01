@@ -16,6 +16,7 @@
     ./languages
     ./terminals
     ./claude
+    ./codex
     ./agent-skills
     ./1password
     ./terraform
