@@ -106,7 +106,7 @@
       commonHomeModules = [
         nix-index-database.hmModules.nix-index
         agent-skills.homeManagerModules.default
-        ./modules/agent-skills.nix
+        ./modules/ai/agent-skills.nix
         ./modules/home-manager.nix
       ];
 
@@ -124,7 +124,7 @@
         ./modules/1password/brew.nix
         ./modules/terminals/warp/brew.nix
         ./modules/gyazo/brew.nix
-        ./modules/claude/brew.nix
+        ./modules/ai/claude/brew.nix
         ./modules/editors/cursor/brew.nix
         ./modules/wtp/brew.nix
       ];

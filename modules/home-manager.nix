@@ -15,9 +15,7 @@
     ./editors
     ./languages
     ./terminals
-    ./claude
-    ./codex
-    ./agent-skills
+    ./ai
     ./1password
     ./terraform
 
