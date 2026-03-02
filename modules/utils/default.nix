@@ -13,6 +13,8 @@
     bash
     zlib
 
+    beads
+
     gyou
   ] ++ lib.optionals config.dotfiles.isPersonal [
     jq
