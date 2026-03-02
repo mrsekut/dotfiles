@@ -6,6 +6,9 @@
     # codex が nix_2_31 に対応したら nixos-unstable に戻す
     nixpkgs.url = "github:nixos/nixpkgs/d02bcc33948ca19b0aaa0213fe987ceec1f4ebe1";
 
+    # NOTE: claude-code など一部パッケージを最新版で使うための nixpkgs (codexが古いので)
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+
     # NOTE: nixpkgs を固定したため、対応する home-manager も固定 (2025-12-14)
     home-manager = {
       url = "github:nix-community/home-manager/58bf3ecb2d0bba7bdf363fc8a6c4d49b4d509d03";
@@ -88,6 +91,7 @@
   outputs =
     {
       nixpkgs,
+      nixpkgs-unstable,
       home-manager,
       codex,
       nix-darwin,
@@ -111,9 +115,17 @@
       system = "aarch64-darwin";
       # system = "x86_64-darwin";
 
+      pkgs-unstable = import nixpkgs-unstable {
+        inherit system;
+        config.allowUnfreePredicate =
+          pkg:
+          builtins.elem (nixpkgs-unstable.lib.getName pkg) [
+            "claude-code"
+          ];
+      };
+
       pkgs = import nixpkgs {
         inherit system;
-        overlays = [ nix-claude-code.overlays.default ];
         config.allowUnfreePredicate =
           pkg:
           builtins.elem (nixpkgs.lib.getName pkg) [
@@ -121,7 +133,14 @@
             "claude-code"
             "terraform"
           ];
-        overlays = [ codex.overlays.default ];
+        overlays = [
+          nix-claude-code.overlays.default
+          codex.overlays.default
+          # claude-code を最新の nixpkgs-unstable から取得する (codexが古いので)
+          (_final: _prev: {
+            claude-code = pkgs-unstable.claude-code;
+          })
+        ];
       };
 
       commonHomeModules = [
