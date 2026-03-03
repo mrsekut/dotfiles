@@ -224,11 +224,11 @@
     "mrsekut-skills": {
       "flake": false,
       "locked": {
-        "lastModified": 1772371995,
-        "narHash": "sha256-bVcLp2XSmv4ptBPpNvvnAW1u4X7StdjFIjcwOuyuuWc=",
+        "lastModified": 1772505627,
+        "narHash": "sha256-yRW7txqLNvZ4ZRWWaQ6GQaLPYN4hf+8SSr1jnO0sBCE=",
         "owner": "mrsekut",
         "repo": "agent-skills",
-        "rev": "efecec0ecff966d4f1f5d16f146cde6c11a7d673",
+        "rev": "2c5aa6576b821ed45f5d97a815c05e136ce2ccd2",
         "type": "github"
       },
       "original": {
