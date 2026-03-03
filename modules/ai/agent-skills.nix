@@ -19,14 +19,12 @@
       path = mrsekut-skills;
     };
 
+    skills.enableAll = [ "mrsekut" ];
     skills.enable = [
       "skill-creator"
       "context7"
       "nix-shell-deps"
       "sdd"
-      "chrome-store-submit"
-      "bun-publish-setup"
-      "tech-article-writer"
     ];
   };
 }
