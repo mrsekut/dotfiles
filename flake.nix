@@ -136,9 +136,8 @@
         overlays = [
           nix-claude-code.overlays.default
           codex.overlays.default
-          # claude-code を最新の nixpkgs-unstable から取得する (codexが古いので)
           (_final: _prev: {
-            claude-code = pkgs-unstable.claude-code;
+            beads = pkgs-unstable.beads;
           })
         ];
       };
