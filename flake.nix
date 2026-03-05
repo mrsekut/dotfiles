@@ -36,6 +36,10 @@
       url = "github:satococoa/homebrew-tap";
       flake = false;
     };
+    datadog-labs-pack = {
+      url = "github:datadog-labs/homebrew-pack";
+      flake = false;
+    };
 
     codex = {
       url = "github:herp-inc-hq/codex";
@@ -92,6 +96,7 @@
       homebrew-cask,
       homebrew-bundle,
       satococoa-tap,
+      datadog-labs-pack,
       git-fixup,
       gyou,
       nix-index-database,
@@ -183,7 +188,7 @@
 
       darwinConfigurations = {
         "mrsekut@personal" = nix-darwin.lib.darwinSystem {
-          specialArgs = { inherit homebrew-cask homebrew-bundle satococoa-tap; };
+          specialArgs = { inherit homebrew-cask homebrew-bundle satococoa-tap datadog-labs-pack; };
           system = system;
           modules = commonDarwinModules ++ [
             { dotfiles.profile = "personal"; }
@@ -191,7 +196,7 @@
         };
 
         "mrsekut@work" = nix-darwin.lib.darwinSystem {
-          specialArgs = { inherit homebrew-cask homebrew-bundle satococoa-tap; };
+          specialArgs = { inherit homebrew-cask homebrew-bundle satococoa-tap datadog-labs-pack; };
           system = system;
           modules = commonDarwinModules ++ [
             { dotfiles.profile = "work"; }

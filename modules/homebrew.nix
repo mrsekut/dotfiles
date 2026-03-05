@@ -2,6 +2,7 @@
   homebrew-cask,
   homebrew-bundle,
   satococoa-tap,
+  datadog-labs-pack,
   config,
   lib,
   ...
@@ -18,6 +19,7 @@
       "homebrew/homebrew-cask" = homebrew-cask;
       "homebrew/homebrew-bundle" = homebrew-bundle;
       "satococoa/homebrew-tap" = satococoa-tap;
+      "datadog-labs/homebrew-pack" = datadog-labs-pack;
     };
   };
 
@@ -31,6 +33,7 @@
     # taps = [ ];
     brews = [
       "wtp"
+      "datadog-labs/pack/pup"
     ];
     masApps = {
       "okta-verify" = 490179405;
