@@ -24,11 +24,11 @@
     "anthropic-skills": {
       "flake": false,
       "locked": {
-        "lastModified": 1771993718,
-        "narHash": "sha256-mZZ0rlj/kju7we1h+MvUjgFAVjcZ/qKkMbNZfhfCSvk=",
+        "lastModified": 1772827583,
+        "narHash": "sha256-GzNpraXV85qUwyGs5XDe0zHYr2AazqFppWtH9JvO3QE=",
         "owner": "anthropics",
         "repo": "skills",
-        "rev": "3d59511518591fa82e6cfcf0438d68dd5dad3e76",
+        "rev": "b0cbd3df1533b396d281a6886d5132f623393a9c",
         "type": "github"
       },
       "original": {
@@ -224,11 +224,11 @@
     "mrsekut-skills": {
       "flake": false,
       "locked": {
-        "lastModified": 1772620747,
-        "narHash": "sha256-YFFEtLLlB5IzhrwAkJwwY6C4tbxVIqmRq1rUZWYyeWo=",
+        "lastModified": 1772677788,
+        "narHash": "sha256-9e+C/zORbCvkiucKZ5O2U6WuhU5rZLN3eQspy1MHwXI=",
         "owner": "mrsekut",
         "repo": "agent-skills",
-        "rev": "c8cd22e66bb31fe5a9e36e1b91e60c87b4e9ddce",
+        "rev": "e2a49a628bfa6a3c4cb88fcf83b38f5c18a565dc",
         "type": "github"
       },
       "original": {
@@ -311,6 +311,22 @@
         "type": "github"
       }
     },
+    "openai-skills": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1772817803,
+        "narHash": "sha256-Dq3RuFb0hjFmxsnN9v3LctnoIN0DmfAe434puOSbLr0=",
+        "owner": "openai",
+        "repo": "skills",
+        "rev": "ce2535c009ef92f4065be9626ae695c9ecd77e61",
+        "type": "github"
+      },
+      "original": {
+        "owner": "openai",
+        "repo": "skills",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "agent-skills": "agent-skills",
@@ -326,6 +342,7 @@
         "nix-homebrew": "nix-homebrew",
         "nix-index-database": "nix-index-database",
         "nixpkgs": "nixpkgs",
+        "openai-skills": "openai-skills",
         "satococoa-tap": "satococoa-tap",
         "sdd-skills": "sdd-skills"
       }

@@ -67,6 +67,10 @@
       url = "github:mrsekut/agent-skills";
       flake = false;
     };
+    openai-skills = {
+      url = "github:openai/skills";
+      flake = false;
+    };
   };
 
   outputs =
@@ -86,6 +90,7 @@
       intellectronica-skills,
       sdd-skills,
       mrsekut-skills,
+      openai-skills,
       ...
     }:
     let
@@ -113,7 +118,7 @@
       commonExtraSpecialArgs = {
         git-fixup = git-fixup.packages.${system}.default;
         gyou = gyou.packages.${system}.default;
-        inherit anthropic-skills intellectronica-skills sdd-skills mrsekut-skills;
+        inherit anthropic-skills intellectronica-skills sdd-skills mrsekut-skills openai-skills;
       };
 
       commonDarwinModules = [
