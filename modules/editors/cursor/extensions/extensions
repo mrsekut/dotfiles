@@ -44,6 +44,7 @@ marimo-team.vscode-marimo
 mechatroner.rainbow-csv
 mosapride.zenkaku
 mrmlnc.vscode-apache
+mrsekut.loc-in-file-tree
 ms-azuretools.vscode-containers
 ms-azuretools.vscode-docker
 ms-ceintl.vscode-language-pack-ja
@@ -60,10 +61,10 @@ ms-toolsai.vscode-jupyter-cell-tags
 ms-toolsai.vscode-jupyter-slideshow
 ms-vscode-remote.remote-containers
 ms-vscode.atom-keybindings
-ms-vscode.azure-repos
 ms-vscode.remote-repositories
 natizyskunk.sftp
 neuron.neuron-ipe
+openai.chatgpt
 patbenatar.advanced-new-file
 pkief.material-icon-theme
 prisma.prisma
@@ -78,7 +79,6 @@ sysoev.language-stylus
 thisismanta.stylus-supremacy
 tombonnike.vscode-status-bar-format-toggle
 tyriar.sort-lines
-visualjj.visualjj
 vitest.explorer
 vscodevim.vim
 wayou.vscode-todo-highlight
