@@ -182,6 +182,22 @@
         "type": "github"
       }
     },
+    "mrsekut-private-skills": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1773102436,
+        "narHash": "sha256-M/aaYal5ozsPCe6Puh/hkFhf+tPSN+tCBLJVPhU3qvY=",
+        "ref": "refs/heads/main",
+        "rev": "92c3223d19b7f928023880d41251ef0e6c01520c",
+        "revCount": 9,
+        "type": "git",
+        "url": "ssh://git@github.com/mrsekut/agent-skills-private"
+      },
+      "original": {
+        "type": "git",
+        "url": "ssh://git@github.com/mrsekut/agent-skills-private"
+      }
+    },
     "mrsekut-skills": {
       "flake": false,
       "locked": {
@@ -297,6 +313,7 @@
         "homebrew-bundle": "homebrew-bundle",
         "homebrew-cask": "homebrew-cask",
         "intellectronica-skills": "intellectronica-skills",
+        "mrsekut-private-skills": "mrsekut-private-skills",
         "mrsekut-skills": "mrsekut-skills",
         "nix-darwin": "nix-darwin",
         "nix-homebrew": "nix-homebrew",
@@ -353,7 +370,7 @@
         "repo": "default",
         "type": "github"
       }
-    },
+    }
   },
   "root": "root",
   "version": 7

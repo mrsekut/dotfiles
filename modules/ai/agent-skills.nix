@@ -1,4 +1,4 @@
-{ anthropic-skills, intellectronica-skills, sdd-skills, mrsekut-skills, openai-skills, ... }:
+{ anthropic-skills, intellectronica-skills, sdd-skills, mrsekut-skills, mrsekut-private-skills, openai-skills, ... }:
 {
   programs.agent-skills = {
     sources.anthropic = {
@@ -19,13 +19,16 @@
     sources.mrsekut = {
       path = mrsekut-skills;
     };
+    sources.mrsekut-private = {
+      path = mrsekut-private-skills;
+    };
     sources.openai = {
       path = openai-skills;
       subdir = "skills/.curated";
       filter.nameRegex = "^screenshot$";
     };
 
-    skills.enableAll = [ "mrsekut" ];
+    skills.enableAll = [ "mrsekut" "mrsekut-private" ];
     skills.enable = [
       "skill-creator"
       "context7"

@@ -62,6 +62,10 @@
       url = "github:mrsekut/agent-skills";
       flake = false;
     };
+    mrsekut-private-skills = {
+      url = "git+ssh://git@github.com/mrsekut/agent-skills-private";
+      flake = false;
+    };
     openai-skills = {
       url = "github:openai/skills";
       flake = false;
@@ -84,6 +88,7 @@
       intellectronica-skills,
       sdd-skills,
       mrsekut-skills,
+      mrsekut-private-skills,
       openai-skills,
       ...
     }:
@@ -111,7 +116,7 @@
 
       commonExtraSpecialArgs = {
         git-fixup = git-fixup.packages.${system}.default;
-        inherit anthropic-skills intellectronica-skills sdd-skills mrsekut-skills openai-skills;
+        inherit anthropic-skills intellectronica-skills sdd-skills mrsekut-skills mrsekut-private-skills openai-skills;
       };
 
       commonDarwinModules = [
