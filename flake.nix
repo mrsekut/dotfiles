@@ -35,11 +35,6 @@
       url = "github:mrsekut/git-fixup";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    gyou = {
-      url = "github:mrsekut/gyou";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     # nix-index-database (for comma)
     nix-index-database = {
       url = "github:Mic92/nix-index-database";
@@ -83,7 +78,6 @@
       homebrew-bundle,
       satococoa-tap,
       git-fixup,
-      gyou,
       nix-index-database,
       agent-skills,
       anthropic-skills,
@@ -117,7 +111,6 @@
 
       commonExtraSpecialArgs = {
         git-fixup = git-fixup.packages.${system}.default;
-        gyou = gyou.packages.${system}.default;
         inherit anthropic-skills intellectronica-skills sdd-skills mrsekut-skills openai-skills;
       };
 

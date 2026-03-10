@@ -1,4 +1,4 @@
-{ pkgs, config, lib, gyou, ... }:
+{ pkgs, config, lib, ... }:
 
 {
   home.packages = with pkgs; [
@@ -14,8 +14,6 @@
     zlib
 
     beads
-
-    gyou
   ] ++ lib.optionals config.dotfiles.isPersonal [
     jq
     awscli2
