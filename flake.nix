@@ -126,6 +126,7 @@
         ./modules/homebrew.nix
         ./modules/1password/brew.nix
         ./modules/terminals/warp/brew.nix
+        ./modules/terminals/wezterm/brew.nix
         ./modules/gyazo/brew.nix
         ./modules/ai/claude/brew.nix
         ./modules/editors/cursor/brew.nix
