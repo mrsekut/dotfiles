@@ -116,6 +116,8 @@ config.keys = {
       end
     end),
   }) },
+  { key = "<",         mods = "SHIFT|CMD", action = act.MoveTabRelative(-1) },
+  { key = ">",         mods = "SHIFT|CMD", action = act.MoveTabRelative(1) },
 }
 
 return config
