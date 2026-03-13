@@ -1,5 +1,6 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
+local resurrect = wezterm.plugin.require("https://github.com/MLFlexer/resurrect.wezterm")
 
 config.use_ime = true
 config.font = wezterm.font("JetBrains Mono")
@@ -118,6 +119,19 @@ config.keys = {
   }) },
   { key = "<",         mods = "SHIFT|CMD", action = act.MoveTabRelative(-1) },
   { key = ">",         mods = "SHIFT|CMD", action = act.MoveTabRelative(1) },
+  { key = "q",         mods = "CMD", action = wezterm.action_callback(function(window, pane)
+    local ws = resurrect.workspace_state.get_workspace_state()
+    resurrect.state_manager.save_state(ws)
+    resurrect.state_manager.write_current_state(ws.workspace, "workspace")
+    window:perform_action(act.QuitApplication, pane)
+  end) },
 }
+
+-- Session resurrect: periodic save + restore on startup
+resurrect.state_manager.periodic_save({ interval_seconds = 600, save_workspaces = true })
+wezterm.on("resurrect.state_manager.periodic_save.finished", function()
+  resurrect.state_manager.write_current_state(wezterm.mux.get_active_workspace(), "workspace")
+end)
+wezterm.on("gui-startup", resurrect.state_manager.resurrect_on_gui_startup)
 
 return config
