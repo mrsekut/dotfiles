@@ -1,4 +1,4 @@
-{ anthropic-skills, intellectronica-skills, sdd-skills, mrsekut-skills, mrsekut-private-skills, openai-skills, ... }:
+{ anthropic-skills, intellectronica-skills, mrsekut-skills, mrsekut-private-skills, openai-skills, ... }:
 {
   programs.agent-skills = {
     sources.anthropic = {
@@ -12,9 +12,6 @@
     };
     sources.local = {
       path = ./agent-skills/skills;
-    };
-    sources.sdd = {
-      path = sdd-skills;
     };
     sources.mrsekut = {
       path = mrsekut-skills;
@@ -33,7 +30,6 @@
       "skill-creator"
       "context7"
       "nix-shell-deps"
-      "sdd"
       "screenshot"
     ];
   };

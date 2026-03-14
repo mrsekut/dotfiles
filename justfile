@@ -21,7 +21,7 @@ nix-uninstall:
 
 # agent-skillsのスキルソースを更新
 skills-update:
-  nix flake lock --update-input anthropic-skills --update-input intellectronica-skills --update-input sdd-skills --update-input mrsekut-skills
+  nix flake lock --update-input anthropic-skills --update-input intellectronica-skills --update-input mrsekut-skills
 
 
 # flake.lockを更新
