@@ -3,7 +3,10 @@ local config = wezterm.config_builder()
 local resurrect = wezterm.plugin.require("https://github.com/MLFlexer/resurrect.wezterm")
 
 config.use_ime = true
-config.font = wezterm.font("JetBrains Mono")
+config.font = wezterm.font_with_fallback({
+  "JetBrains Mono",
+  "Noto Sans Mono CJK JP",
+})
 config.harfbuzz_features = { "calt=1", "clig=1", "liga=1" }
 config.font_size = 14.0
 
