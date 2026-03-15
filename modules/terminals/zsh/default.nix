@@ -21,6 +21,7 @@
       cdd = "cd ~/Desktop";
       mkcd = ''f(){ mkdir -p "$1"; cd "$1" }; f'';
       killport = ''f(){ lsof -ti:$1 | xargs kill -9 }; f'';
+      z = "cd $(ghq root)/github.com/mrsekut/zatsu";
     };
 
     initContent = ''
