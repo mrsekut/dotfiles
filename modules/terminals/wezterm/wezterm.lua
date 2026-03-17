@@ -40,41 +40,11 @@ config.colors = {
   },
 }
 
--- Tab bar
-config.use_fancy_tab_bar = true
-config.tab_max_width = 25
-config.window_frame = {
-  active_titlebar_bg = "#38005c",
-  inactive_titlebar_bg = "#38005c",
-}
-config.colors.tab_bar = {
-  background = "#38005c",
-  active_tab = {
-    bg_color = "#38005c",
-    fg_color = "#ff8ffd",
-    intensity = "Bold",
-  },
-  inactive_tab = {
-    bg_color = "#38005c",
-    fg_color = "#8e8e8e",
-  },
-  inactive_tab_hover = {
-    bg_color = "#6b3fa0",
-    fg_color = "#f1f1f1",
-  },
-  new_tab = {
-    bg_color = "#38005c",
-    fg_color = "#8e8e8e",
-  },
-  new_tab_hover = {
-    bg_color = "#6b3fa0",
-    fg_color = "#f1f1f1",
-  },
-}
+-- Tab bar (disabled: zellij manages tabs/panes)
+config.enable_tab_bar = false
 
 -- Window
-config.hide_tab_bar_if_only_one_tab = false
-config.window_decorations = "INTEGRATED_BUTTONS | RESIZE"
+config.window_decorations = "TITLE | RESIZE"
 config.scrollback_lines = 10000
 config.window_padding = { left = 8, right = 8, top = 8, bottom = 8 }
 config.macos_window_background_blur = 20
@@ -83,51 +53,36 @@ config.window_close_confirmation = "NeverPrompt"
 -- NOTE: WezTerm does not support global hotkeys (e.g. Alt-Space to focus).
 -- Use Raycast or another macOS tool to bind Alt-Space to activate WezTerm.
 
--- Tab title: show directory name (e.g. repo name) with padding
-wezterm.on("format-tab-title", function(tab)
-  local title
-  if tab.tab_title and #tab.tab_title > 0 then
-    title = tab.tab_title
-  else
-    local cwd = tab.active_pane.current_working_dir
-    if cwd then
-      local path = cwd.file_path or tostring(cwd)
-      title = path:match("([^/]+)/?$") or path
-    else
-      title = tab.active_pane.title
-    end
-  end
-  return "  " .. title .. "  "
-end)
-
--- Keybindings
+-- Keybindings (tab/pane operations delegated to zellij)
 local act = wezterm.action
 config.keys = {
   { key = "Backspace", mods = "CMD", action = act.SendString("\x15") },       -- Cmd-Delete: kill to line start
   { key = "z",         mods = "CMD", action = act.SendString("\x1f") },        -- Cmd-Z: undo
-  { key = "d",         mods = "CMD", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
-  { key = "d",         mods = "CMD|SHIFT", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
-  { key = "w",         mods = "CMD", action = act.CloseCurrentPane({ confirm = true }) },
-  { key = "]",         mods = "CMD", action = act.ActivatePaneDirection("Next") },
-  { key = "[",         mods = "CMD", action = act.ActivatePaneDirection("Prev") },
   { key = "k",         mods = "CMD", action = act.ClearScrollback("ScrollbackAndViewport") },
   { key = " ",         mods = "CMD|SHIFT", action = act.QuickSelect },
-  { key = "e",         mods = "CMD", action = act.PromptInputLine({
-    description = "Tab name:",
-    action = wezterm.action_callback(function(window, pane, line)
-      if line then
-        window:active_tab():set_title(line)
-      end
-    end),
-  }) },
-  { key = "<",         mods = "SHIFT|CMD", action = act.MoveTabRelative(-1) },
-  { key = ">",         mods = "SHIFT|CMD", action = act.MoveTabRelative(1) },
   { key = "q",         mods = "CMD", action = wezterm.action_callback(function(window, pane)
     local ws = resurrect.workspace_state.get_workspace_state()
     resurrect.state_manager.save_state(ws)
     resurrect.state_manager.write_current_state(ws.workspace, "workspace")
     window:perform_action(act.QuitApplication, pane)
   end) },
+  -- Disable default tab/pane shortcuts (zellij handles these)
+  { key = "t",         mods = "CMD",       action = act.DisableDefaultAssignment },
+  { key = "t",         mods = "CMD|SHIFT", action = act.DisableDefaultAssignment },
+  { key = "w",         mods = "CMD",       action = act.DisableDefaultAssignment },
+  { key = "d",         mods = "CMD",       action = act.DisableDefaultAssignment },
+  { key = "d",         mods = "CMD|SHIFT", action = act.DisableDefaultAssignment },
+  { key = "]",         mods = "CMD",       action = act.DisableDefaultAssignment },
+  { key = "[",         mods = "CMD",       action = act.DisableDefaultAssignment },
+  { key = "1",         mods = "CMD",       action = act.DisableDefaultAssignment },
+  { key = "2",         mods = "CMD",       action = act.DisableDefaultAssignment },
+  { key = "3",         mods = "CMD",       action = act.DisableDefaultAssignment },
+  { key = "4",         mods = "CMD",       action = act.DisableDefaultAssignment },
+  { key = "5",         mods = "CMD",       action = act.DisableDefaultAssignment },
+  { key = "6",         mods = "CMD",       action = act.DisableDefaultAssignment },
+  { key = "7",         mods = "CMD",       action = act.DisableDefaultAssignment },
+  { key = "8",         mods = "CMD",       action = act.DisableDefaultAssignment },
+  { key = "9",         mods = "CMD",       action = act.DisableDefaultAssignment },
 }
 
 -- Session resurrect: periodic save + restore on startup

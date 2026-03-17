@@ -6,5 +6,6 @@
     ./zsh
     ./warp
     ./wezterm
+    ./zellij
   ];
 }
