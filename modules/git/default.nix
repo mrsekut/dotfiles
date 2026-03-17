@@ -78,6 +78,7 @@
         pull-f = "!f() { git fetch origin $(git rev-parse --abbrev-ref HEAD) && git reset --hard origin/$(git rev-parse --abbrev-ref HEAD); }; f";
         see = "!gh repo view --web";
         tagpush = "!f() { git tag \"$1\" && git push origin \"$1\"; }; f";
+        pr-url = "!f() { repo=$(gh repo view --json nameWithOwner -q .nameWithOwner); url=$(gh api \"repos/\${repo}/commits/$1/pulls\" --jq '.[0].html_url'); [ -z \"$url\" ] || [ \"$url\" = \"null\" ] && echo \"No PR found\" >&2 && exit 1; echo \"$url\"; }; f"; # commitからPRのURLを取得
 
         # その他のスクリプト操作
         stack-branch = "!${pkgs.bun}/bin/bun run ${./scripts/stack-branch.ts}";
