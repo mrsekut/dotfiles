@@ -34,6 +34,7 @@
     ./kubernetes
     ./wtp
     ./yazi
+    ./tmux
     ./launchd
   ];
 }
