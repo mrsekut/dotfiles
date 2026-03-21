@@ -8,11 +8,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1772640663,
-        "narHash": "sha256-apWnei/2LGgJ247h4WpPQsGooWot4I3CX2PzPsXGx3A=",
+        "lastModified": 1774030553,
+        "narHash": "sha256-JV6PFjMEew1Owx4ihhdvhuIJ2Ztlz2nDdypuHH7UMRk=",
         "owner": "Kyure-A",
         "repo": "agent-skills-nix",
-        "rev": "0e74b9e4b998807c21ab7ac49d00074aee5df96c",
+        "rev": "bf08d4153f03d6a3c7421332483f1e3d25cd6d4c",
         "type": "github"
       },
       "original": {
@@ -101,11 +101,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1772380461,
-        "narHash": "sha256-O3ukj3Bb3V0Tiy/4LUfLlBpWypJ9P0JeUgsKl2nmZZY=",
+        "lastModified": 1773608492,
+        "narHash": "sha256-QZteyExJYSQzgxqdsesDPbQgjctGG7iKV/6ooyQPITk=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "f140aa04d7d14f8a50ab27f3691b5766b17ae961",
+        "rev": "9a40ec3b78fc688d0908485887d355caa5666d18",
         "type": "github"
       },
       "original": {
@@ -121,11 +121,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1773422513,
-        "narHash": "sha256-MPjR48roW7CUMU6lu0+qQGqj92Kuh3paIulMWFZy+NQ=",
+        "lastModified": 1774007980,
+        "narHash": "sha256-FOnZjElEI8pqqCvB6K/1JRHTE8o4rer8driivTpq2uo=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "ef12a9a2b0f77c8fa3dda1e7e494fca668909056",
+        "rev": "9670de2921812bc4e0452f6e3efd8c859696c183",
         "type": "github"
       },
       "original": {
@@ -153,11 +153,11 @@
     "homebrew-cask": {
       "flake": false,
       "locked": {
-        "lastModified": 1773555568,
-        "narHash": "sha256-uFwHN0gC5inv0+P5s2ueGYMbz6PRb0wvOmaxFsZWBp4=",
+        "lastModified": 1774089889,
+        "narHash": "sha256-uPG6PW4A4XnJqKN8IjUYkqT2EUO9ULkJU1JaULqosr8=",
         "owner": "homebrew",
         "repo": "homebrew-cask",
-        "rev": "46dadac346ef312c975e6fd3fa4c2cb1196cc3ba",
+        "rev": "3b058e587b63b5d1112bf80e7f299b46656f13a9",
         "type": "github"
       },
       "original": {
@@ -185,11 +185,11 @@
     "mrsekut-private-skills": {
       "flake": false,
       "locked": {
-        "lastModified": 1773555808,
-        "narHash": "sha256-mzMx0S68QAf7boyvyDkMrdkYUKlvz9jt3qgxi2eD95o=",
+        "lastModified": 1773620278,
+        "narHash": "sha256-iz5hZHsdFicvUXCKJF8z2M6MaJuYqxfWOiNnwIDINPU=",
         "ref": "refs/heads/main",
-        "rev": "36f62938c413da3aa360ff19a9a7057d346325ef",
-        "revCount": 12,
+        "rev": "917989d92b9e4e1c139cd0422ba775c1b89beb6d",
+        "revCount": 14,
         "type": "git",
         "url": "ssh://git@github.com/mrsekut/agent-skills-private"
       },
@@ -201,11 +201,11 @@
     "mrsekut-skills": {
       "flake": false,
       "locked": {
-        "lastModified": 1773493304,
-        "narHash": "sha256-eC21v7qcT5fBWaFuO5qC0RurH9p9vB3gSyEUEBmQhu4=",
+        "lastModified": 1773751164,
+        "narHash": "sha256-+EzIUkW4Z1cmd3Hqq/nA8mK80D219p6ltIEoVZq2Jd4=",
         "owner": "mrsekut",
         "repo": "agent-skills",
-        "rev": "edc288e5d0b9c356a72a157f8b56f694564d16a2",
+        "rev": "054ebf1056cfbbaf2b3374acb8b21961d7c32fad",
         "type": "github"
       },
       "original": {
@@ -274,11 +274,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1773389992,
-        "narHash": "sha256-wvfdLLWJ2I9oEpDd9PfMA8osfIZicoQ5MT1jIwNs9Tk=",
+        "lastModified": 1773821835,
+        "narHash": "sha256-TJ3lSQtW0E2JrznGVm8hOQGVpXjJyXY2guAxku2O9A4=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "c06b4ae3d6599a672a6210b7021d699c351eebda",
+        "rev": "b40629efe5d6ec48dd1efba650c797ddbd39ace0",
         "type": "github"
       },
       "original": {
@@ -291,11 +291,11 @@
     "openai-skills": {
       "flake": false,
       "locked": {
-        "lastModified": 1773273245,
-        "narHash": "sha256-rW/ZhYzKE9HZHiaVufQ7jYsb61tyISYey948/ZlcPY8=",
+        "lastModified": 1774028990,
+        "narHash": "sha256-IUGh0jNiisUjgZK6I6CN7eqmV8HqtSmseELyAHu6T5o=",
         "owner": "openai",
         "repo": "skills",
-        "rev": "ecc1fb8bc0b82f1d3c7a92a82167ae8e8e613a67",
+        "rev": "82d2c5b44ac234ec0f204f647562a4349d90ef43",
         "type": "github"
       },
       "original": {
