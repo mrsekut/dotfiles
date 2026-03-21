@@ -5,6 +5,5 @@
     ./starship
     ./zsh
     ./warp
-    ./wezterm
   ];
 }
