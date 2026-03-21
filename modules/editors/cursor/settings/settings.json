@@ -185,5 +185,6 @@
 	"commentTranslate.browse.mode": "inplace",
 	"docker.extension.enableComposeLanguageServer": false,
 	"python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
-	"locInFileTree.enabled": false
+	"locInFileTree.enabled": false,
+	"zig.zls.enabled": "on"
 }
