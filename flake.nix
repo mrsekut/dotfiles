@@ -30,6 +30,11 @@
       flake = false;
     };
 
+    beads-viewer = {
+      url = "github:Dicklesworthstone/beads_viewer";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # mrsekut's libraries
     git-fixup = {
       url = "github:mrsekut/git-fixup";
@@ -77,6 +82,7 @@
       homebrew-cask,
       homebrew-bundle,
       satococoa-tap,
+      beads-viewer,
       git-fixup,
       nix-index-database,
       agent-skills,
@@ -110,6 +116,7 @@
       ];
 
       commonExtraSpecialArgs = {
+        beads-viewer = beads-viewer.packages.${system}.default;
         git-fixup = git-fixup.packages.${system}.default;
         inherit anthropic-skills intellectronica-skills mrsekut-skills mrsekut-private-skills openai-skills;
       };
