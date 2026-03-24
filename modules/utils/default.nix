@@ -1,4 +1,4 @@
-{ pkgs, config, lib, beads-viewer, ... }:
+{ pkgs, config, lib, ... }:
 
 {
   home.packages = with pkgs; [
@@ -15,7 +15,6 @@
 
     beads
   ] ++ lib.optionals config.dotfiles.isPersonal [
-    beads-viewer
     jq
     awscli2
   ] ++ lib.optionals config.dotfiles.isWork [
