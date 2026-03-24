@@ -1,6 +1,6 @@
-{ pkgs, config, lib, ... }:
+{ pkgs, ... }:
 
-lib.mkIf config.dotfiles.isPersonal {
+{
   home.packages = with pkgs; [
     rustc
     cargo
