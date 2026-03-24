@@ -12,6 +12,5 @@
     ./go
     ./python
     ./rust
-    ./zig
   ];
 }
