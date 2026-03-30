@@ -6,7 +6,7 @@
   ];
 
   programs.zsh.shellAliases = {
-    claude-yolo = "claude --dangerously-skip-permissions";
+    c = "claude --dangerously-skip-permissions";
   };
 
   # ~/.claude/settings.json は動的に変更されるためdotfiles管理外。
