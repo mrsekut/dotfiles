@@ -41,6 +41,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nix-claude-code = {
+      url = "github:ryoppippi/nix-claude-code";
+    };
+
     # Agent Skills
     agent-skills = {
       url = "github:Kyure-A/agent-skills-nix";
@@ -79,6 +83,7 @@
       satococoa-tap,
       git-fixup,
       nix-index-database,
+      nix-claude-code,
       agent-skills,
       anthropic-skills,
       intellectronica-skills,
@@ -93,6 +98,7 @@
 
       pkgs = import nixpkgs {
         inherit system;
+        overlays = [ nix-claude-code.overlays.default ];
         config.allowUnfreePredicate =
           pkg:
           builtins.elem (nixpkgs.lib.getName pkg) [

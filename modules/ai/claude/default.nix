@@ -1,9 +1,10 @@
 { pkgs, ... }:
 
 {
-  home.packages = [
-    pkgs.claude-code
-  ];
+  programs.claude-code = {
+    enable = true;
+    package = pkgs.claude-code;
+  };
 
   programs.zsh.shellAliases = {
     c = "claude --dangerously-skip-permissions";
