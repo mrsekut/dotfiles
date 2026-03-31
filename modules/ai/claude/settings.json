@@ -53,6 +53,7 @@
 			}
 		}
 	},
+	"cleanupPeriodDays": 9999,
 	"language": "japanese",
 	"alwaysThinkingEnabled": true,
 	"voiceEnabled": false,
