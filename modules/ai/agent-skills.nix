@@ -1,4 +1,4 @@
-{ anthropic-skills, intellectronica-skills, mrsekut-skills, mrsekut-private-skills, openai-skills, ... }:
+{ anthropic-skills, intellectronica-skills, mrsekut-skills, mrsekut-private-skills, openai-skills, playwriter-skills, ... }:
 {
   programs.agent-skills = {
     sources.anthropic = {
@@ -24,12 +24,17 @@
       subdir = "skills/.curated";
       filter.nameRegex = "^screenshot$";
     };
+    sources.playwriter = {
+      path = playwriter-skills;
+      subdir = "skills";
+    };
 
     skills.enableAll = [ "mrsekut" "mrsekut-private" ];
     skills.enable = [
       "skill-creator"
       "context7"
       "nix-shell-deps"
+      "playwriter"
       "screenshot"
     ];
   };

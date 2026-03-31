@@ -70,6 +70,10 @@
       url = "github:openai/skills";
       flake = false;
     };
+    playwriter-skills = {
+      url = "github:remorses/playwriter";
+      flake = false;
+    };
   };
 
   outputs =
@@ -90,6 +94,7 @@
       mrsekut-skills,
       mrsekut-private-skills,
       openai-skills,
+      playwriter-skills,
       ...
     }:
     let
@@ -117,7 +122,7 @@
 
       commonExtraSpecialArgs = {
         git-fixup = git-fixup.packages.${system}.default;
-        inherit anthropic-skills intellectronica-skills mrsekut-skills mrsekut-private-skills openai-skills;
+        inherit anthropic-skills intellectronica-skills mrsekut-skills mrsekut-private-skills openai-skills playwriter-skills;
       };
 
       commonDarwinModules = [
