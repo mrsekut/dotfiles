@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
   programs.claude-code = {
@@ -6,13 +6,19 @@
     package = pkgs.claude-code;
   };
 
+  # ~/.claude/settings.json をdotfilesで管理する。
+  # home.fileはNix store経由(read-only)になるため、
+  # Claude Codeが書き換えられるよう実ファイルへの直接symlinkにする。
+  home.activation.claude-settings = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+    export PATH="${pkgs.git}/bin:$PATH"
+    DOTFILES_DIR="$(${pkgs.ghq}/bin/ghq root)/github.com/mrsekut/dotfiles"
+    ln -sf "$DOTFILES_DIR/modules/ai/claude/settings.json" "$HOME/.claude/settings.json"
+  '';
+
   programs.zsh.shellAliases = {
     c = "claude --dangerously-skip-permissions";
   };
 
-  # ~/.claude/settings.json は動的に変更されるためdotfiles管理外。
-  # statusLineの設定は手動で以下を追記する:
-  #   "statusLine": { "type": "command", "command": "bash ~/.claude/statusline-command.sh", "padding": 0 }
   home.file.".claude/statusline-command.sh" = {
     source = ./statusline-command.sh;
     executable = true;

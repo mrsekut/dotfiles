@@ -1,0 +1,60 @@
+{
+	"hooks": {
+		"PreCompact": [
+			{
+				"matcher": "",
+				"hooks": [
+					{
+						"type": "command",
+						"command": "bd prime"
+					}
+				]
+			}
+		],
+		"SessionStart": [
+			{
+				"matcher": "",
+				"hooks": [
+					{
+						"type": "command",
+						"command": "if [ -d .beads ]; then bd prime; elif git rev-parse --git-dir > /dev/null 2>&1; then bd init -q && bd prime; fi"
+					}
+				]
+			},
+			{
+				"matcher": "",
+				"hooks": [
+					{
+						"type": "command",
+						"command": "bd prime"
+					}
+				]
+			}
+		]
+	},
+	"statusLine": {
+		"type": "command",
+		"command": "bash ~/.claude/statusline-command.sh",
+		"padding": 0
+	},
+	"enabledPlugins": {
+		"gopls-lsp@claude-plugins-official": true,
+		"greeting-plugin@cc-marketplace": true,
+		"rust-analyzer-lsp@claude-plugins-official": true,
+		"swift-lsp@claude-plugins-official": true,
+		"warp@claude-code-warp": true,
+		"codex@openai-codex": true
+	},
+	"extraKnownMarketplaces": {
+		"openai-codex": {
+			"source": {
+				"source": "github",
+				"repo": "openai/codex-plugin-cc"
+			}
+		}
+	},
+	"language": "japanese",
+	"alwaysThinkingEnabled": true,
+	"voiceEnabled": false,
+	"skipDangerousModePermissionPrompt": true
+}
