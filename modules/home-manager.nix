@@ -36,6 +36,5 @@
     ./yazi
     ./tmux
     ./launchd
-    ./chrome-extensions
   ];
 }
