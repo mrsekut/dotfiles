@@ -32,7 +32,6 @@
     ./keyboard/karabiner
     ./gomi
     ./kubernetes
-    ./wtp
     ./yazi
     ./tmux
     ./launchd

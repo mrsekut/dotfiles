@@ -30,7 +30,6 @@
 
     # taps = [ ];
     brews = [
-      "wtp"
     ];
     masApps = {
       # "toggl" = 1291898086; # errorになるのでコメントアウト
