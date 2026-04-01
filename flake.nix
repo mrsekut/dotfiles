@@ -74,6 +74,12 @@
       url = "github:remorses/playwriter";
       flake = false;
     };
+
+    # Chrome Extensions
+    hover-translate-src = {
+      url = "git+ssh://git@github.com/mrsekut/hover-translate";
+      flake = false;
+    };
   };
 
   outputs =
@@ -95,6 +101,7 @@
       mrsekut-private-skills,
       openai-skills,
       playwriter-skills,
+      hover-translate-src,
       ...
     }:
     let
@@ -123,6 +130,7 @@
       commonExtraSpecialArgs = {
         git-fixup = git-fixup.packages.${system}.default;
         inherit anthropic-skills intellectronica-skills mrsekut-skills mrsekut-private-skills openai-skills playwriter-skills;
+        inherit hover-translate-src;
       };
 
       commonDarwinModules = [
