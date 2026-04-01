@@ -17,16 +17,7 @@
 				"hooks": [
 					{
 						"type": "command",
-						"command": "if [ -d .beads ]; then bd prime; elif git rev-parse --git-dir > /dev/null 2>&1; then bd init -q && bd prime; fi"
-					}
-				]
-			},
-			{
-				"matcher": "",
-				"hooks": [
-					{
-						"type": "command",
-						"command": "bd prime"
+						"command": "if [ -d .beads ]; then bd prime; fi"
 					}
 				]
 			}
