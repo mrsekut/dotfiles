@@ -121,11 +121,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1774991950,
-        "narHash": "sha256-kScKj3qJDIWuN9/6PMmgy5esrTUkYinrO5VvILik/zw=",
+        "lastModified": 1775047159,
+        "narHash": "sha256-UWM4VZvfKaPwA9FMu7iZha5YAE8vsEtUazk+rFxmbTY=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "f2d3e04e278422c7379e067e323734f3e8c585a7",
+        "rev": "1ce9e62690dfdd7e76bd266ccb9a887778410eb2",
         "type": "github"
       },
       "original": {
@@ -153,33 +153,17 @@
     "homebrew-cask": {
       "flake": false,
       "locked": {
-        "lastModified": 1775037661,
-        "narHash": "sha256-ORAYBji6iY4tVAGpwcxFen4NYu/8vVbuNakr4U7LF7k=",
+        "lastModified": 1775052795,
+        "narHash": "sha256-L3q55oP4F16lN7t19h7MTsuIvgew5Y0k6CgrWICe4TA=",
         "owner": "homebrew",
         "repo": "homebrew-cask",
-        "rev": "d9b8aa8c20387d52cb38022cf12e4ea3df02e8d5",
+        "rev": "a7a47bce1d5c54c19fd6f44121f02bf863172ce3",
         "type": "github"
       },
       "original": {
         "owner": "homebrew",
         "repo": "homebrew-cask",
         "type": "github"
-      }
-    },
-    "hover-translate-src": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1775003156,
-        "narHash": "sha256-yrslB5Ol5H17k6GQPk8thZ5ECQAV6BNyh4V1DH9r5u4=",
-        "ref": "refs/heads/master",
-        "rev": "ef4fceec6d349a3d3cd003525fd4982d2a1c2b40",
-        "revCount": 2,
-        "type": "git",
-        "url": "ssh://git@github.com/mrsekut/hover-translate"
-      },
-      "original": {
-        "type": "git",
-        "url": "ssh://git@github.com/mrsekut/hover-translate"
       }
     },
     "intellectronica-skills": {
@@ -201,11 +185,11 @@
     "mrsekut-private-skills": {
       "flake": false,
       "locked": {
-        "lastModified": 1774261920,
-        "narHash": "sha256-kl6pgwouByDFcsHh/Mqi6P8reISDscU7xL1/SUobNSg=",
+        "lastModified": 1775049742,
+        "narHash": "sha256-lmCeRcmCjY9wIipWISPpyLNNMHxFzUPE4zZI0VBKMYk=",
         "ref": "refs/heads/main",
-        "rev": "dab6d886e7cc7a7979b3198bfca8ec283c1e7c75",
-        "revCount": 15,
+        "rev": "416d19b759e5985bd098ce12aebab342d0b193f4",
+        "revCount": 16,
         "type": "git",
         "url": "ssh://git@github.com/mrsekut/agent-skills-private"
       },
@@ -255,11 +239,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1775023938,
-        "narHash": "sha256-0/aPuEXIIaehfP/t9icDJUTCmAu13dfS+RNKWdMV5P0=",
+        "lastModified": 1775037210,
+        "narHash": "sha256-KM2WYj6EA7M/FVZVCl3rqWY+TFV5QzSyyGE2gQxeODU=",
         "owner": "LnL7",
         "repo": "nix-darwin",
-        "rev": "5176e2f4b45de02f1c90133854634a6c675ef41b",
+        "rev": "06648f4902343228ce2de79f291dd5a58ee12146",
         "type": "github"
       },
       "original": {
@@ -357,11 +341,11 @@
     "playwriter-skills": {
       "flake": false,
       "locked": {
-        "lastModified": 1775036871,
-        "narHash": "sha256-3Ku/BLQfEXYtI3S126eC5YawE2LZdld0lrLWtVgN/Bc=",
+        "lastModified": 1775038591,
+        "narHash": "sha256-ZL+quULCvl4P7LrBknkLYsu7NNmGpNDvBh+dtU3RYKo=",
         "owner": "remorses",
         "repo": "playwriter",
-        "rev": "612473b5786ab737a79db923f103432b27e0fdd7",
+        "rev": "2a2db6be25b36d6b42c621ca1ba9589d89fd2d63",
         "type": "github"
       },
       "original": {
@@ -378,7 +362,6 @@
         "home-manager": "home-manager_2",
         "homebrew-bundle": "homebrew-bundle",
         "homebrew-cask": "homebrew-cask",
-        "hover-translate-src": "hover-translate-src",
         "intellectronica-skills": "intellectronica-skills",
         "mrsekut-private-skills": "mrsekut-private-skills",
         "mrsekut-skills": "mrsekut-skills",
