@@ -33,10 +33,10 @@
       "wtp"
     ];
     masApps = {
-      "toggl" = 1291898086;
+      # "toggl" = 1291898086; # errorになるのでコメントアウト
       # "xcode"
     } // lib.optionalAttrs config.dotfiles.isPersonal {
-      "kindle" = 302584613;
+      # "kindle" = 302584613; # errorになるのでコメントアウト
     } // lib.optionalAttrs config.dotfiles.isWork {
       "okta-verify" = 490179405;
       "meetingbar" = 1532419400;
@@ -52,7 +52,7 @@
       "karabiner-elements"
       "google-chrome"
       "zoom"
-      "wispr-flow"
+      # "wispr-flow" # errorになるのでコメントアウト
     ] ++ lib.optionals config.dotfiles.isWork [
       "obsidian"
     ];
