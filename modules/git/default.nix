@@ -142,9 +142,11 @@
     enableGitIntegration = true;
   };
 
-  programs.zsh.shellAliases = {
-    ghrc = "${pkgs.bun}/bin/bun run ${./scripts/gh-repo-create.ts}";
-    wtcd = "cd $(git worktree list | fzf | awk '{print \$1}')";
+  programs.zsh = {
+    initContent = builtins.readFile ./wt.zsh;
+    shellAliases = {
+      ghrc = "${pkgs.bun}/bin/bun run ${./scripts/gh-repo-create.ts}";
+    };
   };
 
   # gitignore for global
