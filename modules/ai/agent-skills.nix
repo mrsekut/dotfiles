@@ -1,4 +1,4 @@
-{ anthropic-skills, intellectronica-skills, mrsekut-skills, mrsekut-private-skills, openai-skills, playwriter-skills, ... }:
+{ anthropic-skills, intellectronica-skills, mrsekut-skills, mrsekut-private-skills, openai-skills, playwriter-skills, cosense-cli-skills, ... }:
 {
   programs.agent-skills = {
     sources.anthropic = {
@@ -28,6 +28,10 @@
       path = playwriter-skills;
       subdir = "skills";
     };
+    sources.cosense-cli = {
+      path = cosense-cli-skills;
+      subdir = "skills";
+    };
 
     skills.enableAll = [ "mrsekut" "mrsekut-private" ];
     skills.enable = [
@@ -36,6 +40,7 @@
       "nix-shell-deps"
       "playwriter"
       "screenshot"
+      "cosense"
     ];
   };
 }

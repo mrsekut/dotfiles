@@ -74,6 +74,10 @@
       url = "github:remorses/playwriter";
       flake = false;
     };
+    cosense-cli-skills = {
+      url = "github:mrsekut/cosense-cli";
+      flake = false;
+    };
   };
 
   outputs =
@@ -95,6 +99,7 @@
       mrsekut-private-skills,
       openai-skills,
       playwriter-skills,
+      cosense-cli-skills,
       ...
     }:
     let
@@ -122,7 +127,7 @@
 
       commonExtraSpecialArgs = {
         git-fixup = git-fixup.packages.${system}.default;
-        inherit anthropic-skills intellectronica-skills mrsekut-skills mrsekut-private-skills openai-skills playwriter-skills;
+        inherit anthropic-skills intellectronica-skills mrsekut-skills mrsekut-private-skills openai-skills playwriter-skills cosense-cli-skills;
       };
 
       commonDarwinModules = [
