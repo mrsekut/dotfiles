@@ -40,7 +40,7 @@
       "nix-shell-deps"
       "playwriter"
       "screenshot"
-      "cosense"
+      "cosense-cli"
     ];
   };
 }
