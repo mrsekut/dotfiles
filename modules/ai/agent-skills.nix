@@ -10,9 +10,6 @@
       path = intellectronica-skills;
       subdir = "skills";
     };
-    sources.local = {
-      path = ./agent-skills/skills;
-    };
     sources.mrsekut = {
       path = mrsekut-skills;
     };
@@ -37,7 +34,6 @@
     skills.enable = [
       "skill-creator"
       "context7"
-      "nix-shell-deps"
       "playwriter"
       "screenshot"
       "cosense-cli"
