@@ -14,6 +14,7 @@
   imports = [
     # <home-manager/nix-darwin>
     ./darwin/dock.nix
+    ./darwin/security.nix
     ./darwin/trackpad.nix
     ./keyboard/darwin.nix
     # ./fonts.nix
