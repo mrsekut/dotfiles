@@ -31,6 +31,10 @@
       flake = false;
     };
 
+    codex = {
+      url = "github:herp-inc-hq/codex/release-26.05";
+    };
+
     # mrsekut's libraries
     git-fixup = {
       url = "github:mrsekut/git-fixup";
@@ -102,6 +106,7 @@
     {
       nixpkgs,
       home-manager,
+      codex,
       nix-darwin,
       agenix,
       nix-homebrew,
@@ -130,7 +135,10 @@
 
       pkgs = import nixpkgs {
         inherit system;
-        overlays = [ nix-claude-code.overlays.default ];
+        overlays = [
+          nix-claude-code.overlays.default
+          codex.overlays.default
+        ];
         config.allowUnfreePredicate =
           pkg:
           builtins.elem (nixpkgs.lib.getName pkg) [
@@ -187,6 +195,13 @@
           extraSpecialArgs = commonExtraSpecialArgs;
           modules = commonHomeModules ++ [
             { dotfiles.profile = "work"; }
+            codex.homeModules.default
+            {
+              codex.standardPackages.enable = true;
+              # cosense は modules/cosense-cli の自作ラッパー (PAT router) を使うため、
+              # codex の標準パッケージが入れる公式 cosense-cli (bin/cosense 衝突) は除外する。
+              codex.standardPackages.ignore = [ "cosense-cli" ];
+            }
           ];
         };
       };
