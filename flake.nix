@@ -30,6 +30,10 @@
       flake = false;
     };
 
+    codex = {
+      url = "github:herp-inc-hq/codex/release-25.11";
+    };
+
     # mrsekut's libraries
     git-fixup = {
       url = "github:mrsekut/git-fixup";
@@ -84,6 +88,7 @@
     {
       nixpkgs,
       home-manager,
+      codex,
       nix-darwin,
       nix-homebrew,
       homebrew-cask,
@@ -108,7 +113,17 @@
 
       pkgs = import nixpkgs {
         inherit system;
-        overlays = [ nix-claude-code.overlays.default ];
+        overlays = [
+          nix-claude-code.overlays.default
+          # codex (release-25.11) の overlay が prev.nixVersions.nix_2_33 を参照するが、
+          # 新しい nixpkgs では nix_2_33 が削除済みなので nix_2_34 を alias として復活させる
+          (_final: prev: {
+            nixVersions = prev.nixVersions // {
+              nix_2_33 = prev.nixVersions.nix_2_34;
+            };
+          })
+          codex.overlays.default
+        ];
         config.allowUnfreePredicate =
           pkg:
           builtins.elem (nixpkgs.lib.getName pkg) [
@@ -158,6 +173,13 @@
           extraSpecialArgs = commonExtraSpecialArgs;
           modules = commonHomeModules ++ [
             { dotfiles.profile = "work"; }
+            codex.homeModules.default
+            {
+              codex.standardPackages.enable = true;
+              # cosense は modules/cosense-cli の自作ラッパー (PAT router) を使うため、
+              # codex の標準パッケージが入れる公式 cosense-cli (bin/cosense 衝突) は除外する。
+              codex.standardPackages.ignore = [ "cosense-cli" ];
+            }
           ];
         };
       };
