@@ -1,4 +1,8 @@
 {
+	"cleanupPeriodDays": 9999,
+	"permissions": {
+		"defaultMode": "auto"
+	},
 	"hooks": {
 		"PreCompact": [
 			{
@@ -42,11 +46,18 @@
 				"source": "github",
 				"repo": "openai/codex-plugin-cc"
 			}
+		},
+		"claude-code-warp": {
+			"source": {
+				"source": "github",
+				"repo": "warpdotdev/claude-code-warp"
+			}
 		}
 	},
-	"cleanupPeriodDays": 9999,
 	"language": "japanese",
 	"alwaysThinkingEnabled": true,
+	"skipDangerousModePermissionPrompt": true,
+	"skipAutoPermissionPrompt": true,
 	"voiceEnabled": false,
-	"skipDangerousModePermissionPrompt": true
+	"preferredNotifChannel": "terminal_bell"
 }
