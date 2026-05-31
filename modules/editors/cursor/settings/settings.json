@@ -186,5 +186,8 @@
 	"docker.extension.enableComposeLanguageServer": false,
 	"python.defaultInterpreterPath": "/nix/store/zbcd1vkil51sfl628pbh2b5z59fibv1r-python3-3.13.12/bin/python",
 	"locInFileTree.enabled": false,
+	"workbench.editorAssociations": {
+		"*.md": "markdown-editor.openEditor"
+	},
 	"window.autoDetectColorScheme": false
 }

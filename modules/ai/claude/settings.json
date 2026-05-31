@@ -24,6 +24,15 @@
 						"command": "if [ -d .beads ]; then bd prime; fi"
 					}
 				]
+			},
+			{
+				"matcher": "",
+				"hooks": [
+					{
+						"type": "command",
+						"command": "bd prime"
+					}
+				]
 			}
 		]
 	},
@@ -33,12 +42,12 @@
 		"padding": 0
 	},
 	"enabledPlugins": {
+		"codex@openai-codex": true,
 		"gopls-lsp@claude-plugins-official": true,
 		"greeting-plugin@cc-marketplace": true,
 		"rust-analyzer-lsp@claude-plugins-official": true,
 		"swift-lsp@claude-plugins-official": true,
-		"warp@claude-code-warp": true,
-		"codex@openai-codex": true
+		"warp@claude-code-warp": true
 	},
 	"extraKnownMarketplaces": {
 		"openai-codex": {
@@ -58,6 +67,7 @@
 	"alwaysThinkingEnabled": true,
 	"skipDangerousModePermissionPrompt": true,
 	"skipAutoPermissionPrompt": true,
-	"voiceEnabled": false,
-	"preferredNotifChannel": "terminal_bell"
+	"theme": "dark-daltonized",
+	"preferredNotifChannel": "terminal_bell",
+	"voiceEnabled": false
 }
