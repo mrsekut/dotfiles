@@ -1,4 +1,4 @@
-{ anthropic-skills, intellectronica-skills, mrsekut-skills, mrsekut-private-skills, openai-skills, playwriter-skills, cosense-cli-skills, ... }:
+{ anthropic-skills, intellectronica-skills, mrsekut-skills, mrsekut-private-skills, openai-skills, playwriter-skills, cosense-skills, ... }:
 {
   programs.agent-skills = {
     sources.anthropic = {
@@ -25,8 +25,8 @@
       path = playwriter-skills;
       subdir = "skills";
     };
-    sources.cosense-cli = {
-      path = cosense-cli-skills;
+    sources.cosense = {
+      path = cosense-skills;
       subdir = "skills";
     };
 
@@ -36,7 +36,7 @@
       "context7"
       "playwriter"
       "screenshot"
-      "cosense-cli"
+      "cosense"
     ];
   };
 }

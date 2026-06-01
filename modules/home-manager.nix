@@ -28,6 +28,7 @@
 
     # others
     ./git
+    ./cosense-cli
     ./utils
     ./keyboard/karabiner
     ./gomi
