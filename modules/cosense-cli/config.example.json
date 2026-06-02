@@ -1,0 +1,10 @@
+{
+	"profiles": {
+		"personal": { "token": "pat_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" },
+		"hoge": { "token": "pat_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" }
+	},
+	"default": "personal",
+	"overrides": {
+		"hoge-inc": "hoge"
+	}
+}
