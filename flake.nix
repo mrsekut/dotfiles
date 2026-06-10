@@ -140,6 +140,7 @@
         ./modules/gyazo/brew.nix
         ./modules/ai/claude/brew.nix
         ./modules/editors/cursor/brew.nix
+        ./modules/orbstack/brew.nix
       ];
     in
     {

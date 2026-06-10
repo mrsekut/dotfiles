@@ -44,7 +44,6 @@
 
     casks = [
       "chatgpt"
-      "orbstack"
       "fork"
       "monitorcontrol"
       "raycast"

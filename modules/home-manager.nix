@@ -17,6 +17,7 @@
     ./terminals
     ./ai
     ./1password
+    ./orbstack
     ./terraform
 
     # commands
