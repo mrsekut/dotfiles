@@ -25,10 +25,6 @@
       path = playwriter-skills;
       subdir = "skills";
     };
-    sources.cosense = {
-      path = cosense-skills;
-      subdir = "skills";
-    };
 
     skills.enableAll = [ "mrsekut" "mrsekut-private" ];
     skills.enable = [
@@ -36,7 +32,6 @@
       "context7"
       "playwriter"
       "screenshot"
-      "cosense"
     ];
   };
 }

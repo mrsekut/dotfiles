@@ -15,4 +15,14 @@ let
 in
 {
   home.packages = [ cosense-cli ];
+
+  programs.agent-skills = {
+    sources.cosense = {
+      path = cosense-skills;
+      subdir = "skills";
+    };
+    skills.enable = [
+      "cosense"
+    ];
+  };
 }
