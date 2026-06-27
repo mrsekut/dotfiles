@@ -30,6 +30,7 @@
     # others
     ./git
     ./cosense-cli
+    ./crit
     ./utils
     ./keyboard/karabiner
     ./gomi

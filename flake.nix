@@ -45,6 +45,11 @@
       url = "github:ryoppippi/nix-claude-code";
     };
 
+    crit = {
+      url = "github:tomasz-tomczyk/crit";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # Agent Skills
     agent-skills = {
       url = "github:Kyure-A/agent-skills-nix";
@@ -92,6 +97,7 @@
       git-fixup,
       nix-index-database,
       nix-claude-code,
+      crit,
       agent-skills,
       anthropic-skills,
       intellectronica-skills,
@@ -127,6 +133,9 @@
 
       commonExtraSpecialArgs = {
         git-fixup = git-fixup.packages.${system}.default;
+        # crit はバイナリと skill の両方を flake source から取り出すため、
+        # package ではなく flake input そのものを渡し、module 側で導出する。
+        inherit crit;
         inherit anthropic-skills intellectronica-skills mrsekut-skills mrsekut-private-skills openai-skills playwriter-skills cosense-skills;
       };
 
