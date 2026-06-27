@@ -18,7 +18,7 @@
   programs.git = {
     enable = true;
 
-    includes = lib.optionals config.dotfiles.isWork [
+    includes = [
       {
         condition = "gitdir:~/Desktop/dev/github.com/herp-inc-hq/";
         contents = {
