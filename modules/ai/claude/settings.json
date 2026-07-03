@@ -65,9 +65,11 @@
 	},
 	"language": "japanese",
 	"alwaysThinkingEnabled": true,
+	"tui": "fullscreen",
 	"skipDangerousModePermissionPrompt": true,
-	"skipAutoPermissionPrompt": true,
 	"theme": "dark-daltonized",
 	"preferredNotifChannel": "terminal_bell",
-	"voiceEnabled": false
+	"skipAutoPermissionPrompt": true,
+	"voiceEnabled": false,
+	"effortLevel": "medium"
 }

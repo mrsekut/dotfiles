@@ -12,6 +12,8 @@ CWD=$(echo "$INPUT" | jq -r '.cwd // "."')
 FIVE_HOUR_PCT=$(echo "$INPUT" | jq -r '.rate_limits.five_hour.used_percentage // empty')
 FIVE_HOUR_RESETS=$(echo "$INPUT" | jq -r '.rate_limits.five_hour.resets_at // empty')
 
+EFFORT=$(echo "$INPUT" | jq -r '.effort.level // empty')
+
 # Git branch
 BRANCH=$(git -C "$CWD" branch --show-current 2>/dev/null || echo "?")
 
@@ -51,10 +53,15 @@ else
   MODEL_NAME="$MODEL_DISPLAY"
 fi
 
-# --- Single line: model │ branch │ ctx │ 5h rate limit ---
+# --- Single line: model │ effort │ branch │ ctx │ 5h rate limit ---
 SEP="${C_GREY}│${C_RESET}"
 CTX_INT=${CTX_PCT%%.*}
 CTX_C=$(color_for_pct "$CTX_INT")
+
+EFFORT_PART=""
+if [[ -n "$EFFORT" ]]; then
+  printf -v EFFORT_PART ' %s %s%s%s' "$SEP" "$C_GREEN" "$EFFORT" "$C_RESET"
+fi
 
 RATE_PART=""
 if [[ -n "$FIVE_HOUR_PCT" ]]; then
@@ -73,7 +80,7 @@ else
   printf -v RATE_PART ' %s 5h %s▱▱▱▱▱▱▱▱▱▱ --%% %s' "$SEP" "$C_GREY" "$C_RESET"
 fi
 
-printf '%s%s%s %s %s%s%s %s ctx %s%s%%%s%s\n' \
-  "$C_GREEN" "$MODEL_NAME" "$C_RESET" "$SEP" \
+printf '%s%s%s%s %s %s%s%s %s ctx %s%s%%%s%s\n' \
+  "$C_GREEN" "$MODEL_NAME" "$C_RESET" "$EFFORT_PART" "$SEP" \
   "$C_GREEN" "$BRANCH" "$C_RESET" "$SEP" \
   "$CTX_C" "$CTX_PCT" "$C_RESET" "$RATE_PART"
