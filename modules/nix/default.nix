@@ -11,7 +11,7 @@
   programs.nix-index-database.comma.enable = true;
 
   home.packages = with pkgs; [
-    nixfmt-classic
+    nixfmt
     nil
     nix-update
   ];
