@@ -12,8 +12,6 @@
 
     bash
     zlib
-
-    beads
   ] ++ lib.optionals config.dotfiles.isPersonal [
     jq
     awscli2
