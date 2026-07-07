@@ -23,11 +23,13 @@ nix-uninstall:
 flake-update:
   nix flake update
 
-nix-apply-personal:
+nix-update-apply-personal:
+  just flake-update
   just home-manager-apply-personal
   just darwin-apply-personal
 
-nix-apply-work:
+nix-update-apply-work:
+  just flake-update
   just home-manager-apply-work
   just darwin-apply-work
 
