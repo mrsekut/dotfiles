@@ -4,6 +4,7 @@ altimateai.vscode-altimate-mcp-server
 anseki.vscode-color
 anthropic.claude-code
 anysphere.cursorpyright
+anysphere.remote-ssh
 ast-grep.ast-grep-vscode
 bpruitt-goddard.mermaid-markdown-syntax-highlighting
 bradlc.vscode-tailwindcss
@@ -13,7 +14,6 @@ dbaeumer.vscode-eslint
 docker.docker
 eamodio.gitlens
 effectful-tech.effect-vscode
-eiminsasete.apacheconf-snippets
 esbenp.prettier-vscode
 fabiospampinato.vscode-search-open-all-results
 figma.figma-vscode-extension
@@ -27,6 +27,7 @@ graphql.vscode-graphql
 graphql.vscode-graphql-syntax
 hashicorp.terraform
 haskell.haskell
+haskell.language-haskell
 htmlhint.vscode-htmlhint
 humao.rest-client
 ics.japanese-proofreading
@@ -43,7 +44,6 @@ kisstkondoros.vscode-gutter-preview
 marimo-team.vscode-marimo
 mechatroner.rainbow-csv
 mosapride.zenkaku
-mrmlnc.vscode-apache
 mrsekut.loc-in-file-tree
 ms-azuretools.vscode-containers
 ms-azuretools.vscode-docker
@@ -59,13 +59,10 @@ ms-toolsai.jupyter
 ms-toolsai.jupyter-renderers
 ms-toolsai.vscode-jupyter-cell-tags
 ms-toolsai.vscode-jupyter-slideshow
-ms-vscode-remote.remote-containers
 ms-vscode.atom-keybindings
 ms-vscode.remote-repositories
 natizyskunk.sftp
 neuron.neuron-ipe
-openai.chatgpt
-patbenatar.advanced-new-file
 pkief.material-icon-theme
 prisma.prisma
 redhat.vscode-yaml
@@ -74,13 +71,10 @@ rust-lang.rust-analyzer
 samuelcolvin.jinjahtml
 shardulm94.trailing-spaces
 simonsiefke.svg-preview
-spywhere.guides
-sswg.swift-lang
 sysoev.language-stylus
 thisismanta.stylus-supremacy
 tombonnike.vscode-status-bar-format-toggle
 tyriar.sort-lines
-vadimcn.vscode-lldb
 vitest.explorer
 vscodevim.vim
 wayou.vscode-todo-highlight
@@ -89,4 +83,3 @@ yanxinwang.previewcsv
 yoavbls.pretty-ts-errors
 zaaack.markdown-editor
 zhuangtongfa.material-theme
-ziglang.vscode-zig
