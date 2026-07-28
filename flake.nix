@@ -29,6 +29,10 @@
       url = "github:satococoa/homebrew-tap";
       flake = false;
     };
+    stablyai-orca-tap = {
+      url = "github:stablyai/homebrew-orca";
+      flake = false;
+    };
 
     # mrsekut's libraries
     git-fixup = {
@@ -94,6 +98,7 @@
       homebrew-cask,
       homebrew-bundle,
       satococoa-tap,
+      stablyai-orca-tap,
       git-fixup,
       nix-index-database,
       nix-claude-code,
@@ -150,6 +155,7 @@
         ./modules/ai/claude/brew.nix
         ./modules/editors/cursor/brew.nix
         ./modules/orbstack/brew.nix
+        ./modules/orca/brew.nix
       ];
     in
     {
@@ -173,7 +179,7 @@
 
       darwinConfigurations = {
         "mrsekut@personal" = nix-darwin.lib.darwinSystem {
-          specialArgs = { inherit homebrew-cask homebrew-bundle satococoa-tap; };
+          specialArgs = { inherit homebrew-cask homebrew-bundle satococoa-tap stablyai-orca-tap; };
           system = system;
           modules = commonDarwinModules ++ [
             { dotfiles.profile = "personal"; }
@@ -181,7 +187,7 @@
         };
 
         "mrsekut@work" = nix-darwin.lib.darwinSystem {
-          specialArgs = { inherit homebrew-cask homebrew-bundle satococoa-tap; };
+          specialArgs = { inherit homebrew-cask homebrew-bundle satococoa-tap stablyai-orca-tap; };
           system = system;
           modules = commonDarwinModules ++ [
             { dotfiles.profile = "work"; }

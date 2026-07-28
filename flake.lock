@@ -410,7 +410,8 @@
         "nixpkgs": "nixpkgs_2",
         "openai-skills": "openai-skills",
         "playwriter-skills": "playwriter-skills",
-        "satococoa-tap": "satococoa-tap"
+        "satococoa-tap": "satococoa-tap",
+        "stablyai-orca-tap": "stablyai-orca-tap"
       }
     },
     "satococoa-tap": {
@@ -426,6 +427,22 @@
       "original": {
         "owner": "satococoa",
         "repo": "homebrew-tap",
+        "type": "github"
+      }
+    },
+    "stablyai-orca-tap": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1785210338,
+        "narHash": "sha256-2mJVGAwFzr2BZ0XlEsfVjpbnrzRhrs5QPgXHCB+DyAs=",
+        "owner": "stablyai",
+        "repo": "homebrew-orca",
+        "rev": "6999436fe08672eafb2092278ee42cdd42467dc7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "stablyai",
+        "repo": "homebrew-orca",
         "type": "github"
       }
     },
