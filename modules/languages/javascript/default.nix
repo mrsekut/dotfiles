@@ -5,7 +5,7 @@
     typescript
     npm-check-updates
     nodejs_latest
-    yarn
+    pnpm
     bun
     ni
   ];
