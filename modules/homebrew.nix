@@ -41,7 +41,6 @@
     } // lib.optionalAttrs config.dotfiles.isWork {
       "okta-verify" = 490179405;
       "meetingbar" = 1532419400;
-      "tootrain" = 1579538917;
     };
 
     casks = [
