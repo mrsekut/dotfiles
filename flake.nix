@@ -87,6 +87,10 @@
       url = "github:helpfeel/cosense-cli";
       flake = false;
     };
+    gh-stack-skills = {
+      url = "github:github/gh-stack";
+      flake = false;
+    };
   };
 
   outputs =
@@ -111,6 +115,7 @@
       openai-skills,
       playwriter-skills,
       cosense-skills,
+      gh-stack-skills,
       ...
     }:
     let
@@ -141,7 +146,7 @@
         # crit はバイナリと skill の両方を flake source から取り出すため、
         # package ではなく flake input そのものを渡し、module 側で導出する。
         inherit crit;
-        inherit anthropic-skills intellectronica-skills mrsekut-skills mrsekut-private-skills openai-skills playwriter-skills cosense-skills;
+        inherit anthropic-skills intellectronica-skills mrsekut-skills mrsekut-private-skills openai-skills playwriter-skills cosense-skills gh-stack-skills;
       };
 
       commonDarwinModules = [

@@ -159,8 +159,10 @@
   home.activation.installGhExtensions = lib.hm.dag.entryAfter [ "installPackages" ] ''
     PATH="${pkgs.git}/bin:$PATH"
     PATH="${pkgs.gh}/bin:$PATH"
-    if ! gh extension list | grep -q 'kawarimidoll/gh-q'; then
-      run gh extension install kawarimidoll/gh-q
-    fi
+    for ext in kawarimidoll/gh-q github/gh-stack; do
+      if ! gh extension list | grep -q "$ext"; then
+        run gh extension install "$ext"
+      fi
+    done
   '';
 }
