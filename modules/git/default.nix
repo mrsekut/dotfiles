@@ -1,12 +1,16 @@
 {
   pkgs,
-  lib,
-  config,
   git-fixup,
   ...
 }:
 
 {
+  imports = [
+    ./gh-extensions.nix
+    ./gh-q
+    ./gh-stack
+  ];
+
   home.packages = with pkgs; [
     git
     gh
@@ -154,15 +158,4 @@
     target = ".config/git/ignore";
     source = "${builtins.toString ./.}/gitignore";
   };
-
-  # 実行前に gh auth で login が必要
-  home.activation.installGhExtensions = lib.hm.dag.entryAfter [ "installPackages" ] ''
-    PATH="${pkgs.git}/bin:$PATH"
-    PATH="${pkgs.gh}/bin:$PATH"
-    for ext in kawarimidoll/gh-q github/gh-stack; do
-      if ! gh extension list | grep -q "$ext"; then
-        run gh extension install "$ext"
-      fi
-    done
-  '';
 }

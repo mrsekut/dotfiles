@@ -1,4 +1,4 @@
-{ anthropic-skills, intellectronica-skills, mrsekut-skills, mrsekut-private-skills, openai-skills, playwriter-skills, cosense-skills, gh-stack-skills, ... }:
+{ anthropic-skills, intellectronica-skills, mrsekut-skills, mrsekut-private-skills, openai-skills, playwriter-skills, cosense-skills, ... }:
 {
   programs.agent-skills = {
     sources.anthropic = {
@@ -25,10 +25,6 @@
       path = playwriter-skills;
       subdir = "skills";
     };
-    sources.gh-stack = {
-      path = gh-stack-skills;
-      subdir = "skills";
-    };
 
     skills.enableAll = [ "mrsekut" "mrsekut-private" ];
     skills.enable = [
@@ -36,7 +32,6 @@
       "context7"
       "playwriter"
       "screenshot"
-      "gh-stack"
     ];
   };
 }
