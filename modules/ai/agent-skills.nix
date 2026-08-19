@@ -1,6 +1,10 @@
-{ anthropic-skills, intellectronica-skills, mrsekut-skills, mrsekut-private-skills, openai-skills, playwriter-skills, cosense-skills, cognitive-rhythm-writing-skill, japanese-tech-writing-skill, ... }:
+{ codex, anthropic-skills, intellectronica-skills, mrsekut-skills, mrsekut-private-skills, openai-skills, playwriter-skills, cosense-skills, cognitive-rhythm-writing-skill, japanese-tech-writing-skill, ... }:
 {
   programs.agent-skills = {
+    sources.codex = {
+      path = codex;
+      subdir = "skills";
+    };
     sources.anthropic = {
       path = anthropic-skills;
       subdir = "skills";
@@ -41,6 +45,8 @@
       "screenshot"
       "cognitive-rhythm-writing"
       "japanese-tech-writing"
+      "get-aws-credentials"
+      "share-internal-resource"
     ];
   };
 }
