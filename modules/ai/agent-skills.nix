@@ -1,6 +1,10 @@
-{ anthropic-skills, intellectronica-skills, mrsekut-skills, mrsekut-private-skills, openai-skills, playwriter-skills, cosense-skills, ... }:
+{ codex, anthropic-skills, intellectronica-skills, mrsekut-skills, mrsekut-private-skills, openai-skills, playwriter-skills, cosense-skills, ... }:
 {
   programs.agent-skills = {
+    sources.codex = {
+      path = codex;
+      subdir = "skills";
+    };
     sources.anthropic = {
       path = anthropic-skills;
       subdir = "skills";
@@ -32,6 +36,8 @@
       "context7"
       "playwriter"
       "screenshot"
+      "get-aws-credentials"
+      "share-internal-resource"
     ];
   };
 }
