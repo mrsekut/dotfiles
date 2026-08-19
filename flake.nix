@@ -161,6 +161,8 @@
         # crit はバイナリと skill の両方を flake source から取り出すため、
         # package ではなく flake input そのものを渡し、module 側で導出する。
         inherit crit;
+        # codex の skills/ を agent-skills の source として使うため flake input を渡す。
+        inherit codex;
         inherit anthropic-skills intellectronica-skills mrsekut-skills mrsekut-private-skills openai-skills playwriter-skills cosense-skills gh-stack-skills;
       };
 
