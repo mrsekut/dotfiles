@@ -34,12 +34,12 @@
     brews = [
     ];
     masApps = {
+      "okta-verify" = 490179405;
       # "toggl" = 1291898086; # errorになるのでコメントアウト
       # "xcode"
     } // lib.optionalAttrs config.dotfiles.isPersonal {
       # "kindle" = 302584613; # errorになるのでコメントアウト
     } // lib.optionalAttrs config.dotfiles.isWork {
-      "okta-verify" = 490179405;
       "meetingbar" = 1532419400;
     };
 
