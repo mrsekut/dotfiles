@@ -156,7 +156,6 @@
         ./modules/homebrew.nix
         ./modules/1password/brew.nix
         ./modules/terminals/warp/brew.nix
-        ./modules/gyazo/brew.nix
         ./modules/ai/claude/brew.nix
         ./modules/editors/cursor/brew.nix
         ./modules/orbstack/brew.nix
