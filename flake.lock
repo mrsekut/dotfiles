@@ -80,11 +80,11 @@
     "cosense-skills": {
       "flake": false,
       "locked": {
-        "lastModified": 1787478761,
-        "narHash": "sha256-7TS+yU1HfSCl4qZlvleMYmDNKemcE9PT6qoBRprklYQ=",
+        "lastModified": 1788600652,
+        "narHash": "sha256-pMCDyVUw/3BuAYczVFNhv+xqwj/8/QwqO1tU6V3oc/M=",
         "owner": "helpfeel",
         "repo": "cosense-cli",
-        "rev": "3d54a28ef8f98f2e9db65ef06d796327784baa3d",
+        "rev": "dac8da11ef81f71e8a1539e3e15dff281f26b119",
         "type": "github"
       },
       "original": {
@@ -100,11 +100,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1788557950,
-        "narHash": "sha256-GapCSkhtJ1/KkiEpTQU99BypuDK4kA9RuhJ/S00+wOE=",
+        "lastModified": 1788947744,
+        "narHash": "sha256-wo9QraW+dkPkeYaANv5LOhFxz+0oxk1n3bFedenOtUk=",
         "owner": "tomasz-tomczyk",
         "repo": "crit",
-        "rev": "2f9a883d138cf5d0dafd1eec70cf6c98893e3f12",
+        "rev": "d85e52a2f11e4caa46520c014c03c5592bbb9985",
         "type": "github"
       },
       "original": {
@@ -196,11 +196,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1788487777,
-        "narHash": "sha256-Ro/e1N4ZR8/XaFF+sF9SgfPK79HM5YNEppzFj8p+0Ak=",
+        "lastModified": 1788921139,
+        "narHash": "sha256-2wRuvf9UDw1SYWtBcxNmxLeAtNU1i/hc1c0AKQHdvlM=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "693e8ce0fb240a73c116a03cfd7b19269c87af88",
+        "rev": "a2dbe7c2c9333e8234ae8114c7f731784201d108",
         "type": "github"
       },
       "original": {
@@ -228,11 +228,11 @@
     "homebrew-cask": {
       "flake": false,
       "locked": {
-        "lastModified": 1788580229,
-        "narHash": "sha256-J+QmYX0SA8erSp/vjEY9M2VEWuAkVo0ag5iNZjFsWfo=",
+        "lastModified": 1788962395,
+        "narHash": "sha256-DyodnPSB1e7g6U5RF7RUhGdvxS0aXAKtSPUF4vK1KQs=",
         "owner": "homebrew",
         "repo": "homebrew-cask",
-        "rev": "83f477e0ea814f93d262b8df1635ecc12e447269",
+        "rev": "0014ef9188a3f1a8925179114c7ef0d70790b7e8",
         "type": "github"
       },
       "original": {
@@ -294,11 +294,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1788544929,
-        "narHash": "sha256-xU77j1WvPz4kITpP8vCe61Ji69knCrNmUxRaTtwvfbg=",
+        "lastModified": 1788912217,
+        "narHash": "sha256-EHBPF2xdj3T1Hv3Dr9vx5Zj3MsXXlBY2U9Um4mDeZpM=",
         "owner": "ryoppippi",
         "repo": "nix-claude-code",
-        "rev": "3d13dfe23382719c12f2ec65689b4f8bbf309aa7",
+        "rev": "a398f346519ab5020f3aca079f14e9cda1c13d9a",
         "type": "github"
       },
       "original": {
@@ -352,11 +352,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1788080100,
-        "narHash": "sha256-n14luQo3F/ZLfCEHk1QieiI1nGnW92ZQZeZ0UIb0UMQ=",
+        "lastModified": 1788680125,
+        "narHash": "sha256-amGSoDobwmp4CFvCn841ws2iuitus+HUJdD/gKgsrJA=",
         "owner": "Mic92",
         "repo": "nix-index-database",
-        "rev": "dbb978fa87faf13398e90ccbc52c343d21c7dd6d",
+        "rev": "116ad1c2adb642405ef8916f6a94c8626f971344",
         "type": "github"
       },
       "original": {
@@ -383,11 +383,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1788404924,
-        "narHash": "sha256-lhEhY8X5EgkQ/eg6IFz4cc8jRuSYSvnxx1al7d1dvZ0=",
+        "lastModified": 1788881743,
+        "narHash": "sha256-2V9GZGvPfrNzxFozhI9dcqV+c3QdA8YZrvAAzqEB+dI=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "0968519e14f7aa7d3e9b389682bd74d2b51c8ce8",
+        "rev": "d6524aaca2ff07876657ae2b323f24be4874944b",
         "type": "github"
       },
       "original": {
@@ -473,11 +473,11 @@
     "stablyai-orca-tap": {
       "flake": false,
       "locked": {
-        "lastModified": 1788482783,
-        "narHash": "sha256-G3h2pbZ5ChYfzsDIWJQuiTuv3w14zDEm+rjUAnXK9ro=",
+        "lastModified": 1788857774,
+        "narHash": "sha256-BkRDrbT8k37UGwHohpBfV9FmeqVYjCM2XK0QmG+7dmc=",
         "owner": "stablyai",
         "repo": "homebrew-orca",
-        "rev": "9cba221c8d12cad70aa2f5c7ddd6b4294d972107",
+        "rev": "8c1d9eb9615d51f93014000b497d92d44660cbd8",
         "type": "github"
       },
       "original": {
