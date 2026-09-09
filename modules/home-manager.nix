@@ -29,6 +29,7 @@
 
     # others
     ./git
+    ./book
     ./cosense-cli
     ./crit
     ./utils
