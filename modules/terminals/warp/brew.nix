@@ -1,9 +1,4 @@
-
-{ ... }: {
-
-  homebrew = {
-    casks = [
-      "warp"
-    ];
-  };
+{ ... }:
+{
+  dotfiles.apps.warp = { };
 }

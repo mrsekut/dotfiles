@@ -1,8 +1,4 @@
-{ ... }: {
-
-  homebrew = {
-    casks = [
-      "claude"
-    ];
-  };
+{ ... }:
+{
+  dotfiles.apps.claude = { };
 }

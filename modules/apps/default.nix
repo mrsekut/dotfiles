@@ -51,6 +51,21 @@ in
     # 細かい設定を持たないアプリはここに1行足すだけでよい。
     # 設定ファイル等を持つアプリは `modules/<feature>/` から `dotfiles.apps` に合流させる。
     dotfiles.apps = {
+      chatgpt = { };
+      fork = { };
+      google-chrome = { };
+      zoom = { };
+      obsidian = {
+        profiles = [ "work" ];
+      };
+
+      okta-verify = {
+        source = "mas";
+        masId = 490179405;
+      };
+      # toggl = { source = "mas"; masId = 1291898086; }; # errorになるのでコメントアウト
+      # kindle = { source = "mas"; masId = 302584613; }; # errorになるのでコメントアウト
+
       raycast = {
         launchAtLogin = "Raycast";
       };

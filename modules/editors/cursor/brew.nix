@@ -1,9 +1,4 @@
 { ... }:
 {
-
-  homebrew = {
-    casks = [
-      "cursor"
-    ];
-  };
+  dotfiles.apps.cursor = { };
 }

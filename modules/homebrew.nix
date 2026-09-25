@@ -2,8 +2,6 @@
   homebrew-cask,
   homebrew-bundle,
   stablyai-orca-tap,
-  config,
-  lib,
   ...
 }:
 {
@@ -31,22 +29,6 @@
     # taps = [ ];
     brews = [
     ];
-    masApps = {
-      "okta-verify" = 490179405;
-      # "toggl" = 1291898086; # errorになるのでコメントアウト
-      # "xcode"
-    } // lib.optionalAttrs config.dotfiles.isPersonal {
-      # "kindle" = 302584613; # errorになるのでコメントアウト
-    };
-
-    casks = [
-      "chatgpt"
-      "fork"
-      "karabiner-elements"
-      "google-chrome"
-      "zoom"
-    ] ++ lib.optionals config.dotfiles.isWork [
-      "obsidian"
-    ];
+    # GUIアプリは `dotfiles.apps` (modules/apps) 側で宣言する
   };
 }

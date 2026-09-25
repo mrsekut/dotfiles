@@ -1,8 +1,4 @@
-{ ... }: {
-
-  homebrew = {
-    casks = [
-      "1password"
-    ];
-  };
+{ ... }:
+{
+  dotfiles.apps."1password" = { };
 }

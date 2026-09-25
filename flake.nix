@@ -150,6 +150,7 @@
         nix-homebrew.darwinModules.nix-homebrew
         ./modules/homebrew.nix
         ./modules/apps
+        ./modules/keyboard/karabiner/app.nix
         ./modules/1password/brew.nix
         ./modules/terminals/warp/brew.nix
         ./modules/ai/claude/brew.nix
