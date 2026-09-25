@@ -59,10 +59,8 @@ in
         profiles = [ "work" ];
       };
 
-      okta-verify = {
-        source = "mas";
-        masId = 490179405;
-      };
+      # cask本体はpkgなので、手動インストール済みでも上書きインストールされる
+      okta-verify = { };
       # toggl = { source = "mas"; masId = 1291898086; }; # errorになるのでコメントアウト
       # kindle = { source = "mas"; masId = 302584613; }; # errorになるのでコメントアウト
 
