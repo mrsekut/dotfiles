@@ -37,19 +37,14 @@
       # "xcode"
     } // lib.optionalAttrs config.dotfiles.isPersonal {
       # "kindle" = 302584613; # errorになるのでコメントアウト
-    } // lib.optionalAttrs config.dotfiles.isWork {
-      "meetingbar" = 1532419400;
     };
 
     casks = [
       "chatgpt"
       "fork"
-      "monitorcontrol"
-      "raycast"
       "karabiner-elements"
       "google-chrome"
       "zoom"
-      # "wispr-flow" # errorになるのでコメントアウト
     ] ++ lib.optionals config.dotfiles.isWork [
       "obsidian"
     ];

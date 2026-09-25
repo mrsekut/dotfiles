@@ -149,6 +149,7 @@
         ./modules/nix-darwin.nix
         nix-homebrew.darwinModules.nix-homebrew
         ./modules/homebrew.nix
+        ./modules/apps
         ./modules/1password/brew.nix
         ./modules/terminals/warp/brew.nix
         ./modules/ai/claude/brew.nix
