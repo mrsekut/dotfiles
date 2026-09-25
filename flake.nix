@@ -151,12 +151,12 @@
         ./modules/homebrew.nix
         ./modules/apps
         ./modules/keyboard/karabiner/app.nix
-        ./modules/1password/brew.nix
-        ./modules/terminals/warp/brew.nix
-        ./modules/ai/claude/brew.nix
-        ./modules/editors/cursor/brew.nix
-        ./modules/orbstack/brew.nix
-        ./modules/orca/brew.nix
+        ./modules/1password/app.nix
+        ./modules/terminals/warp/app.nix
+        ./modules/ai/claude/app.nix
+        ./modules/editors/cursor/app.nix
+        ./modules/orbstack/app.nix
+        ./modules/orca/app.nix
       ];
     in
     {
