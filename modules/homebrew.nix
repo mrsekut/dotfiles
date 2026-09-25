@@ -1,7 +1,6 @@
 {
   homebrew-cask,
   homebrew-bundle,
-  satococoa-tap,
   stablyai-orca-tap,
   config,
   lib,
@@ -18,7 +17,6 @@
     taps = {
       "homebrew/homebrew-cask" = homebrew-cask;
       "homebrew/homebrew-bundle" = homebrew-bundle;
-      "satococoa/homebrew-tap" = satococoa-tap;
       "stablyai/homebrew-orca" = stablyai-orca-tap;
     };
   };
