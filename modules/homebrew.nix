@@ -1,7 +1,6 @@
 {
   homebrew-cask,
   homebrew-bundle,
-  stablyai-orca-tap,
   ...
 }:
 {
@@ -15,7 +14,6 @@
     taps = {
       "homebrew/homebrew-cask" = homebrew-cask;
       "homebrew/homebrew-bundle" = homebrew-bundle;
-      "stablyai/homebrew-orca" = stablyai-orca-tap;
     };
   };
 
