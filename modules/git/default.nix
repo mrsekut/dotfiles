@@ -24,7 +24,7 @@
 
     includes = [
       {
-        condition = "gitdir:~/Desktop/dev/github.com/herp-inc-hq/";
+        condition = "gitdir:~/Desktop/dev/github.com-herp/";
         contents = {
           user = {
             name = "kota-marusue_herpinc";
