@@ -1,6 +1,7 @@
 4ops.terraform
 akamud.vscode-theme-onelight
 altimateai.vscode-altimate-mcp-server
+alygin.vscode-tlaplus-nightly
 anseki.vscode-color
 anthropic.claude-code
 anysphere.cursorpyright
@@ -9,6 +10,7 @@ ast-grep.ast-grep-vscode
 bpruitt-goddard.mermaid-markdown-syntax-highlighting
 bradlc.vscode-tailwindcss
 christian-kohler.path-intellisense
+clargo.clargo
 davidhouchin.whitespace-plus
 dbaeumer.vscode-eslint
 docker.docker

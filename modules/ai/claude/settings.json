@@ -32,11 +32,11 @@
 	},
 	"language": "japanese",
 	"alwaysThinkingEnabled": true,
+	"effortLevel": "medium",
 	"tui": "fullscreen",
 	"skipDangerousModePermissionPrompt": true,
 	"theme": "dark-daltonized",
 	"preferredNotifChannel": "terminal_bell",
 	"skipAutoPermissionPrompt": true,
-	"voiceEnabled": false,
-	"effortLevel": "medium"
+	"voiceEnabled": false
 }
