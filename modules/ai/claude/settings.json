@@ -9,7 +9,6 @@
 		"padding": 0
 	},
 	"enabledPlugins": {
-		"codex@openai-codex": true,
 		"gopls-lsp@claude-plugins-official": true,
 		"greeting-plugin@cc-marketplace": true,
 		"rust-analyzer-lsp@claude-plugins-official": true,
@@ -17,12 +16,6 @@
 		"warp@claude-code-warp": true
 	},
 	"extraKnownMarketplaces": {
-		"openai-codex": {
-			"source": {
-				"source": "github",
-				"repo": "openai/codex-plugin-cc"
-			}
-		},
 		"claude-code-warp": {
 			"source": {
 				"source": "github",
