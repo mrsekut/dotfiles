@@ -1,4 +1,4 @@
-dotfilesPath := "$HOME/Desktop/dev/github.com/mrsekut/dotfiles"
+dotfilesPath := "$HOME/dev/github.com/mrsekut/dotfiles"
 
 default:
   @just --choose

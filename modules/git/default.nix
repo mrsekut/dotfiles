@@ -24,7 +24,7 @@
 
     includes = [
       {
-        condition = "gitdir:~/Desktop/dev/github.com-herp/";
+        condition = "gitdir:~/dev/github.com-herp/";
         contents = {
           user = {
             name = "kota-marusue_herpinc";
@@ -52,7 +52,7 @@
       fetch.prune = true;
       color.ui = true;
       help.autocorrect = 1;
-      ghq.root = "~/Desktop/dev";
+      ghq.root = "~/dev";
 
       alias = {
         # log

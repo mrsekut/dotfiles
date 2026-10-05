@@ -8,7 +8,7 @@ lib.mkIf config.dotfiles.isPersonal {
       EnvironmentVariables = {
         PATH = "/Users/mrsekut/.nix-profile/bin:/Users/mrsekut/.bun/bin:/usr/bin:/bin";
       };
-      WorkingDirectory = "/Users/mrsekut/Desktop/dev/github.com/mrsekut/prototypings";
+      WorkingDirectory = "/Users/mrsekut/dev/github.com/mrsekut/prototypings";
       RunAtLoad = true;
       KeepAlive = true;
     };
