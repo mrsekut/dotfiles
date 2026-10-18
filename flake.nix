@@ -130,7 +130,7 @@
       };
 
       commonHomeModules = [
-        nix-index-database.hmModules.nix-index
+        nix-index-database.homeModules.nix-index
         agent-skills.homeManagerModules.default
         ./modules/ai/agent-skills.nix
         ./modules/home-manager.nix
