@@ -10,7 +10,6 @@
     # ./lean
 
     ./go
-    ./python
     ./rust
   ];
 }

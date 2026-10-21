@@ -126,10 +126,10 @@ if [ -d "$image_dir" ]; then
 elif [ -d "$k2i/out/$title" ]; then
   skip "$k2i/out/$title が既にある"
 else
-  require_cmd rye "kindle2image の実行"
+  require_cmd uv "kindle2image の実行"
   warn "Kindle アプリを開き、取り込みたい本の最初のページを表示して前面にしてください"
   warn "10 秒以内にアクティブにならないと失敗します"
-  (cd "$k2i" && rye run python -m kindle2image --title "$title")
+  (cd "$k2i" && uv run python -m kindle2image --title "$title")
   [ -d "$k2i/out/$title" ] || die "kindle2image が $k2i/out/$title を作らなかった"
 fi
 
