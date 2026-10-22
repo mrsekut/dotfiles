@@ -119,39 +119,7 @@
 
       pkgs = import nixpkgs {
         inherit system;
-        overlays = [
-          nix-claude-code.overlays.default
-          # TODO(2026-10-22): 一時対応。nixos-unstable の brotli が 1.2.1 以上になったら
-          # `nix flake update nixpkgs` してこの overlay を消す。
-          # Nix の nodejs は --shared-brotli で Nix 側の libbrotli を使うため、node を上げても
-          # CVE-2026-111497 (brotli decoder の OOB write → RCE) は直らない。
-          # brotli 全体を差し替えると大量の再ビルドになるので、node にだけ修正版を渡す。
-          # brotli は v24.nix / v26.nix 内の callPackage ./nodejs.nix で注入されるため、
-          # nodejs-slim_* の callPackage を差し替えて渡す (nodejs_* は nodejs-slim_* の symlink)。
-          (
-            _final: prev:
-            let
-              brotli-cve-2026-111497 = prev.brotli.overrideAttrs (_: rec {
-                version = "1.2.1";
-                src = prev.fetchFromGitHub {
-                  owner = "google";
-                  repo = "brotli";
-                  tag = "v${version}";
-                  hash = "sha256-llY72cYffDv0ugsH0p89xIPEbElV4L8u7U/Fe8hT3gI=";
-                };
-              });
-              withFixedBrotli =
-                pkg:
-                pkg.override {
-                  callPackage = fn: args: prev.callPackage fn (args // { brotli = brotli-cve-2026-111497; });
-                };
-            in
-            {
-              nodejs-slim_24 = withFixedBrotli prev.nodejs-slim_24;
-              nodejs-slim_26 = withFixedBrotli prev.nodejs-slim_26;
-            }
-          )
-        ];
+        overlays = [ nix-claude-code.overlays.default ];
         config.allowUnfreePredicate =
           pkg:
           builtins.elem (nixpkgs.lib.getName pkg) [
