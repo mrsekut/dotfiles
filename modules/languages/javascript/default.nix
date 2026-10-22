@@ -7,7 +7,6 @@
     nodejs_latest
     pnpm
     bun
-    ni
   ];
 
   programs.zsh = {
