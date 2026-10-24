@@ -14,6 +14,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    agenix = {
+      url = "github:ryantm/agenix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nix-homebrew = {
       url = "github:zhaofengli-wip/nix-homebrew";
     };
@@ -94,6 +99,7 @@
       nixpkgs,
       home-manager,
       nix-darwin,
+      agenix,
       nix-homebrew,
       homebrew-cask,
       homebrew-bundle,
@@ -132,12 +138,14 @@
       commonHomeModules = [
         nix-index-database.homeModules.nix-index
         agent-skills.homeManagerModules.default
+        agenix.homeManagerModules.default
         ./modules/ai/agent-skills.nix
         ./modules/home-manager.nix
       ];
 
       commonExtraSpecialArgs = {
         git-fixup = git-fixup.packages.${system}.default;
+        agenix = agenix.packages.${system}.default;
         # crit はバイナリと skill の両方を flake source から取り出すため、
         # package ではなく flake input そのものを渡し、module 側で導出する。
         inherit crit;

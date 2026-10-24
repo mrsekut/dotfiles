@@ -47,6 +47,25 @@ darwin-apply-work:
 
 
 # =================
+# agenix (ssh config)
+# =================
+
+# 新しいPCで最初に1回。agenix 用の鍵を作り、公開鍵を表示する
+# → 表示された公開鍵を modules/ssh/secrets.nix に追加し、既存PCで `just ssh-rekey` して push
+agenix-keygen:
+  test -f ~/.ssh/agenix_ed25519 || ssh-keygen -t ed25519 -N "" -f ~/.ssh/agenix_ed25519 -C "agenix@$(hostname -s)"
+  cat ~/.ssh/agenix_ed25519.pub
+
+# ~/.ssh/config を編集する。保存後に home-manager-apply-* で反映
+ssh-edit:
+  cd modules/ssh && AGENIX_RULES=secrets.nix nix run github:ryantm/agenix -- -e ssh-config.age -i ~/.ssh/agenix_ed25519
+
+# secrets.nix の公開鍵を変えた後に再暗号化する
+ssh-rekey:
+  cd modules/ssh && AGENIX_RULES=secrets.nix nix run github:ryantm/agenix -- -r -i ~/.ssh/agenix_ed25519
+
+
+# =================
 # VSCode
 # =================
 
