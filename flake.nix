@@ -130,7 +130,7 @@
           pkg:
           builtins.elem (nixpkgs.lib.getName pkg) [
             "1password-cli"
-            "claude-code"
+            "claude"
             "terraform"
           ];
       };
