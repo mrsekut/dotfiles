@@ -1,466 +1,466 @@
 {
-  "nodes": {
-    "agenix": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1792507013,
-        "narHash": "sha256-8tKjSQajD3mUND1GaAuaWTcuyUpgcGsh5V+l4ibzC7U=",
-        "owner": "ryantm",
-        "repo": "agenix",
-        "rev": "5e5b88a0c8e56f291a108c2fe9934054d9745b2e",
-        "type": "github"
-      },
-      "original": {
-        "owner": "ryantm",
-        "repo": "agenix",
-        "type": "github"
-      }
-    },
-    "agent-skills": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1792594212,
-        "narHash": "sha256-XWx3R/AIeYdyZ3guuZVNqirEUPPpehICrIRV3VabR+U=",
-        "owner": "Kyure-A",
-        "repo": "agent-skills-nix",
-        "rev": "f48aa227f3d157ae3abda12cd9c4ab867f400419",
-        "type": "github"
-      },
-      "original": {
-        "owner": "Kyure-A",
-        "repo": "agent-skills-nix",
-        "type": "github"
-      }
-    },
-    "anthropic-skills": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1791571549,
-        "narHash": "sha256-+UIqBnzyeIOvJSKYaDaE3GYPEpLw7qQqyUw5S971AfU=",
-        "owner": "anthropics",
-        "repo": "skills",
-        "rev": "dbd4588f9e1033efb41dad4bef2f7947c8993d44",
-        "type": "github"
-      },
-      "original": {
-        "owner": "anthropics",
-        "repo": "skills",
-        "type": "github"
-      }
-    },
-    "brew-src": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1789661079,
-        "narHash": "sha256-geVTQ51PGZ1mLULM5k7wO7qt/6xenOR/YG8X7Q3eCaI=",
-        "owner": "Homebrew",
-        "repo": "brew",
-        "rev": "edb70f031e4170c780799633a1226ff73e1077f4",
-        "type": "github"
-      },
-      "original": {
-        "owner": "Homebrew",
-        "ref": "7.0.4",
-        "repo": "brew",
-        "type": "github"
-      }
-    },
-    "cosense-skills": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1792630735,
-        "narHash": "sha256-VOAyQ4GPstC8BCsf/dU9nXL5JQ8VT4AOQBmJtJ8sTWc=",
-        "owner": "helpfeel",
-        "repo": "cosense-cli",
-        "rev": "26604a09f13ac1056ec08c8355ae2c97b7c6bece",
-        "type": "github"
-      },
-      "original": {
-        "owner": "helpfeel",
-        "repo": "cosense-cli",
-        "type": "github"
-      }
-    },
-    "crit": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1792760055,
-        "narHash": "sha256-g0pjb/Qd8W4og13XaXE7j5IxFqMnXMJiYe6Z0BJnMfU=",
-        "owner": "tomasz-tomczyk",
-        "repo": "crit",
-        "rev": "ad3e10fbc864ca613eb084cf9a7b23c25f5317b3",
-        "type": "github"
-      },
-      "original": {
-        "owner": "tomasz-tomczyk",
-        "repo": "crit",
-        "type": "github"
-      }
-    },
-    "flake-utils": {
-      "inputs": {
-        "systems": "systems"
-      },
-      "locked": {
-        "lastModified": 1731533236,
-        "narHash": "sha256-l0KFg5HjrsfsO/JpG+r7fRrqm12kzFHyUHqHCVpMMbI=",
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "rev": "11707dc2f618dd54ca8739b309ec4fc024de578b",
-        "type": "github"
-      },
-      "original": {
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "type": "github"
-      }
-    },
-    "gh-stack-skills": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1792781289,
-        "narHash": "sha256-ZJiWfQJhhV07d5BH7H6yHSkPpeBPtj8P8FlAz1zF7Ak=",
-        "owner": "github",
-        "repo": "gh-stack",
-        "rev": "c477b7d1f290a9df463b86773742a5237d14b980",
-        "type": "github"
-      },
-      "original": {
-        "owner": "github",
-        "repo": "gh-stack",
-        "type": "github"
-      }
-    },
-    "git-fixup": {
-      "inputs": {
-        "flake-utils": "flake-utils",
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1743215234,
-        "narHash": "sha256-7uDmgTdlgEbbW0LPGrXroctd09vTp1bEHF0HjtqqRT8=",
-        "owner": "mrsekut",
-        "repo": "git-fixup",
-        "rev": "64475709082ad743b00e301769932ef9e115b2a8",
-        "type": "github"
-      },
-      "original": {
-        "owner": "mrsekut",
-        "repo": "git-fixup",
-        "type": "github"
-      }
-    },
-    "home-manager": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1792818371,
-        "narHash": "sha256-yhEZAzZRNvzYpoAlyFY3wM75V9BmkIXJIueof8S5gOg=",
-        "owner": "nix-community",
-        "repo": "home-manager",
-        "rev": "2cd3234928f60bbff695a7ee56115ef7799c47cd",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-community",
-        "repo": "home-manager",
-        "type": "github"
-      }
-    },
-    "homebrew-bundle": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1745335228,
-        "narHash": "sha256-TIKR2UgtyUmHLNZp255/vLs+1I10hXe+sciMEbAGFwE=",
-        "owner": "homebrew",
-        "repo": "homebrew-bundle",
-        "rev": "a3265c84b232e13048ecbf6fc18a2eedfadbeb08",
-        "type": "github"
-      },
-      "original": {
-        "owner": "homebrew",
-        "repo": "homebrew-bundle",
-        "type": "github"
-      }
-    },
-    "homebrew-cask": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1792836928,
-        "narHash": "sha256-I9zbBga+EHlq6fTOYdMxVlyFvKOEfZr0/+HBNdfF2Oo=",
-        "owner": "homebrew",
-        "repo": "homebrew-cask",
-        "rev": "445c937ca20c4d68147cd775186b41096289af03",
-        "type": "github"
-      },
-      "original": {
-        "owner": "homebrew",
-        "repo": "homebrew-cask",
-        "type": "github"
-      }
-    },
-    "intellectronica-skills": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1777131109,
-        "narHash": "sha256-5CPfJPdI1MWQFmTMpLNeXpcAZ3EejsDlpkH7i5Ycncs=",
-        "owner": "intellectronica",
-        "repo": "agent-skills",
-        "rev": "9b0e00ad1b941165e2506545bbfddafa34cf2cb8",
-        "type": "github"
-      },
-      "original": {
-        "owner": "intellectronica",
-        "repo": "agent-skills",
-        "type": "github"
-      }
-    },
-    "mrsekut-private-skills": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1775049742,
-        "narHash": "sha256-lmCeRcmCjY9wIipWISPpyLNNMHxFzUPE4zZI0VBKMYk=",
-        "ref": "refs/heads/main",
-        "rev": "416d19b759e5985bd098ce12aebab342d0b193f4",
-        "revCount": 16,
-        "type": "git",
-        "url": "ssh://git@github.com/mrsekut/agent-skills-private"
-      },
-      "original": {
-        "type": "git",
-        "url": "ssh://git@github.com/mrsekut/agent-skills-private"
-      }
-    },
-    "mrsekut-skills": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1792592316,
-        "narHash": "sha256-Qd5VxgfwU1Bl0JH51jpQzSxlJtPyNBtTOes/oEh20qU=",
-        "owner": "mrsekut",
-        "repo": "agent-skills",
-        "rev": "65b092eb607d8319ac5eb39c48737d30cff35e3b",
-        "type": "github"
-      },
-      "original": {
-        "owner": "mrsekut",
-        "repo": "agent-skills",
-        "type": "github"
-      }
-    },
-    "nix-claude-code": {
-      "inputs": {
-        "nixpkgs": "nixpkgs"
-      },
-      "locked": {
-        "lastModified": 1792792900,
-        "narHash": "sha256-4t+dlaNeoj9pnvu/OjsEPbrVoBIDA/nrNFSxifRcNK8=",
-        "owner": "ryoppippi",
-        "repo": "nix-claude-code",
-        "rev": "b87bcf196448cc0ed25e3260d37bcdfb00523154",
-        "type": "github"
-      },
-      "original": {
-        "owner": "ryoppippi",
-        "repo": "nix-claude-code",
-        "type": "github"
-      }
-    },
-    "nix-darwin": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1792737899,
-        "narHash": "sha256-P0/GhewcEQmAbzq3QunNWY2jLJaYH9F6c/5dEM/jQ4M=",
-        "owner": "LnL7",
-        "repo": "nix-darwin",
-        "rev": "bb0b90dbd54e207100de72b5dcbe3188c98a4b69",
-        "type": "github"
-      },
-      "original": {
-        "owner": "LnL7",
-        "repo": "nix-darwin",
-        "type": "github"
-      }
-    },
-    "nix-homebrew": {
-      "inputs": {
-        "brew-src": "brew-src"
-      },
-      "locked": {
-        "lastModified": 1789928041,
-        "narHash": "sha256-iV37ieTcE4ZLOYEe0VznW6dWMBe4lEL8AbK1vblyZGM=",
-        "owner": "zhaofengli-wip",
-        "repo": "nix-homebrew",
-        "rev": "c11cccfdd36dd69b5323d70d354b2853379c2426",
-        "type": "github"
-      },
-      "original": {
-        "owner": "zhaofengli-wip",
-        "repo": "nix-homebrew",
-        "type": "github"
-      }
-    },
-    "nix-index-database": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1792309949,
-        "narHash": "sha256-2DAEMk8YkV8OF6N2uw9jQ016cYoNkcgnq50AShwWxNw=",
-        "owner": "Mic92",
-        "repo": "nix-index-database",
-        "rev": "1b4d1758fa6053c5d6284254a793134fa602fbff",
-        "type": "github"
-      },
-      "original": {
-        "owner": "Mic92",
-        "repo": "nix-index-database",
-        "type": "github"
-      }
-    },
-    "nixpkgs": {
-      "locked": {
-        "lastModified": 1792094642,
-        "narHash": "sha256-zp8ToDMnqZcu4o4IH9pdwXFXGp7yLm/M0dEnNWnyd7I=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "fe13242281a67641c0102cdb1087f0ebe586c7df",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_2": {
-      "locked": {
-        "lastModified": 1792502884,
-        "narHash": "sha256-IoNisKcGbUjdd45qCqywGMCYmZ5EnkxezvLII0FWwNA=",
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "02c087f3fe673c9e317f206a627cb6b910336dbe",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nixos",
-        "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "openai-skills": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1782268572,
-        "narHash": "sha256-t4oGnFg0YpxJaQiFpgTiwYhaFoZK6wPDiqvHoG0bXiU=",
-        "owner": "openai",
-        "repo": "skills",
-        "rev": "49f948faa9258a0c61caceaf225e179651397431",
-        "type": "github"
-      },
-      "original": {
-        "owner": "openai",
-        "repo": "skills",
-        "type": "github"
-      }
-    },
-    "playwriter-skills": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1792745506,
-        "narHash": "sha256-tyBm74pOQeNMwRn0fGBcrE4mNITMSUbV4PGaMK6rK5w=",
-        "owner": "remorses",
-        "repo": "playwriter",
-        "rev": "6489336628e6737e32a59f25ed270622400cb277",
-        "type": "github"
-      },
-      "original": {
-        "owner": "remorses",
-        "repo": "playwriter",
-        "type": "github"
-      }
-    },
-    "root": {
-      "inputs": {
-        "agenix": "agenix",
-        "agent-skills": "agent-skills",
-        "anthropic-skills": "anthropic-skills",
-        "cosense-skills": "cosense-skills",
-        "crit": "crit",
-        "gh-stack-skills": "gh-stack-skills",
-        "git-fixup": "git-fixup",
-        "home-manager": "home-manager",
-        "homebrew-bundle": "homebrew-bundle",
-        "homebrew-cask": "homebrew-cask",
-        "intellectronica-skills": "intellectronica-skills",
-        "mrsekut-private-skills": "mrsekut-private-skills",
-        "mrsekut-skills": "mrsekut-skills",
-        "nix-claude-code": "nix-claude-code",
-        "nix-darwin": "nix-darwin",
-        "nix-homebrew": "nix-homebrew",
-        "nix-index-database": "nix-index-database",
-        "nixpkgs": "nixpkgs_2",
-        "openai-skills": "openai-skills",
-        "playwriter-skills": "playwriter-skills",
-        "stablyai-orca-tap": "stablyai-orca-tap"
-      }
-    },
-    "stablyai-orca-tap": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1792825849,
-        "narHash": "sha256-Qo/eCe+wllWtyNOMhcuvUzlHWCAhSQpO2bOIdKnDv0M=",
-        "owner": "stablyai",
-        "repo": "homebrew-orca",
-        "rev": "4d239beab65b2a69cadf567b4a337d8cddec5397",
-        "type": "github"
-      },
-      "original": {
-        "owner": "stablyai",
-        "repo": "homebrew-orca",
-        "type": "github"
-      }
-    },
-    "systems": {
-      "locked": {
-        "lastModified": 1681028828,
-        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
-        "owner": "nix-systems",
-        "repo": "default",
-        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-systems",
-        "repo": "default",
-        "type": "github"
-      }
-    }
-  },
-  "root": "root",
-  "version": 7
+	"nodes": {
+		"agenix": {
+			"inputs": {
+				"nixpkgs": [
+					"nixpkgs"
+				]
+			},
+			"locked": {
+				"lastModified": 1792507013,
+				"narHash": "sha256-8tKjSQajD3mUND1GaAuaWTcuyUpgcGsh5V+l4ibzC7U=",
+				"owner": "ryantm",
+				"repo": "agenix",
+				"rev": "5e5b88a0c8e56f291a108c2fe9934054d9745b2e",
+				"type": "github"
+			},
+			"original": {
+				"owner": "ryantm",
+				"repo": "agenix",
+				"type": "github"
+			}
+		},
+		"agent-skills": {
+			"inputs": {
+				"nixpkgs": [
+					"nixpkgs"
+				]
+			},
+			"locked": {
+				"lastModified": 1792594212,
+				"narHash": "sha256-XWx3R/AIeYdyZ3guuZVNqirEUPPpehICrIRV3VabR+U=",
+				"owner": "Kyure-A",
+				"repo": "agent-skills-nix",
+				"rev": "f48aa227f3d157ae3abda12cd9c4ab867f400419",
+				"type": "github"
+			},
+			"original": {
+				"owner": "Kyure-A",
+				"repo": "agent-skills-nix",
+				"type": "github"
+			}
+		},
+		"anthropic-skills": {
+			"flake": false,
+			"locked": {
+				"lastModified": 1793215238,
+				"narHash": "sha256-MkCOANBAqCc1WmNf7S8PsyAphGJAIzEXGyCm8RrCR9M=",
+				"owner": "anthropics",
+				"repo": "skills",
+				"rev": "ca45fc496a3436251f191354091d557da31c15b5",
+				"type": "github"
+			},
+			"original": {
+				"owner": "anthropics",
+				"repo": "skills",
+				"type": "github"
+			}
+		},
+		"brew-src": {
+			"flake": false,
+			"locked": {
+				"lastModified": 1793000687,
+				"narHash": "sha256-8mCor0DDjNhi+0e+FllfqiMABujBl+/RxYW+wgMpcto=",
+				"owner": "Homebrew",
+				"repo": "brew",
+				"rev": "c6069d2a943b71b0a90d91fc1ac93cb9c1634dcc",
+				"type": "github"
+			},
+			"original": {
+				"owner": "Homebrew",
+				"ref": "7.0.11",
+				"repo": "brew",
+				"type": "github"
+			}
+		},
+		"cosense-skills": {
+			"flake": false,
+			"locked": {
+				"lastModified": 1793440631,
+				"narHash": "sha256-DONm1r7hnZIsKwicOXjXQcvlWJLq8EvKHnBgFuv06fk=",
+				"owner": "helpfeel",
+				"repo": "cosense-cli",
+				"rev": "1e7c755921c0fea18190bd9129f22d398ffae599",
+				"type": "github"
+			},
+			"original": {
+				"owner": "helpfeel",
+				"repo": "cosense-cli",
+				"type": "github"
+			}
+		},
+		"crit": {
+			"inputs": {
+				"nixpkgs": [
+					"nixpkgs"
+				]
+			},
+			"locked": {
+				"lastModified": 1793649736,
+				"narHash": "sha256-4GFjw09OSXQateOpzNJ8Bzv88WvpsR4yJCQeVBquWxM=",
+				"owner": "tomasz-tomczyk",
+				"repo": "crit",
+				"rev": "3e9b80a535d94ea68e04814e2e608c37d54a2b91",
+				"type": "github"
+			},
+			"original": {
+				"owner": "tomasz-tomczyk",
+				"repo": "crit",
+				"type": "github"
+			}
+		},
+		"flake-utils": {
+			"inputs": {
+				"systems": "systems"
+			},
+			"locked": {
+				"lastModified": 1731533236,
+				"narHash": "sha256-l0KFg5HjrsfsO/JpG+r7fRrqm12kzFHyUHqHCVpMMbI=",
+				"owner": "numtide",
+				"repo": "flake-utils",
+				"rev": "11707dc2f618dd54ca8739b309ec4fc024de578b",
+				"type": "github"
+			},
+			"original": {
+				"owner": "numtide",
+				"repo": "flake-utils",
+				"type": "github"
+			}
+		},
+		"gh-stack-skills": {
+			"flake": false,
+			"locked": {
+				"lastModified": 1793057232,
+				"narHash": "sha256-dENuxVuz68Y7P8WW5C7pzVbfJRxGMGIKQ2AnWrTacOs=",
+				"owner": "github",
+				"repo": "gh-stack",
+				"rev": "2a49e6751238633db504655d8a8eba3e433e827d",
+				"type": "github"
+			},
+			"original": {
+				"owner": "github",
+				"repo": "gh-stack",
+				"type": "github"
+			}
+		},
+		"git-fixup": {
+			"inputs": {
+				"flake-utils": "flake-utils",
+				"nixpkgs": [
+					"nixpkgs"
+				]
+			},
+			"locked": {
+				"lastModified": 1743215234,
+				"narHash": "sha256-7uDmgTdlgEbbW0LPGrXroctd09vTp1bEHF0HjtqqRT8=",
+				"owner": "mrsekut",
+				"repo": "git-fixup",
+				"rev": "64475709082ad743b00e301769932ef9e115b2a8",
+				"type": "github"
+			},
+			"original": {
+				"owner": "mrsekut",
+				"repo": "git-fixup",
+				"type": "github"
+			}
+		},
+		"home-manager": {
+			"inputs": {
+				"nixpkgs": [
+					"nixpkgs"
+				]
+			},
+			"locked": {
+				"lastModified": 1793193205,
+				"narHash": "sha256-X6xa6sGA7RnJQuZGbFMC+K+KToWAlBDCCjJXfTwEPsw=",
+				"owner": "nix-community",
+				"repo": "home-manager",
+				"rev": "095fef2f265c3c0da4fe315efba8f8a04495ab34",
+				"type": "github"
+			},
+			"original": {
+				"owner": "nix-community",
+				"repo": "home-manager",
+				"type": "github"
+			}
+		},
+		"homebrew-bundle": {
+			"flake": false,
+			"locked": {
+				"lastModified": 1745335228,
+				"narHash": "sha256-TIKR2UgtyUmHLNZp255/vLs+1I10hXe+sciMEbAGFwE=",
+				"owner": "homebrew",
+				"repo": "homebrew-bundle",
+				"rev": "a3265c84b232e13048ecbf6fc18a2eedfadbeb08",
+				"type": "github"
+			},
+			"original": {
+				"owner": "homebrew",
+				"repo": "homebrew-bundle",
+				"type": "github"
+			}
+		},
+		"homebrew-cask": {
+			"flake": false,
+			"locked": {
+				"lastModified": 1793696219,
+				"narHash": "sha256-qiBmcl6y5ZEhDeTALOocsYroGbNze6r318vZ6bT3/fk=",
+				"owner": "homebrew",
+				"repo": "homebrew-cask",
+				"rev": "0cd5f0ecb435e955c112e460d1fa74779d232b1f",
+				"type": "github"
+			},
+			"original": {
+				"owner": "homebrew",
+				"repo": "homebrew-cask",
+				"type": "github"
+			}
+		},
+		"intellectronica-skills": {
+			"flake": false,
+			"locked": {
+				"lastModified": 1777131109,
+				"narHash": "sha256-5CPfJPdI1MWQFmTMpLNeXpcAZ3EejsDlpkH7i5Ycncs=",
+				"owner": "intellectronica",
+				"repo": "agent-skills",
+				"rev": "9b0e00ad1b941165e2506545bbfddafa34cf2cb8",
+				"type": "github"
+			},
+			"original": {
+				"owner": "intellectronica",
+				"repo": "agent-skills",
+				"type": "github"
+			}
+		},
+		"mrsekut-private-skills": {
+			"flake": false,
+			"locked": {
+				"lastModified": 1775049742,
+				"narHash": "sha256-lmCeRcmCjY9wIipWISPpyLNNMHxFzUPE4zZI0VBKMYk=",
+				"ref": "refs/heads/main",
+				"rev": "416d19b759e5985bd098ce12aebab342d0b193f4",
+				"revCount": 16,
+				"type": "git",
+				"url": "ssh://git@github.com/mrsekut/agent-skills-private"
+			},
+			"original": {
+				"type": "git",
+				"url": "ssh://git@github.com/mrsekut/agent-skills-private"
+			}
+		},
+		"mrsekut-skills": {
+			"flake": false,
+			"locked": {
+				"lastModified": 1793537983,
+				"narHash": "sha256-lMqN2g5X/d/5vdxRv+xM8eQPeL4OeZcAD4CK+yEb1tc=",
+				"owner": "mrsekut",
+				"repo": "agent-skills",
+				"rev": "8011649d9bb1457ddf6b2faa005c303f15452649",
+				"type": "github"
+			},
+			"original": {
+				"owner": "mrsekut",
+				"repo": "agent-skills",
+				"type": "github"
+			}
+		},
+		"nix-claude-code": {
+			"inputs": {
+				"nixpkgs": "nixpkgs"
+			},
+			"locked": {
+				"lastModified": 1793671330,
+				"narHash": "sha256-HvjAjr6g394Vd6JMtjOcBXSe7GXbaOqXAcxUIC5OIOY=",
+				"owner": "ryoppippi",
+				"repo": "nix-claude-code",
+				"rev": "90d2a4b543fd64481b44326093cb43c2953526c6",
+				"type": "github"
+			},
+			"original": {
+				"owner": "ryoppippi",
+				"repo": "nix-claude-code",
+				"type": "github"
+			}
+		},
+		"nix-darwin": {
+			"inputs": {
+				"nixpkgs": [
+					"nixpkgs"
+				]
+			},
+			"locked": {
+				"lastModified": 1793418699,
+				"narHash": "sha256-+RpTlcdh9KqZ+ZiLkNSTvibQWm935EcIdBzRPCTFsrQ=",
+				"owner": "LnL7",
+				"repo": "nix-darwin",
+				"rev": "ff0e21a414d4547183396da1b44a66f2577b65e9",
+				"type": "github"
+			},
+			"original": {
+				"owner": "LnL7",
+				"repo": "nix-darwin",
+				"type": "github"
+			}
+		},
+		"nix-homebrew": {
+			"inputs": {
+				"brew-src": "brew-src"
+			},
+			"locked": {
+				"lastModified": 1793543863,
+				"narHash": "sha256-oDYLVD8KGT/M57c8HziYSSj0le4wCyA+jZ7+/qUS91M=",
+				"owner": "zhaofengli-wip",
+				"repo": "nix-homebrew",
+				"rev": "52bc87da3f30c2261a6d1cfef3c892097b53daeb",
+				"type": "github"
+			},
+			"original": {
+				"owner": "zhaofengli-wip",
+				"repo": "nix-homebrew",
+				"type": "github"
+			}
+		},
+		"nix-index-database": {
+			"inputs": {
+				"nixpkgs": [
+					"nixpkgs"
+				]
+			},
+			"locked": {
+				"lastModified": 1793543282,
+				"narHash": "sha256-PHtGxKYM99f8WhGR5YD7iiCiwemKa2wUD4yVI2oALFg=",
+				"owner": "Mic92",
+				"repo": "nix-index-database",
+				"rev": "cee0f879d338cf08f814210fa6c2b280594ade0a",
+				"type": "github"
+			},
+			"original": {
+				"owner": "Mic92",
+				"repo": "nix-index-database",
+				"type": "github"
+			}
+		},
+		"nixpkgs": {
+			"locked": {
+				"lastModified": 1793341285,
+				"narHash": "sha256-Y1CiZ4SoBUjLQyQM/pY+rS2dXD3CHLPstF0lmOc73D4=",
+				"owner": "NixOS",
+				"repo": "nixpkgs",
+				"rev": "1c89083e451e891152365b799595cf7790a43325",
+				"type": "github"
+			},
+			"original": {
+				"owner": "NixOS",
+				"ref": "nixos-unstable",
+				"repo": "nixpkgs",
+				"type": "github"
+			}
+		},
+		"nixpkgs_2": {
+			"locked": {
+				"lastModified": 1793540411,
+				"narHash": "sha256-fiPJ88izTVucjeo2EQ3jk4aWmLg03I1D4vxnX2QjEgE=",
+				"owner": "nixos",
+				"repo": "nixpkgs",
+				"rev": "0bb2eedc20e4739f29e8045034f2828ad7054f8f",
+				"type": "github"
+			},
+			"original": {
+				"owner": "nixos",
+				"ref": "nixos-unstable",
+				"repo": "nixpkgs",
+				"type": "github"
+			}
+		},
+		"openai-skills": {
+			"flake": false,
+			"locked": {
+				"lastModified": 1782268572,
+				"narHash": "sha256-t4oGnFg0YpxJaQiFpgTiwYhaFoZK6wPDiqvHoG0bXiU=",
+				"owner": "openai",
+				"repo": "skills",
+				"rev": "49f948faa9258a0c61caceaf225e179651397431",
+				"type": "github"
+			},
+			"original": {
+				"owner": "openai",
+				"repo": "skills",
+				"type": "github"
+			}
+		},
+		"playwriter-skills": {
+			"flake": false,
+			"locked": {
+				"lastModified": 1793136186,
+				"narHash": "sha256-GgKmSoRb4zsp6dF37VGnH6vW0tHPiDiCZTYRnEYMmFo=",
+				"owner": "remorses",
+				"repo": "playwriter",
+				"rev": "bf2b96717e2b36ee9781d260d4ed8a7228f47c48",
+				"type": "github"
+			},
+			"original": {
+				"owner": "remorses",
+				"repo": "playwriter",
+				"type": "github"
+			}
+		},
+		"root": {
+			"inputs": {
+				"agenix": "agenix",
+				"agent-skills": "agent-skills",
+				"anthropic-skills": "anthropic-skills",
+				"cosense-skills": "cosense-skills",
+				"crit": "crit",
+				"gh-stack-skills": "gh-stack-skills",
+				"git-fixup": "git-fixup",
+				"home-manager": "home-manager",
+				"homebrew-bundle": "homebrew-bundle",
+				"homebrew-cask": "homebrew-cask",
+				"intellectronica-skills": "intellectronica-skills",
+				"mrsekut-private-skills": "mrsekut-private-skills",
+				"mrsekut-skills": "mrsekut-skills",
+				"nix-claude-code": "nix-claude-code",
+				"nix-darwin": "nix-darwin",
+				"nix-homebrew": "nix-homebrew",
+				"nix-index-database": "nix-index-database",
+				"nixpkgs": "nixpkgs_2",
+				"openai-skills": "openai-skills",
+				"playwriter-skills": "playwriter-skills",
+				"stablyai-orca-tap": "stablyai-orca-tap"
+			}
+		},
+		"stablyai-orca-tap": {
+			"flake": false,
+			"locked": {
+				"lastModified": 1793677052,
+				"narHash": "sha256-G5fjxcfyFoSUi5wHI6wVArDwbi20kkcIOPzKzDlKC/Q=",
+				"owner": "stablyai",
+				"repo": "homebrew-orca",
+				"rev": "0a6feadbf104edff8aff19a0bfdeadc771df2a68",
+				"type": "github"
+			},
+			"original": {
+				"owner": "stablyai",
+				"repo": "homebrew-orca",
+				"type": "github"
+			}
+		},
+		"systems": {
+			"locked": {
+				"lastModified": 1681028828,
+				"narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+				"owner": "nix-systems",
+				"repo": "default",
+				"rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+				"type": "github"
+			},
+			"original": {
+				"owner": "nix-systems",
+				"repo": "default",
+				"type": "github"
+			}
+		}
+	},
+	"root": "root",
+	"version": 7
 }
