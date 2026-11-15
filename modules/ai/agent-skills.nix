@@ -1,4 +1,4 @@
-{ anthropic-skills, intellectronica-skills, mrsekut-skills, mrsekut-private-skills, openai-skills, playwriter-skills, cosense-skills, ... }:
+{ anthropic-skills, intellectronica-skills, mrsekut-skills, mrsekut-private-skills, openai-skills, playwriter-skills, cosense-skills, cognitive-rhythm-writing-skill, japanese-tech-writing-skill, ... }:
 {
   programs.agent-skills = {
     sources.anthropic = {
@@ -25,6 +25,13 @@
       path = playwriter-skills;
       subdir = "skills";
     };
+    # k16shikano さんの Gist。cognitive-rhythm-writing は ../japanese-tech-writing を参照する
+    sources.cognitive-rhythm-writing = {
+      path = cognitive-rhythm-writing-skill;
+    };
+    sources.japanese-tech-writing = {
+      path = japanese-tech-writing-skill;
+    };
 
     skills.enableAll = [ "mrsekut" "mrsekut-private" ];
     skills.enable = [
@@ -32,6 +39,8 @@
       "context7"
       "playwriter"
       "screenshot"
+      "cognitive-rhythm-writing"
+      "japanese-tech-writing"
     ];
   };
 }

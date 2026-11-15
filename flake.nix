@@ -92,6 +92,14 @@
       url = "github:github/gh-stack";
       flake = false;
     };
+    cognitive-rhythm-writing-skill = {
+      url = "git+https://gist.github.com/k16shikano/eb2929f13ed19c97188393d297be8432";
+      flake = false;
+    };
+    japanese-tech-writing-skill = {
+      url = "git+https://gist.github.com/k16shikano/fd287c3133457c4fd8f5601d34aa817d";
+      flake = false;
+    };
   };
 
   outputs =
@@ -117,6 +125,8 @@
       playwriter-skills,
       cosense-skills,
       gh-stack-skills,
+      cognitive-rhythm-writing-skill,
+      japanese-tech-writing-skill,
       ...
     }:
     let
@@ -149,7 +159,7 @@
         # crit はバイナリと skill の両方を flake source から取り出すため、
         # package ではなく flake input そのものを渡し、module 側で導出する。
         inherit crit;
-        inherit anthropic-skills intellectronica-skills mrsekut-skills mrsekut-private-skills openai-skills playwriter-skills cosense-skills gh-stack-skills;
+        inherit anthropic-skills intellectronica-skills mrsekut-skills mrsekut-private-skills openai-skills playwriter-skills cosense-skills gh-stack-skills cognitive-rhythm-writing-skill japanese-tech-writing-skill;
       };
 
       commonDarwinModules = [
