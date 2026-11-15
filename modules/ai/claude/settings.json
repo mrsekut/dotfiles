@@ -10,7 +10,6 @@
 	},
 	"enabledPlugins": {
 		"gopls-lsp@claude-plugins-official": true,
-		"greeting-plugin@cc-marketplace": true,
 		"rust-analyzer-lsp@claude-plugins-official": true,
 		"swift-lsp@claude-plugins-official": true,
 		"warp@claude-code-warp": true,
