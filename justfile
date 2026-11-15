@@ -27,11 +27,13 @@ nix-update-apply-personal:
   just flake-update
   just home-manager-apply-personal
   just darwin-apply-personal
+  just claude-plugins-update
 
 nix-update-apply-work:
   just flake-update
   just home-manager-apply-work
   just darwin-apply-work
+  just claude-plugins-update
 
 home-manager-apply-personal:
   nix run home-manager -- switch --flake '.#mrsekut@personal'
@@ -63,6 +65,33 @@ ssh-edit:
 # secrets.nix の公開鍵を変えた後に再暗号化する
 ssh-rekey:
   cd modules/ssh && AGENIX_RULES=secrets.nix nix run github:ryantm/agenix -- -r -i ~/.ssh/agenix_ed25519
+
+
+# =================
+# Claude Code
+# =================
+
+# settings.json に書いた marketplace と plugin をインストール・更新する
+# Claude Code は第三者 marketplace を自動更新しないので、ここで明示的に更新する
+claude-plugins-update:
+  #!/usr/bin/env bash
+  set -uo pipefail
+  settings=modules/ai/claude/settings.json
+  known=$(claude plugin marketplace list --json | jq -r '.[].name')
+  jq -r '.extraKnownMarketplaces | to_entries[] | select(.value.source.source == "github") | "\(.key) \(.value.source.repo)"' "$settings" |
+    while read -r name repo; do
+      grep -qx "$name" <<<"$known" || claude plugin marketplace add "$repo"
+    done
+  claude plugin marketplace update
+  installed=$(claude plugin list --json | jq -r '.[] | select(.scope == "user") | .id')
+  jq -r '.enabledPlugins | to_entries[] | select(.value) | .key' "$settings" |
+    while read -r plugin; do
+      if grep -qx "$plugin" <<<"$installed"; then
+        claude plugin update "$plugin" --scope user
+      else
+        claude plugin install "$plugin" --scope user
+      fi || echo "warn: $plugin の更新に失敗" >&2
+    done
 
 
 # =================
