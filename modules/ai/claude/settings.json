@@ -13,13 +13,26 @@
 		"greeting-plugin@cc-marketplace": true,
 		"rust-analyzer-lsp@claude-plugins-official": true,
 		"swift-lsp@claude-plugins-official": true,
-		"warp@claude-code-warp": true
+		"warp@claude-code-warp": true,
+		"software-factory-mode@shokai-agent-skills": true,
+		"codex-consultation@shokai-agent-skills": true,
+		"subagent-consultation@shokai-agent-skills": true,
+		"conversation-context@shokai-agent-skills": true,
+		"sanity-review@shokai-agent-skills": true,
+		"skill-usability-test@shokai-agent-skills": true,
+		"kuden@shokai-agent-skills": true
 	},
 	"extraKnownMarketplaces": {
 		"claude-code-warp": {
 			"source": {
 				"source": "github",
 				"repo": "warpdotdev/claude-code-warp"
+			}
+		},
+		"shokai-agent-skills": {
+			"source": {
+				"source": "github",
+				"repo": "shokai/agent-skills"
 			}
 		}
 	},
