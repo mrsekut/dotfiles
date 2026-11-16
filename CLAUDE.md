@@ -16,3 +16,4 @@
    - `git rebase master herp` で herp を追従させる
 4. herp 側のコミットはできるだけ少なく保つ。新しく作るより、既存の herp コミットに fixup/squash するほうを優先する
 5. herp は rebase で履歴が書き換わるので、push には `--force-with-lease` を使う
+6. rebase で flake.lock がコンフリクトしたら、master 側の内容は気にせず herp 側で `nix flake lock` などを使って作り直す。flake.lock をコミットしている以上コンフリクトは避けられないので、input ごとに細かく突き合わせなくてよい
