@@ -19,10 +19,13 @@
 
   homebrew = {
     enable = true;
-    # onActivation = {
-    #   autoUpdate = true;
-    #   # cleanup = "uninstall";
-    # };
+    onActivation = {
+      # Homebrew は既定で formulae.brew.sh の API キャッシュから cask を引くが、autoUpdate しないとこのキャッシュが古いままになり、
+      # 新しい cask が "No Cask with this name exists" になる。nix で固定した tap を正とするため API を使わせない。
+      extraEnv.HOMEBREW_NO_INSTALL_FROM_API = "1";
+      # autoUpdate = true;
+      # cleanup = "uninstall";
+    };
 
     # taps = [ ];
     brews = [
