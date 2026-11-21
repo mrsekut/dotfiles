@@ -1,0 +1,19 @@
+{
+  "title": "Option+Space で Herdr をトグル",
+  "rules": [
+    {
+      "description": "Option+Space: Herdr が前面なら隠す、そうでなければ前面に出す",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": { "key_code": "spacebar", "modifiers": { "mandatory": ["option"] } },
+          "to": [
+            {
+              "shell_command": "osascript -e 'if application \"Herdr\" is running and frontmost of application \"Herdr\" then' -e 'tell application \"System Events\" to set visible of process \"Herdr\" to false' -e 'else' -e 'tell application \"Herdr\" to activate' -e 'end if'"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
