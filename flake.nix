@@ -175,6 +175,7 @@
         ./modules/editors/cursor/app.nix
         ./modules/orbstack/app.nix
         ./modules/orca/app.nix
+        ./modules/herdr/app.nix
       ];
     in
     {

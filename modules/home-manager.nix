@@ -40,5 +40,6 @@
     ./yazi
     ./tmux
     ./launchd
+    ./herdr
   ];
 }
