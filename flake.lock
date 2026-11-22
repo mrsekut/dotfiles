@@ -459,24 +459,7 @@
         "nix-index-database": "nix-index-database",
         "nixpkgs": "nixpkgs_2",
         "openai-skills": "openai-skills",
-        "playwriter-skills": "playwriter-skills",
-        "stablyai-orca-tap": "stablyai-orca-tap"
-      }
-    },
-    "stablyai-orca-tap": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1795233081,
-        "narHash": "sha256-3SWuOeo+q9FoWs4tpqAFS2aDP2d80b4IaV4MwbaMLIk=",
-        "owner": "stablyai",
-        "repo": "homebrew-orca",
-        "rev": "f479bcee21e5f2335af099ecc7269f6d6dabb7e0",
-        "type": "github"
-      },
-      "original": {
-        "owner": "stablyai",
-        "repo": "homebrew-orca",
-        "type": "github"
+        "playwriter-skills": "playwriter-skills"
       }
     },
     "systems": {

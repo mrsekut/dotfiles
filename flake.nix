@@ -30,10 +30,6 @@
       url = "github:homebrew/homebrew-bundle";
       flake = false;
     };
-    stablyai-orca-tap = {
-      url = "github:stablyai/homebrew-orca";
-      flake = false;
-    };
 
     # mrsekut's libraries
     git-fixup = {
@@ -111,7 +107,6 @@
       nix-homebrew,
       homebrew-cask,
       homebrew-bundle,
-      stablyai-orca-tap,
       git-fixup,
       nix-index-database,
       nix-claude-code,
@@ -174,7 +169,6 @@
         ./modules/ai/claude/app.nix
         ./modules/editors/cursor/app.nix
         ./modules/orbstack/app.nix
-        ./modules/orca/app.nix
         ./modules/herdr/app.nix
       ];
     in
@@ -199,7 +193,7 @@
 
       darwinConfigurations = {
         "mrsekut@personal" = nix-darwin.lib.darwinSystem {
-          specialArgs = { inherit homebrew-cask homebrew-bundle stablyai-orca-tap; };
+          specialArgs = { inherit homebrew-cask homebrew-bundle; };
           system = system;
           modules = commonDarwinModules ++ [
             { dotfiles.profile = "personal"; }
@@ -207,7 +201,7 @@
         };
 
         "mrsekut@work" = nix-darwin.lib.darwinSystem {
-          specialArgs = { inherit homebrew-cask homebrew-bundle stablyai-orca-tap; };
+          specialArgs = { inherit homebrew-cask homebrew-bundle; };
           system = system;
           modules = commonDarwinModules ++ [
             { dotfiles.profile = "work"; }
