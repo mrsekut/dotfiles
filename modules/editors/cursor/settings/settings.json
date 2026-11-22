@@ -141,6 +141,7 @@
 	"rust.formatOnSave": true,
 	"typescript.referencesCodeLens.enabled": true,
 	"typescript.tsdk": "node_modules/typescript/lib",
+	"js/ts.tsserver.maxMemory": 8192,
 	"typescript.updateImportsOnFileMove.enabled": "always",
 	"totalTypeScript.hideAllTips": true,
 	"julia.symbolCacheDownload": true,
@@ -184,7 +185,7 @@
 	"commentTranslate.targetLanguage": "ja",
 	"commentTranslate.browse.mode": "inplace",
 	"docker.extension.enableComposeLanguageServer": false,
-	"python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
+	"python.defaultInterpreterPath": "/usr/bin/python3",
 	"locInFileTree.enabled": false,
 	"workbench.editorAssociations": {
 		"*.md": "markdown-editor.openEditor"
